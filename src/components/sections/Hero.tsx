@@ -9,7 +9,6 @@ import {
 } from 'lucide-react'
 import { BRAND, HERO_PILLARS, LINKS } from '../../data/site'
 import { Button } from '../ui/Button'
-import { LazyImage } from '../ui/LazyImage'
 import { Reveal } from '../ui/Reveal'
 import { SacredGeometryBackground } from '../layout/SacredGeometryBackground'
 import { SectionAtmosphere } from '../layout/SectionAtmosphere'
