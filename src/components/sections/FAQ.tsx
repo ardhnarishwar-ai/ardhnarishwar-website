@@ -3,17 +3,17 @@ export function FAQ() {
     {
       question: "What is Medical Astrology?",
       answer:
-        "Medical Astrology is an ancient observational discipline that studies the relationship between planetary patterns, constitutional tendencies, and wellness themes. It has been practiced across various traditions for centuries as a framework for understanding recurring health and lifestyle patterns."
+        "Ancient Medical Astrology is a traditional system of observation that studies the relationship between planetary patterns, constitutional tendencies, timing cycles, and human well-being. For centuries, astrologers, physicians, and herbal practitioners used these principles to understand recurring health and life patterns at a deeper level."
     },
     {
-      question: "How is the analysis performed?",
+      question: "Why is birth time important?",
       answer:
-        "The analysis is based on birth details, planetary positions, house relationships, timing cycles, and traditional Medical Astrology principles. No physical examination, laboratory testing, or medical scanning equipment is used."
+        "The exact birth time creates a unique astrological blueprint. This chart provides the foundation for studying constitutional tendencies, planetary strengths, timing cycles, and recurring patterns observed throughout life."
     },
     {
-      question: "Can a birth chart reveal wellness tendencies?",
+      question: "How can a birth chart be used for wellness observation?",
       answer:
-        "According to traditional Medical Astrology, planetary configurations may reflect constitutional strengths, recurring sensitivities, timing patterns, and lifestyle tendencies. These observations are interpreted through established astrological frameworks."
+        "Ancient Medical Astrology views the birth chart as a symbolic map of the individual. Through structured analysis of planetary placements, houses, aspects, and timing systems, recurring wellness themes, stress signatures, constitutional patterns, and life-cycle trends can be observed."
     },
     {
       question: "What makes Medical Astrology unique?",
@@ -21,16 +21,31 @@ export function FAQ() {
         "Medical Astrology views the individual as an interconnected system rather than examining isolated symptoms. It studies constitutional patterns, planetary timing cycles, and recurring themes that may influence overall well-being."
     },
     {
+      question: "Can a birth chart reveal hidden health patterns?",
+      answer:
+           "Ancient Medical Astrology is based on the observation that planetary configurations may reflect constitutional tendencies, energetic patterns, and recurring wellness themes throughout life. Unlike modern diagnostic machines that examine specific organs or systems, Ancient Medical Astrology studies the individual at a broader constitutional level through birth-time and planetary analysis. By examining planetary relationships, house structures, timing cycles, and astrological signatures, we seek to identify deeper patterns that may influence vitality, recovery tendencies, stress responses, behavioral habits, and overall well-being."
+    },
+    {
+      question: "What makes this approach different?",
+      answer:
+        "Rather than focusing on isolated events, Ancient Medical Astrology studies the individual as a complete system. Physical tendencies, psychological patterns, lifestyle rhythms, environmental influences, and timing cycles are examined together through a unified observational framework."
+    },
+    {
+      question: "Why is observation important?",
+      answer:
+        "Many recurring life challenges follow identifiable patterns. Ancient Medical Astrology seeks to uncover these hidden structures through disciplined observation, allowing greater awareness, preparation, and informed decision-making."
+    },
+    { 
       question: "What will I receive?",
       answer:
         "You will receive a confidential observational report highlighting constitutional tendencies, timing themes, recurring patterns, and structured wellness observations derived through Medical Astrology analysis."
     },
     {
-      question: "Is my information private?",
+      question: "Is my information confidential?",
       answer:
-        "Yes. All birth details, consultation notes, and observational reports remain strictly confidential and are used solely for the purpose of personalized analysis."
+        "Yes. All birth details, consultation notes, and observational reports remain strictly confidential and are used solely for the purpose of personalized analysis and guidance."
     }
-  ]
+  ];
 
   return (
     <section id="faq" className="section-flow py-28 md:py-36">
