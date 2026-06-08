@@ -94,15 +94,16 @@ export function Hero() {
 
             <Reveal immediate delay={160}>
               <h1 className="hero-title font-serif text-[2.35rem] leading-[1.04] text-navy sm:text-[2.65rem] md:text-[3.25rem] lg:text-[3.55rem] xl:text-[3.85rem]">
-                <span className="hero-title-line">Decode The Pattern</span>
-                <span className="hero-title-line hero-title-line--accent">Behind Your Imbalance</span>
+                <span className="hero-title-line">Observe The Pattern</span>
+                <span className="hero-title-line hero-title-line--accent">Behind Your Life</span>
               </h1>
             </Reveal>
 
             <Reveal immediate delay={240}>
               <p className="hero-subtitle type-body-calm mt-7 text-[1.05rem] text-navy/66 md:mt-9 md:text-lg">
-                Root-cause oriented astrological guidance integrating planetary timing, wellness
-                intelligence, and structured observation.
+                Research-driven astromedical observation integrating
+planetary timing, constitutional analysis,
+and structured wellness intelligence.
               </p>
             </Reveal>
 
@@ -157,7 +158,8 @@ export function Hero() {
                 </p>
                 <span className="mb-2 hidden h-px w-8 bg-gold/30 sm:block" aria-hidden />
                 <p className="pb-1 text-[10px] font-medium tracking-[0.22em] text-navy/50 uppercase">
-                  Medical Astrologer & Advisor
+                  S. Raja
+Founder & Research Director
                 </p>
               </div>
             </Reveal>
