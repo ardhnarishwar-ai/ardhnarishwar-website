@@ -1,3 +1,4 @@
+import { KnowledgeCenter } from './components/sections/KnowledgeCenter'
 import { useScrollMotion } from './hooks/useScrollMotion'
 import { Header } from './components/layout/Header'
 import { Footer } from './components/layout/Footer'
@@ -7,7 +8,7 @@ import { About } from './components/sections/About'
 import { Services } from './components/sections/Services'
 import { Process } from './components/sections/Process'
 import { Testimonials } from './components/sections/Testimonials'
-import { AboutRaja } from './components/sections/AboutRaja'
+import { AboutRaja } from './components/sections/AboutSRaja'
 import { Contact } from './components/sections/Contact'
 import { FAQ } from './components/sections/FAQ'
 function App() {
@@ -23,7 +24,8 @@ function App() {
         <Services />
         <Process />
         <Testimonials />
-<AboutRaja />
+<AboutSRaja />
+<KnowledgeCenter />
 <FAQ />
 <Contact />
       </main>
