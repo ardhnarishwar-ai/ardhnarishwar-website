@@ -15,19 +15,51 @@ export function KnowledgeCenter() {
           </p>
         </div>
 
-        <div className="rounded-2xl border border-gold/20 p-8">
-          <h3 className="font-serif text-2xl text-navy mb-4">
-            Coming Soon
-          </h3>
+        <div className="grid md:grid-cols-2 gap-6 mt-12">
 
-          <p className="text-navy/70">
-            Zodiac signs, planetary correspondences, body systems,
-            constitutional frameworks, elemental theory, and traditional
-            medical astrology educational content.
-          </p>
-        </div>
+  <div className="rounded-2xl border border-gold/20 p-8">
+    <h3 className="font-serif text-2xl text-navy mb-3">
+      The Five Elements & Human Constitution
+    </h3>
+    <p className="text-navy/70">
+      Understanding Earth, Water, Fire, Air, and Space as foundational
+      principles influencing structure, vitality, movement,
+      transformation, and awareness.
+    </p>
+  </div>
 
-      </div>
+  <div className="rounded-2xl border border-gold/20 p-8">
+    <h3 className="font-serif text-2xl text-navy mb-3">
+      Planetary Correspondences
+    </h3>
+    <p className="text-navy/70">
+      Exploring traditional relationships between planetary symbolism,
+      constitutional tendencies, timing cycles, and wellness observation.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-gold/20 p-8">
+    <h3 className="font-serif text-2xl text-navy mb-3">
+      Zodiac & Human Body
+    </h3>
+    <p className="text-navy/70">
+      Traditional perspectives connecting zodiac archetypes with
+      anatomical regions, physiological themes, and constitutional
+      observation.
+    </p>
+  </div>
+
+  <div className="rounded-2xl border border-gold/20 p-8">
+    <h3 className="font-serif text-2xl text-navy mb-3">
+      Solar–Lunar Energy Framework
+    </h3>
+    <p className="text-navy/70">
+      Understanding the symbolic influence of solar and lunar cycles in
+      personal rhythms, vitality patterns, and life observation.
+    </p>
+  </div>
+
+</div>
     </section>
   )
 }
