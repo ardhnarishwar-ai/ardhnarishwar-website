@@ -52,11 +52,10 @@ export function FAQ() {
       <div className="mx-auto max-w-5xl px-5 md:px-8 lg:px-10">
         <div className="text-center mb-12">
           <h2 className="font-serif text-4xl md:text-5xl text-navy">
-            Medical Astrology FAQ
+            Ancient Medical Astrology FAQ
           </h2>
           <p className="mt-4 text-navy/70 max-w-3xl mx-auto">
-            Understanding the principles, methodology, and observational
-            framework of Medical Astrology.
+            Understanding the principles, methodology, and observational framework of Ancient Medical Astrology.
           </p>
         </div>
 
