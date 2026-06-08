@@ -9,7 +9,7 @@ import { Process } from './components/sections/Process'
 import { Testimonials } from './components/sections/Testimonials'
 import { AboutRaja } from './components/sections/AboutRaja'
 import { Contact } from './components/sections/Contact'
-
+import { FAQ } from './components/sections/FAQ'
 function App() {
   useScrollMotion()
 
@@ -23,8 +23,9 @@ function App() {
         <Services />
         <Process />
         <Testimonials />
-        <AboutRaja />
-        <Contact />
+<AboutRaja />
+<FAQ />
+<Contact />
       </main>
       <Footer />
     </>
