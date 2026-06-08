@@ -66,12 +66,19 @@ export function AboutRaja() {
 
           <div>
             <Reveal soft delay={80}>
-              <p className="text-xs font-medium tracking-[0.28em] text-gold uppercase">Consultant</p>
+              <p className="text-xs font-medium tracking-[0.28em] text-gold uppercase">Astromedical Research</p>
               <h2 className="mt-4 font-serif text-4xl leading-[1.08] text-navy md:text-5xl lg:text-[3.25rem]">
                 S. Raja
               </h2>
+             <p className="mt-2 text-gold">
+  Founder & Research Director
+</p>
+
+<p className="font-medium text-navy/80"
+  Ardhnarishwar Astromedical Solutions
+</p>
               <p className="mt-3 text-sm font-medium tracking-[0.2em] text-navy/58 uppercase">
-                Medical Astrologer & Pattern Analyst
+                Astromedical Researcher & Advisor
               </p>
             </Reveal>
 
