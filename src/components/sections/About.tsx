@@ -43,11 +43,18 @@ export function About() {
       <div className="relative mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
         <SectionHeading
           revealDelay={SECTION_DELAY}
-          label="Philosophy"
-          title="Where Ancient Observation Meets Structured Wellness Insight"
-          subtitle="Ardhnarishwar Astromedical Solutions bridges classical astrological observation with a clinical, research-oriented lens—designed for discerning individuals seeking intelligent pattern clarity."
+          label="label="Why Observation Matters"
+          title="title="Many Symptoms Are Visible. Patterns Are Not"
+          subtitle="Many health, emotional, and life challenges emerge through interconnected patterns involving constitution, psychology, environment, timing, and recurring life cycles."
         />
-
+<Reveal soft delay={120}>
+  <p className="mx-auto max-w-3xl text-center text-navy/80 leading-relaxed mb-12">
+    While individual events may appear unrelated, recurring themes often reveal
+    deeper constitutional, psychological, and timing-based relationships.
+    Our approach focuses on identifying these hidden structures through
+    disciplined observation and pattern analysis.
+  </p>
+</Reveal>
         <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
           {pillars.map((item, i) => (
             <Reveal key={item.title} soft delay={180 + i * STAGGER}>
