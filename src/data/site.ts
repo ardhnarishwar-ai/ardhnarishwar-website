@@ -88,27 +88,30 @@ export const SERVICES = [
 export const PROCESS_STEPS = [
   {
     step: 1,
-    title: 'Fill Consultation Form',
+    title: 'Private Intake & Data Collection',
     description:
-      'Share birth details, concerns, and observational history through our secure private intake form.',
+      'Collection of birth details, life-history context, wellness observations, and specific areas of inquiry through a confidential intake process.',
   },
+
   {
     step: 2,
-    title: 'Pattern Observation & Chart Study',
+    title: 'Pattern Mapping & Observational Analysis',
     description:
-      'In-depth chart analysis, house mapping, aspect geometry, and multi-layer pattern observation.',
+      'Systematic review of constitutional indicators, planetary timing, psychological themes, environmental influences, and recurring life-cycle patterns.',
   },
+
   {
     step: 3,
-    title: 'Structured Analysis Session',
+    title: 'Clinical Observation Report',
     description:
-      'A focused private session presenting findings with clinical clarity and structured interpretation.',
+      'Preparation of a structured report highlighting observed relationships, recurring signatures, timing windows, and key pattern clusters.',
   },
+
   {
     step: 4,
-    title: 'Personalized Guidance',
+    title: 'Private Consultation & Guidance',
     description:
-      'Actionable timing guidance, lifestyle observation notes, and confidential follow-up recommendations.',
+      'Discussion of findings, observational insights, and practical guidance designed to support awareness, timing decisions, and personal development.',
   },
 ] as const
 
