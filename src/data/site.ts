@@ -48,13 +48,13 @@ export const HERO_PILLARS = [
 
 export const SERVICES = [
   {
-    title: 'Medical Astrology Consultation',
+    title: 'title: 'Astromedical Consultation',
     description:
       'Clinical mapping of planetary patterns against health tendencies, timing windows, and observational wellness markers.',
     icon: 'activity',
   },
   {
-    title: 'Relationship Pattern Reading',
+    title: 'title: 'Relationship Dynamics Analysis',
     description:
       'Structured analysis of relational dynamics, attachment patterns, and compatibility through chart geometry.',
     icon: 'heart',
@@ -72,13 +72,13 @@ export const SERVICES = [
     icon: 'brain',
   },
   {
-    title: 'Planetary Timing Guidance',
+    title: 'title: 'Life Timing & Transition Analysis',
     description:
       'Precise transit and dasha observation for decision windows, recovery phases, and strategic life transitions.',
     icon: 'clock',
   },
   {
-    title: 'Wellness Observation Reports',
+    title: 'Constitutional Wellness Reports',
     description:
       'Documented pattern reports integrating lifestyle observation, planetary timing, and structured wellness notes.',
     icon: 'file',
@@ -87,40 +87,44 @@ export const SERVICES = [
 
 export const PROCESS_STEPS = [
   {
-    step: 1,
-    title: 'Private Intake & Data Collection',
-    description:
-      'Collection of birth details, life-history context, wellness observations, and specific areas of inquiry through a confidential intake process.',
-  },
+    {
+  step: 1,
+  title: 'Private Intake & Data Collection',
+  description:
+    'Confidential collection of birth details, personal history, constitutional observations, and primary areas of inquiry.',
+},
 
   {
-    step: 2,
-    title: 'Pattern Mapping & Observational Analysis',
-    description:
-      'Systematic review of constitutional indicators, planetary timing, psychological themes, environmental influences, and recurring life-cycle patterns.',
-  },
+    {
+  step: 2,
+  title: 'Pattern Mapping & Astromedical Analysis',
+  description:
+    'Structured review of constitutional indicators, planetary symbolism, life patterns, timing cycles, and wellness observations.',
+},
 
   {
-    step: 3,
-    title: 'Clinical Observation Report',
-    description:
-      'Preparation of a structured report highlighting observed relationships, recurring signatures, timing windows, and key pattern clusters.',
-  },
+    {
+  step: 3,
+  title: 'Observational Intelligence Report',
+  description:
+    'Preparation of a detailed report highlighting recurring signatures, constitutional tendencies, timing themes, and key observations.',
+},
 
   {
-    step: 4,
-    title: 'Private Consultation & Guidance',
-    description:
-      'Discussion of findings, observational insights, and practical guidance designed to support awareness, timing decisions, and personal development.',
-  },
+    {
+  step: 4,
+  title: 'Private Consultation & Strategic Guidance',
+  description:
+    'One-to-one confidential consultation discussing findings, practical recommendations, and personalized guidance frameworks.',
+},
 ] as const
 
 export const TESTIMONIALS = [
   {
     quote:
       'The consultation felt like a private wellness institute review—not generic predictions. Every insight was structured, calm, and deeply observational.',
-    author: 'Private Client',
-    role: 'Executive Wellness Consultation',
+    author: 'Executive Client'
+role: 'Personal Advisory Session',
   },
   {
     quote:
