@@ -66,7 +66,7 @@ export function AboutRaja() {
 
           <div>
             <Reveal soft delay={80}>
-              <p className="text-xs font-medium tracking-[0.28em] text-gold uppercase">Astromedical Research</p>
+              <p className="text-xs font-medium tracking-[0.28em] text-gold uppercase">From The Founder's Desk</p>
               <h2 className="mt-4 font-serif text-4xl leading-[1.08] text-navy md:text-5xl lg:text-[3.25rem]">
                 S. Raja
               </h2>
@@ -78,16 +78,33 @@ export function AboutRaja() {
   Ardhnarishwar Astromedical Solutions
 </p>
               <p className="mt-3 text-sm font-medium tracking-[0.2em] text-navy/58 uppercase">
-                Astromedical Researcher & Advisor
+                Constitutional Researcher & Observer
               </p>
             </Reveal>
 
             <Reveal soft delay={160}>
               <p className="mt-8 text-base leading-[1.82] text-navy/66 md:text-lg">
-                S. Raja offers private astromedical consultations at the intersection of ancient
-                observational science and modern wellness intelligence. His practice is defined by
-                structured chart study, root-cause pattern analysis, and confidential guidance for
-                clients who expect clinical clarity—not generic spiritual messaging.
+                Every journey begins with a question.
+
+Mine began with a simple observation:
+
+Why do individuals with similar symptoms often experience entirely different outcomes?
+
+Over years of observation, I found myself drawn not toward symptoms, but toward patterns.
+
+Symptoms change.
+
+Circumstances change.
+
+Yet constitutional tendencies often leave recurring signatures throughout life.
+
+This search eventually evolved into Ardhnarishwar Astromedical Solutions — a research-oriented framework dedicated to constitutional observation, wellness intelligence, and pattern recognition.
+
+My work is not to predict events.
+
+My work is to observe the constitutional patterns from which events emerge.
+
+— S. Raja
               </p>
             </Reveal>
 
