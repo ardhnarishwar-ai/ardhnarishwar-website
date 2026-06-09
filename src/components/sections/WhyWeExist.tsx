@@ -3,12 +3,14 @@ export function WhyWeExist() {
   return (
     <section id="purpose">
 
-      <h2>The Question Behind Ardhnarishwar</h2>
+      <h2>
+  The Question Behind Ardhnarishwar
+</h2>
 
-      <p>
-        We did not begin with an answer.
-        We began with a question.
-      </p>
+<p>
+  We did not begin with an answer.
+  We began with a question.
+</p>
 
       <div>
 
