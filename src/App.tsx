@@ -1,4 +1,5 @@
 import { Timeline } from './components/sections/Timeline'
+import { WhyWeExist } from './components/sections/WhyWeExist'
 import { KnowledgeCenter } from './components/sections/KnowledgeCenter'
 import { useScrollMotion } from './hooks/useScrollMotion'
 import { Header } from './components/layout/Header'
@@ -27,6 +28,7 @@ function App() {
         <Testimonials />
 <AboutSRaja />
         <Timeline />
+        <WhyWeExist />
 <KnowledgeCenter />
 <FAQ />
 <Contact />
