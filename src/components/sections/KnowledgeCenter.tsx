@@ -14,7 +14,26 @@ export function KnowledgeCenter() {
             and holistic wellness observation.
           </p>
         </div>
+<div className="rounded-2xl border border-gold/20 p-8 mb-10">
 
+  <h3>Foundation of Observation</h3>
+
+  <p>
+    Observation comes before interpretation.
+  </p>
+
+  <p>
+    The purpose of knowledge is not merely to collect information,
+    but to recognize recurring constitutional patterns.
+  </p>
+
+  <p>
+    Every framework in this knowledge centre is presented
+    as a tool for observation, reflection,
+    and deeper understanding.
+  </p>
+
+</div>
         <div className="grid md:grid-cols-2 gap-6 mt-12">
 
   <div className="rounded-2xl border border-gold/20 p-8">
