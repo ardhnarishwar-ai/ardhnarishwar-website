@@ -53,8 +53,8 @@ export function Contact() {
         <SectionHeading
           revealDelay={SECTION_DELAY}
           label="Private Inquiry"
-          title="Begin Your Consultation"
-          subtitle="All engagements are confidential. Complete the secure intake form or reach out directly."
+          title="Begin Your Observation Journey"
+          subtitle="All engagements are confidential. Begin with a confidential intake form designed to understand your constitutional patterns, timing cycles, and areas of inquiry."
         />
 
         <div className="mb-16 grid gap-7 md:grid-cols-3 md:gap-8">
@@ -84,8 +84,8 @@ export function Contact() {
             <LuxuryCard variant="ivory" className="p-8 md:p-10 lg:p-11">
               <h3 className="font-serif text-2xl text-navy md:text-3xl">Consultation Inquiry</h3>
               <p className="mt-4 text-sm leading-[1.75] text-navy/62">
-                Submit your details below. You will be directed to our secure Google Form to
-                complete birth data and consultation preferences.
+                Submit your details below.
+You will be directed to our confidential intake form where you may share relevant background information, areas of inquiry, and observational objectives.
               </p>
 
               <form onSubmit={handleSubmit} className="mt-9 space-y-5">
@@ -114,12 +114,12 @@ export function Contact() {
                     className="input-luxury w-full rounded-xl px-4 py-3.5 text-sm text-navy"
                   >
                     <option value="">Select consultation type</option>
-                    <option>Medical Astrology Consultation</option>
-                    <option>Relationship Pattern Reading</option>
-                    <option>Career & Life Direction</option>
-                    <option>Psychological Pattern Analysis</option>
-                    <option>Planetary Timing Guidance</option>
-                    <option>Wellness Observation Report</option>
+                    <option>Constitutional Observation</option>
+                    <option>Pattern Intelligence Review</option>
+                    <option>Life Pattern Analysis</option>
+                    <option>Psychological Observation</option>
+                    <option>Timing Cycle Assessment</option>
+                    <option>Private Research Consultation</option>
                   </select>
                 </div>
                 <div>
@@ -162,7 +162,7 @@ export function Contact() {
                   Secure Intake
                 </p>
                 <p className="mt-1.5 font-serif text-xl text-ivory md:text-2xl">
-                  Official Consultation Form
+                  Official Intake Form
                 </p>
               </div>
               <FormEmbed />
