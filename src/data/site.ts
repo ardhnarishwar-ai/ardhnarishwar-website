@@ -49,20 +49,21 @@ export const HERO_PILLARS = [
 export const SERVICES = [
   {
     title: 'Constitutional Observation',
-    description:
-      'Clinical mapping of planetary patterns against health tendencies, timing windows, and observational wellness markers.',
-    icon: 'activity',
+description:
+'Structured observation of recurring constitutional indicators, wellness tendencies, and timing cycles across life patterns.'
   },
   {
     title: 'Relationship Pattern Review',
     description:
-      'Structured analysis of relational dynamics, attachment patterns, and compatibility through chart geometry.',
+      'description:
+'Structured analysis of relational dynamics, attachment patterns, communication tendencies, and recurring interaction themes.',
     icon: 'heart',
   },
   {
     title: 'Life Pattern Assessment',
     description:
-      'Directional insight into vocation, reputation cycles, and life-path alignment through house and planetary study.',
+      'description:
+'Directional insight into vocation, reputation cycles, decision patterns, and long-term life development trends.',
     icon: 'compass',
   },
   {
@@ -74,13 +75,15 @@ export const SERVICES = [
   {
     title: 'Timing Cycle Assessment',
     description:
-      'Precise transit and dasha observation for decision windows, recovery phases, and strategic life transitions.',
+      'description:
+'Structured timing-cycle assessment highlighting decision windows, transition phases, recovery periods, and recurring life rhythms.',
     icon: 'clock',
   },
   {
     title: 'Constitutional Intelligence Report',
     description:
-      'Documented pattern reports integrating lifestyle observation, planetary timing, and structured wellness notes.',
+      'description:
+'Documented pattern report integrating constitutional observation, timing cycles, lifestyle indicators, and recurring behavioral signatures.',
     icon: 'file',
   },
 ] as const
