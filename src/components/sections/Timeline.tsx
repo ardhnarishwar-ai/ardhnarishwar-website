@@ -33,7 +33,7 @@ export function Timeline() {
 
       <div>
         <h3>2026</h3>
-        <p>Ardhnarishwar Astromedical Solutions</p>
+        <p>Ardhnarishwar Observatory</p>
         <p>
           Creation of a research-oriented initiative
           focused on constitutional observation,
@@ -52,9 +52,18 @@ export function Timeline() {
       </div>
 
       <p>
-        Every observatory begins with a question.
-        Ardhnarishwar began with one observation.
-      </p>
+Every observatory begins with a question.
+
+Ardhnarishwar began with a simple observation:
+
+Similar symptoms often produce different outcomes.
+
+That observation led to years of studying
+constitutional patterns, timing cycles,
+and recurring signatures hidden beneath symptoms.
+
+The journey continues.
+</p>
     </section>
   )
 }
