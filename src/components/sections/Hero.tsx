@@ -94,16 +94,22 @@ export function Hero() {
 
             <Reveal immediate delay={160}>
               <h1 className="hero-title font-serif text-[2.35rem] leading-[1.04] text-navy sm:text-[2.65rem] md:text-[3.25rem] lg:text-[3.55rem] xl:text-[3.85rem]">
-                <span className="hero-title-line">Observe The Pattern</span>
-                <span className="hero-title-line hero-title-line--accent">Behind Your Life</span>
+                <span className="hero-title-line">
+Every Symptom
+Has A Pattern
+</span>
+
+<span className="hero-title-line hero-title-line--accent">
+Every Pattern
+Leaves A Signature
+</span>
               </h1>
             </Reveal>
 
             <Reveal immediate delay={240}>
               <p className="hero-subtitle type-body-calm mt-7 text-[1.05rem] text-navy/66 md:mt-9 md:text-lg">
-                Research-driven astromedical observation integrating
-planetary timing, constitutional analysis,
-and structured wellness intelligence.
+                A research-led observatory exploring constitutional patterns,
+planetary timing, and deeper human wellness intelligence.
               </p>
             </Reveal>
 
