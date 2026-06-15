@@ -76,6 +76,51 @@ export function About() {
             without noise, and transformation without spectacle.
           </p>
         </Reveal>
+        <div className="rounded-2xl border border-gold/20 p-8 mt-12 text-center">
+  <h3 className="font-serif text-2xl text-navy mb-4">
+    What Makes Ardhnarishwar Different
+  </h3>
+
+  <div className="grid gap-6 md:grid-cols-2 mt-8">
+
+    <div className="rounded-xl border border-gold/20 p-6">
+      <h4 className="font-serif text-xl text-navy mb-3">
+        Observation First
+      </h4>
+      <p>
+        We begin with observation before interpretation.
+      </p>
+    </div>
+
+    <div className="rounded-xl border border-gold/20 p-6">
+      <h4 className="font-serif text-xl text-navy mb-3">
+        Constitution Before Symptoms
+      </h4>
+      <p>
+        Patterns are explored at the constitutional level rather than through isolated symptoms alone.
+      </p>
+    </div>
+
+    <div className="rounded-xl border border-gold/20 p-6">
+      <h4 className="font-serif text-xl text-navy mb-3">
+        Timing Matters
+      </h4>
+      <p>
+        Human experiences often unfold through recurring cycles and timing patterns.
+      </p>
+    </div>
+
+    <div className="rounded-xl border border-gold/20 p-6">
+      <h4 className="font-serif text-xl text-navy mb-3">
+        Research-Led Approach
+      </h4>
+      <p>
+        Built on observation, documentation, and long-term pattern study.
+      </p>
+    </div>
+
+  </div>
+</div>
       </div>
     </section>
   )
