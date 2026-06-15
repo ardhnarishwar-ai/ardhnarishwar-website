@@ -66,7 +66,9 @@ export function AboutRaja() {
 
           <div>
             <Reveal soft delay={80}>
-              <p className="text-xs font-medium tracking-[0.28em] text-gold uppercase">From The Founder's Desk</p>
+           <p className="text-xs font-medium tracking-[0.20em] text-gold uppercase">
+The Observer Behind Ardhnarishwar
+</p>
               <h2 className="mt-4 font-serif text-4xl leading-[1.08] text-navy md:text-5xl lg:text-[3.25rem]">
                 S. Raja
               </h2>
@@ -78,7 +80,7 @@ export function AboutRaja() {
   Ardhnarishwar Astromedical Solutions
 </p>
               <p className="mt-3 text-sm font-medium tracking-[0.2em] text-navy/58 uppercase">
-                Constitutional Researcher & Observer
+                Founder • Observer • Constitutional Researcher
               </p>
             </Reveal>
 
@@ -98,8 +100,10 @@ Circumstances change.
 
 Yet constitutional tendencies often leave recurring signatures throughout life.
 
-This search eventually evolved into Ardhnarishwar Astromedical Solutions — a research-oriented framework dedicated to constitutional observation, wellness intelligence, and pattern recognition.
-
+This search gradually evolved into Ardhnarishwar —
+a private observatory dedicated to constitutional observation,
+pattern intelligence, planetary timing,
+and the study of recurring signatures across human life.
 My work is not to predict events.
 
 My work is to observe the constitutional patterns from which events emerge.
