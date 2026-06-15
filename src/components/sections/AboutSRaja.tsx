@@ -10,7 +10,7 @@ const traits = [
   {
     icon: BookOpen,
     title: 'Research-Driven Approach',
-    text: 'Multi-chart study, aspect geometry, and pattern synthesis drawn from clinical astrological methodology.',
+    text: 'Multi-layer pattern study, constitutional analysis, and recurring-signature synthesis drawn from long-term observational research.',
   },
   {
     icon: Eye,
@@ -43,7 +43,7 @@ export function AboutRaja() {
               <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-luxury-lg">
                 <LazyImage
                   src="/images/portrait.png"
-                  alt="S. Raja — Medical Astrologer & Pattern Analyst"
+                  alt="S. Raja - Constitutional Observer & Pattern Analyst"
                   className="rounded-2xl portrait-warm"
                 />
                 <div
@@ -77,7 +77,7 @@ The Observer Behind Ardhnarishwar
 </p>
 
 <p className="font-medium text-navy/80"
-  Ardhnarishwar Astromedical Solutions
+  Ardhnarishwar Observatory
 </p>
               <p className="mt-3 text-sm font-medium tracking-[0.2em] text-navy/58 uppercase">
                 Founder • Observer • Constitutional Researcher
@@ -102,7 +102,7 @@ Yet constitutional tendencies often leave recurring signatures throughout life.
 
 This search gradually evolved into Ardhnarishwar —
 a private observatory dedicated to constitutional observation,
-pattern intelligence, planetary timing,
+pattern intelligence, constitutional indicators,
 and the study of recurring signatures across human life.
 My work is not to predict events.
 
