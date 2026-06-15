@@ -48,13 +48,13 @@ export const HERO_PILLARS = [
 
 export const SERVICES = [
   {
-    title: 'title: 'Constitutional Observation',
+    title: 'Constitutional Observation',
     description:
       'Clinical mapping of planetary patterns against health tendencies, timing windows, and observational wellness markers.',
     icon: 'activity',
   },
   {
-    title: 'title: 'Relationship Pattern Review',
+    title: 'Relationship Pattern Review',
     description:
       'Structured analysis of relational dynamics, attachment patterns, and compatibility through chart geometry.',
     icon: 'heart',
@@ -72,7 +72,7 @@ export const SERVICES = [
     icon: 'brain',
   },
   {
-    title: 'title: 'Timing Cycle Assessment',
+    title: 'Timing Cycle Assessment',
     description:
       'Precise transit and dasha observation for decision windows, recovery phases, and strategic life transitions.',
     icon: 'clock',
