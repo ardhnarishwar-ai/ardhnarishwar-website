@@ -14,8 +14,10 @@ export function Process() {
         <SectionHeading
           revealDelay={SECTION_DELAY}
           label="The Method"
-          title="A Structured Four-Step Consultation Process"
-          subtitle="From private intake to personalized guidance—every phase is designed for clarity, confidentiality, and pattern precision."
+
+title="A Structured Four-Step Observational Framework"
+
+subtitle="From private intake to personalized insights—each phase is designed for clarity, confidentiality, and thoughtful observation."
         />
 
         <div className="relative max-w-4xl md:mx-auto">
