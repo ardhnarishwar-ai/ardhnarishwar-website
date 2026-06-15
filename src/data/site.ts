@@ -102,7 +102,7 @@ export const PROCESS_STEPS = [
   step: 2,
   title: 'Pattern Mapping & Constitutional Review',
   description:
-    'Structured review of constitutional indicators, planetary symbolism, life patterns, timing cycles, and wellness observations.',
+    'Structured review of constitutional indicators, recurring patterns, timing cycles, behavioral signatures, and observational findings.',
 },
 
   {
