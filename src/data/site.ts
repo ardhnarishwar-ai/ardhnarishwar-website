@@ -55,14 +55,12 @@ description:
   {
     title: 'Relationship Pattern Review',
     description:
-      'description:
 'Structured analysis of relational dynamics, attachment patterns, communication tendencies, and recurring interaction themes.',
     icon: 'heart',
   },
   {
     title: 'Life Pattern Assessment',
     description:
-      'description:
 'Directional insight into vocation, reputation cycles, decision patterns, and long-term life development trends.',
     icon: 'compass',
   },
@@ -75,14 +73,12 @@ description:
   {
     title: 'Timing Cycle Assessment',
     description:
-      'description:
 'Structured timing-cycle assessment highlighting decision windows, transition phases, recovery periods, and recurring life rhythms.',
     icon: 'clock',
   },
   {
     title: 'Constitutional Intelligence Report',
     description:
-      'description:
 'Documented pattern report integrating constitutional observation, timing cycles, lifestyle indicators, and recurring behavioral signatures.',
     icon: 'file',
   },
