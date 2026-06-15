@@ -14,13 +14,30 @@ export function Shakti() {
     multiple interacting layers:
   </p>
 
-  <ul>
-    <li>Physical Constitution</li>
-    <li>Mental Constitution</li>
-    <li>Emotional Constitution</li>
-    <li>Behavioral Constitution</li>
-    <li>Timing Constitution</li>
-  </ul>
+  <div>
+  <h3>Physical Constitution</h3>
+  <p>Body structure, vitality, tendencies, and physical expression.</p>
+</div>
+
+<div>
+  <h3>Mental Constitution</h3>
+  <p>Thought patterns, perception, focus, and cognitive tendencies.</p>
+</div>
+
+<div>
+  <h3>Emotional Constitution</h3>
+  <p>Emotional responses, sensitivity, resilience, and expression.</p>
+</div>
+
+<div>
+  <h3>Behavioral Constitution</h3>
+  <p>Habits, actions, decision patterns, and lifestyle tendencies.</p>
+</div>
+
+<div>
+  <h3>Timing Constitution</h3>
+  <p>Life cycles, timing patterns, and constitutional rhythms.</p>
+</div>
 
 </section>
   )
