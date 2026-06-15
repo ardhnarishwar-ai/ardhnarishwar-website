@@ -1,7 +1,7 @@
 export const BRAND = {
   name: 'Ardhnarishwar',
-  tagline: 'Astromedical Solutions',
-  fullName: 'Ardhnarishwar Astromedical Solutions',
+  tagline: 'Constitutional Observation & Pattern Intelligence',
+fullName: 'Ardhnarishwar Observatory',
   values: ['Healing', 'Guidance', 'Transformation', 'Insight', 'Balance', 'Well-being'],
 } as const
 
@@ -30,7 +30,7 @@ export const LINKS = {
   instagram: 'https://instagram.com/intuitivesraja',
   googleBusiness: 'https://share.google/b1qYkSeRUTgPNHxMc',
   /** Replace with full Google Maps place URL from your Business Profile */
-  googleMaps: 'https://maps.google.com/?q=Ardhnarishwar+Astromedical+Solutions',
+  googleMaps: 'https://maps.google.com/?q=Ardhnarishwar+Constitutional+Observatory',
   consultationForm: 'https://forms.gle/iNK38AsikdRCn5GB8',
   /** Optional — set URL to enable; omit from schema when empty */
   youtube: '',
@@ -48,37 +48,37 @@ export const HERO_PILLARS = [
 
 export const SERVICES = [
   {
-    title: 'title: 'Astromedical Consultation',
+    title: 'title: 'Constitutional Observation',
     description:
       'Clinical mapping of planetary patterns against health tendencies, timing windows, and observational wellness markers.',
     icon: 'activity',
   },
   {
-    title: 'title: 'Relationship Dynamics Analysis',
+    title: 'title: 'Relationship Pattern Review',
     description:
       'Structured analysis of relational dynamics, attachment patterns, and compatibility through chart geometry.',
     icon: 'heart',
   },
   {
-    title: 'Career & Life Direction Analysis',
+    title: 'Life Pattern Assessment',
     description:
       'Directional insight into vocation, reputation cycles, and life-path alignment through house and planetary study.',
     icon: 'compass',
   },
   {
-    title: 'Psychological & Emotional Pattern Analysis',
+    title: 'Psychological Observation',
     description:
       'Root-cause oriented reading of emotional landscapes, instinctual responses, and psychological pattern signatures.',
     icon: 'brain',
   },
   {
-    title: 'title: 'Life Timing & Transition Analysis',
+    title: 'title: 'Timing Cycle Assessment',
     description:
       'Precise transit and dasha observation for decision windows, recovery phases, and strategic life transitions.',
     icon: 'clock',
   },
   {
-    title: 'Constitutional Wellness Reports',
+    title: 'Constitutional Intelligence Report',
     description:
       'Documented pattern reports integrating lifestyle observation, planetary timing, and structured wellness notes.',
     icon: 'file',
@@ -97,7 +97,7 @@ export const PROCESS_STEPS = [
   {
     {
   step: 2,
-  title: 'Pattern Mapping & Astromedical Analysis',
+  title: 'Pattern Mapping & Constitutional Review',
   description:
     'Structured review of constitutional indicators, planetary symbolism, life patterns, timing cycles, and wellness observations.',
 },
@@ -113,7 +113,7 @@ export const PROCESS_STEPS = [
   {
     {
   step: 4,
-  title: 'Private Consultation & Strategic Guidance',
+  title: 'Private Consultation & Observational Insights',
   description:
     'One-to-one confidential consultation discussing findings, practical recommendations, and personalized guidance frameworks.',
 },
@@ -128,7 +128,7 @@ role: 'Personal Advisory Session',
   },
   {
     quote:
-      'S. Raja decoded patterns I had never articulated. The planetary timing guidance helped me align decisions with remarkable clarity.',
+      'S. Raja decoded patterns I had never articulated. The timing-cycle observations helped me align decisions with remarkable clarity.',
     author: 'Confidential Client',
     role: 'Career & Life Direction',
   },
@@ -136,6 +136,6 @@ role: 'Personal Advisory Session',
     quote:
       'Research-oriented, discreet, and intelligent. The relationship pattern reading revealed dynamics I could finally understand and work with.',
     author: 'Anonymous Client',
-    role: 'Relationship Pattern Analysis',
+    role: 'Relationship Pattern Review',
   },
 ] as const
