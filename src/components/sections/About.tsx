@@ -44,7 +44,7 @@ export function About() {
         <SectionHeading
           revealDelay={SECTION_DELAY}
           label="label="Why Observation Matters"
-          title="title="Many Symptoms Are Visible. Patterns Are Not"
+          title="Many Symptoms Are Visible. Patterns Are Not"
           subtitle="Many health, emotional, and life challenges emerge through interconnected patterns involving constitution, psychology, environment, timing, and recurring life cycles."
         />
 <Reveal soft delay={120}>
