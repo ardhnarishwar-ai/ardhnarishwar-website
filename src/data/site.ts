@@ -86,7 +86,7 @@ description:
 
 export const PROCESS_STEPS = [
   {
-    {
+    
   step: 1,
   title: 'Private Intake & Data Collection',
   description:
@@ -94,7 +94,7 @@ export const PROCESS_STEPS = [
 },
 
   {
-    {
+    
   step: 2,
   title: 'Pattern Mapping & Constitutional Review',
   description:
@@ -102,7 +102,7 @@ export const PROCESS_STEPS = [
 },
 
   {
-    {
+    
   step: 3,
   title: 'Observational Intelligence Report',
   description:
@@ -110,7 +110,7 @@ export const PROCESS_STEPS = [
 },
 
   {
-    {
+    
   step: 4,
   title: 'Private Consultation & Observational Insights',
   description:
