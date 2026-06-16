@@ -122,7 +122,7 @@ export const TESTIMONIALS = [
   {
     quote:
       'The consultation felt like a private wellness institute review—not generic predictions. Every insight was structured, calm, and deeply observational.',
-    author: 'Executive Client'
+    author: 'Executive Client',
 role: 'Personal Advisory Session',
   },
   {
