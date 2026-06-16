@@ -131,7 +131,9 @@ My work is to observe the constitutional patterns from which events emerge.
 
             <Reveal soft delay={560}>
               <div className="mt-12">
-                <Button href={LINKS.consultationForm}>Request Private Consultation</Button>
+                <Button href={LINKS.consultationForm}>
+  Request Private Consultation
+</Button>
               </div>
             </Reveal>
           </div>
