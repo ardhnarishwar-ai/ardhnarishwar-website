@@ -19,7 +19,7 @@ function App() {
 
   return (
     <>
-      <Seo />
+      {/* <Seo /> */}
       <Header />
       <main>
         <Hero />
