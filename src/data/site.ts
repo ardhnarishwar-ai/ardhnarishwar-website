@@ -50,7 +50,8 @@ export const SERVICES = [
   {
     title: 'Constitutional Observation',
 description:
-'Structured observation of recurring constitutional indicators, wellness tendencies, and timing cycles across life patterns.'
+'Structured observation of recurring constitutional indicators, wellness tendencies, and timing cycles across life patterns.',
+ icon: 'eye',
   },
   {
     title: 'Relationship Pattern Review',
