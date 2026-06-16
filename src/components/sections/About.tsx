@@ -43,7 +43,7 @@ export function About() {
       <div className="relative mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
         <SectionHeading
           revealDelay={SECTION_DELAY}
-          label="label="Why Observation Matters"
+          label="Why Observation Matters"
           title="Many Symptoms Are Visible. Patterns Are Not"
           subtitle="Many health, emotional, and life challenges emerge through interconnected patterns involving constitution, psychology, environment, timing, and recurring life cycles."
         />
