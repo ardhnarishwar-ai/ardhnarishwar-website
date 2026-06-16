@@ -27,7 +27,7 @@ function App() {
         <Services />
         <Process />
         <Testimonials />
-<AboutSRaja />
+{/* <AboutSRaja /> */}
 <Timeline />
 <WhyWeExist />
 <Shakti />
