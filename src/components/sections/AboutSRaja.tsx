@@ -76,7 +76,7 @@ The Observer Behind Ardhnarishwar
   Founder & Research Director
 </p>
 
-<p className="font-medium text-navy/80"
+<p className="font-medium text-navy/80">
   Ardhnarishwar Observatory
 </p>
               <p className="mt-3 text-sm font-medium tracking-[0.2em] text-navy/58 uppercase">
