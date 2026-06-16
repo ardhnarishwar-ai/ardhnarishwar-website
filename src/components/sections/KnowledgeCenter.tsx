@@ -7,7 +7,6 @@ export function KnowledgeCenter() {
           <h2 className="font-serif text-4xl md:text-5xl text-navy">
             Ancient Medical Astrology Knowledge Centre
           </h2>
-
           <p className="mt-4 text-navy/70 max-w-3xl mx-auto">
             Educational resources exploring the traditional relationship
             between astrology, constitutional tendencies, planetary symbolism,
