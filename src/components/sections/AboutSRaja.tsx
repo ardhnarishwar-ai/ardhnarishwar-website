@@ -31,7 +31,7 @@ const traits = [
 
 const STAGGER = 80
 
-export function AboutRaja() {
+export function AboutSRaja() {
   return (
     <section id="raja" className="section-flow section-lazy relative py-28 md:py-36 lg:py-40">
       <SectionAtmosphere variant="warm" position="bottom" />
