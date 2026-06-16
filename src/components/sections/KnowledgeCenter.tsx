@@ -76,9 +76,10 @@ export function KnowledgeCenter() {
       Understanding the symbolic influence of solar and lunar cycles in
       personal rhythms, vitality patterns, and life observation.
     </p>
-  </div>
-
-</div>
-    </section>
-  )
+  
+</div>   {/* grid */}
+</div>   {/* mx-auto wrapper */}
+</section>
+)
 }
+
