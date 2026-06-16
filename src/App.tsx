@@ -5,7 +5,7 @@ import { KnowledgeCenter } from './components/sections/KnowledgeCenter'
 
 import { Header } from './components/layout/Header'
 import { Footer } from './components/layout/Footer'
-import { Seo } from './components/Seo'
+
 import { Hero } from './components/sections/Hero'
 import { About } from './components/sections/About'
 import { Services } from './components/sections/Services'
