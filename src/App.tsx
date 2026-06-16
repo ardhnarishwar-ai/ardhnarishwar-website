@@ -2,7 +2,7 @@ import { Timeline } from './components/sections/Timeline'
 import { Shakti } from './components/sections/Shakti'
 import { WhyWeExist } from './components/sections/WhyWeExist'
 import { KnowledgeCenter } from './components/sections/KnowledgeCenter'
-import { useScrollMotion } from './hooks/useScrollMotion'
+
 import { Header } from './components/layout/Header'
 import { Footer } from './components/layout/Footer'
 import { Seo } from './components/Seo'
@@ -11,7 +11,7 @@ import { About } from './components/sections/About'
 import { Services } from './components/sections/Services'
 import { Process } from './components/sections/Process'
 import { Testimonials } from './components/sections/Testimonials'
-import { AboutSRaja } from './components/sections/AboutSRaja'
+
 import { Contact } from './components/sections/Contact'
 import { FAQ } from './components/sections/FAQ'
 function App() {
