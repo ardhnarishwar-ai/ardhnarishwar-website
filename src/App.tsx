@@ -15,7 +15,7 @@ import { AboutSRaja } from './components/sections/AboutSRaja'
 import { Contact } from './components/sections/Contact'
 import { FAQ } from './components/sections/FAQ'
 function App() {
-  useScrollMotion()
+  // useScrollMotion()
 
   return (
     <>
