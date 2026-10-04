@@ -3,6 +3,7 @@ import {
   Brain,
   Clock,
   Compass,
+  Eye,
   FileText,
   Heart,
   type LucideIcon,
@@ -16,6 +17,7 @@ import { SectionHeading } from '../ui/SectionHeading'
 
 const iconMap: Record<string, LucideIcon> = {
   activity: Activity,
+  eye: Eye,
   heart: Heart,
   compass: Compass,
   brain: Brain,
