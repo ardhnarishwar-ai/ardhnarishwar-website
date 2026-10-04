@@ -967,3 +967,58 @@
     grid-template-rows: 1fr;
   }
 }
+
+
+/* Editorial institutional redesign — first pass */
+.editorial-hero {
+  border-bottom: 1px solid rgba(10,17,40,.08);
+}
+.editorial-kicker,
+.editorial-footer-label {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: rgba(10,17,40,.46);
+}
+.editorial-hero-title {
+  max-width: 11ch;
+  font-family: var(--font-serif);
+  font-size: clamp(3rem, 6.2vw, 5.7rem);
+  line-height: .96;
+  letter-spacing: -.018em;
+  color: #0a1128;
+}
+.editorial-hero-title span {
+  display: block;
+  color: #8b6914;
+}
+.editorial-hero-copy {
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+  line-height: 1.8;
+  color: rgba(10,17,40,.62);
+}
+.editorial-hero-media {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: #f5f5f2;
+}
+.editorial-hero-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.editorial-text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: .9rem;
+  color: rgba(10,17,40,.7);
+  transition: color .3s ease;
+}
+.editorial-text-link:hover { color: #b8860b; }
+.editorial-section { border-top: 1px solid rgba(10,17,40,.08); }
+.editorial-footer a { transition: color .25s ease; }
+@media (max-width: 640px) {
+  .editorial-hero-title { max-width: 12ch; }
+}
