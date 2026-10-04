@@ -1,84 +1,29 @@
 export function KnowledgeCenter() {
+  const topics = [
+    ['Five Elements & Human Constitution', 'Earth, Water, Fire, Air, and Space as traditional principles for observing structure, vitality, movement, transformation, and awareness.'],
+    ['Planetary Correspondences', 'Traditional relationships between planetary symbolism, constitutional tendencies, timing cycles, and wellness observation.'],
+    ['Zodiac & Human Body', 'Traditional perspectives connecting zodiac archetypes with anatomical regions and constitutional themes.'],
+    ['Solar–Lunar Framework', 'Symbolic solar and lunar cycles considered alongside personal rhythms, vitality patterns, and life observation.'],
+  ]
+
   return (
-    <section id="knowledge" className="section-flow py-28 md:py-36">
-      <div className="mx-auto max-w-5xl px-5 md:px-8 lg:px-10">
-
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl md:text-5xl text-navy">
-            Ancient Medical Astrology Knowledge Centre
-          </h2>
-          <p className="mt-4 text-navy/70 max-w-3xl mx-auto">
-            Educational resources exploring the traditional relationship
-            between astrology, constitutional tendencies, planetary symbolism,
-            and holistic wellness observation.
-          </p>
+    <section id="knowledge" className="editorial-section bg-white">
+      <div className="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32 lg:px-10">
+        <div className="max-w-3xl">
+          <p className="editorial-kicker">Knowledge centre</p>
+          <h2 className="mt-5 font-serif text-4xl leading-tight text-navy md:text-5xl">A place to study the framework.</h2>
+          <p className="mt-5 text-base leading-8 text-navy/58">Educational material presented for observation, reflection, and deeper understanding—not as a substitute for medical diagnosis or treatment.</p>
         </div>
-<div className="rounded-2xl border border-gold/20 p-8 mb-10">
-
-  <h3>Foundation of Observation</h3>
-
-  <p>
-    Observation comes before interpretation.
-  </p>
-
-  <p>
-    The purpose of knowledge is not merely to collect information,
-    but to recognize recurring constitutional patterns.
-  </p>
-
-  <p>
-    Every framework in this knowledge centre is presented
-    as a tool for observation, reflection,
-    and deeper understanding.
-  </p>
-
-</div>
-        <div className="grid md:grid-cols-2 gap-6 mt-12">
-
-  <div className="rounded-2xl border border-gold/20 p-8">
-    <h3 className="font-serif text-2xl text-navy mb-3">
-      The Five Elements & Human Constitution
-    </h3>
-    <p className="text-navy/70">
-      Understanding Earth, Water, Fire, Air, and Space as foundational
-      principles influencing structure, vitality, movement,
-      transformation, and awareness.
-    </p>
-  </div>
-
-  <div className="rounded-2xl border border-gold/20 p-8">
-    <h3 className="font-serif text-2xl text-navy mb-3">
-      Planetary Correspondences
-    </h3>
-    <p className="text-navy/70">
-      Exploring traditional relationships between planetary symbolism,
-      constitutional tendencies, timing cycles, and wellness observation.
-    </p>
-  </div>
-
-  <div className="rounded-2xl border border-gold/20 p-8">
-    <h3 className="font-serif text-2xl text-navy mb-3">
-      Zodiac & Human Body
-    </h3>
-    <p className="text-navy/70">
-      Traditional perspectives connecting zodiac archetypes with
-      anatomical regions, physiological themes, and constitutional
-      observation.
-    </p>
-  </div>
-
-  <div className="rounded-2xl border border-gold/20 p-8">
-    <h3 className="font-serif text-2xl text-navy mb-3">
-      Solar–Lunar Energy Framework
-    </h3>
-    <p className="text-navy/70">
-      Understanding the symbolic influence of solar and lunar cycles in
-      personal rhythms, vitality patterns, and life observation.
-    </p>
-  </div>
-</div>   {/* grid */}
-</div>   {/* mx-auto wrapper */}
-</section>
-)
+        <div className="mt-14 grid gap-px overflow-hidden border border-navy/10 bg-navy/10 md:grid-cols-2">
+          {topics.map(([title, text], i) => (
+            <article key={title} className="bg-white p-8 md:p-10">
+              <span className="font-serif text-2xl text-gold/70">{String(i + 1).padStart(2, '0')}</span>
+              <h3 className="mt-5 font-serif text-2xl text-navy">{title}</h3>
+              <p className="mt-4 text-sm leading-7 text-navy/58">{text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }
-
