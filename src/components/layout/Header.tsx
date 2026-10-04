@@ -50,28 +50,28 @@ export function Header() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 transition-[background,box-shadow,border-color] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] ${navGlassClass}`}
+      className={`fixed inset-x-0 top-0 z-50 transition-[background,box-shadow,border-color] duration-500 ease-out ${navGlassClass}`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 md:px-8 lg:py-5">
-        <a href="#" className="lift-subtle group flex items-center gap-3">
+        <a href="#" className="group flex items-center gap-3">
           <img
             src="/images/logo.png"
             alt={`${BRAND.fullName} logo`}
-            className="h-11 w-11 object-contain transition-transform duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.03] md:h-12 md:w-12"
-            width={48}
-            height={48}
+            className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-[1.02] md:h-11 md:w-11"
+            width={44}
+            height={44}
           />
           <div className="hidden sm:block">
-            <p className="font-serif text-lg leading-none tracking-wide text-gold md:text-xl">
+            <p className="font-serif text-lg leading-none tracking-wide text-navy md:text-xl">
               {BRAND.name.toUpperCase()}
             </p>
-            <p className="mt-0.5 text-[10px] font-medium tracking-[0.2em] text-navy/60 uppercase">
+            <p className="mt-1 text-[9px] font-medium tracking-[0.18em] text-navy/50 uppercase">
               {BRAND.tagline}
             </p>
           </div>
         </a>
 
-        <nav className="hidden items-center gap-7 lg:flex" aria-label="Main">
+        <nav className="hidden items-center gap-6 lg:flex" aria-label="Main">
           {NAV.map((item) => {
             const isActive = activeSection === item.id
             return (
@@ -81,7 +81,6 @@ export function Header() {
                 className={`nav-link ${isActive ? 'nav-link--active' : ''}`}
                 aria-current={isActive ? 'true' : undefined}
               >
-                <span className="nav-link-glow" aria-hidden />
                 {item.label}
                 <span className="nav-link-indicator" aria-hidden />
               </a>
@@ -89,7 +88,7 @@ export function Header() {
           })}
           <a
             href="#contact"
-            className="btn-luxury btn-luxury-primary lift-cta ml-1 rounded-full bg-gradient-gold px-5 py-2.5 text-sm font-medium tracking-[0.04em] text-white shadow-luxury border border-gold-dark/30"
+            className="ml-2 inline-flex items-center border border-navy bg-navy px-5 py-2.5 text-sm font-medium tracking-[0.03em] text-white transition-colors duration-300 hover:bg-[#16213a]"
           >
             Book Consultation
           </a>
@@ -97,7 +96,7 @@ export function Header() {
 
         <button
           type="button"
-          className="rounded-lg p-2 text-navy transition-colors duration-300 hover:text-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold/50 lg:hidden"
+          className="rounded-md p-2 text-navy transition-colors duration-200 hover:text-gold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold/50 lg:hidden"
           onClick={() => setOpen(!open)}
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
@@ -107,7 +106,7 @@ export function Header() {
       </div>
 
       <div
-        className={`nav-mobile-panel border-t border-gold/10 lg:hidden ${open ? 'nav-mobile-panel--open nav-glass' : ''}`}
+        className={`nav-mobile-panel border-t border-navy/10 lg:hidden ${open ? 'nav-mobile-panel--open nav-glass' : ''}`}
         aria-hidden={!open}
       >
         <div>
@@ -119,10 +118,8 @@ export function Header() {
                   key={item.href}
                   href={item.href}
                   onClick={() => setOpen(false)}
-                  className={`rounded-lg px-3 py-3 text-base font-medium transition-colors duration-300 ${
-                    isActive
-                      ? 'nav-mobile-link--active text-gold'
-                      : 'text-navy/80 hover:bg-gold/8 hover:text-gold'
+                  className={`border-b border-navy/8 px-2 py-3.5 text-base font-medium transition-colors duration-200 ${
+                    isActive ? 'text-gold' : 'text-navy/80 hover:text-gold'
                   }`}
                   aria-current={isActive ? 'true' : undefined}
                 >
@@ -133,7 +130,7 @@ export function Header() {
             <a
               href="#contact"
               onClick={() => setOpen(false)}
-              className="btn-luxury btn-luxury-primary mt-4 rounded-full bg-gradient-gold py-3.5 text-center text-sm font-medium text-white shadow-luxury border border-gold-dark/30"
+              className="mt-5 border border-navy bg-navy py-3.5 text-center text-sm font-medium text-white transition-colors hover:bg-[#16213a]"
             >
               Book Private Consultation
             </a>
