@@ -2,7 +2,6 @@ import { Calendar, ArrowRight } from 'lucide-react'
 import { BRAND, LINKS } from '../../data/site'
 import { Button } from '../ui/Button'
 import { Reveal } from '../ui/Reveal'
-import heroImage from '../../assets/hero.png'
 
 export function Hero() {
   return (
@@ -54,16 +53,16 @@ export function Hero() {
         </div>
 
         <Reveal immediate delay={100} className="order-1 lg:order-2">
-          <div className="editorial-hero-media">
+          <div className="editorial-hero-media editorial-hero-portrait">
             <img
-              src={heroImage}
-              alt={BRAND.fullName}
+              src="/images/hero-reference.png"
+              alt="Ardhnarishwar founder and observatory portrait"
               className="h-full w-full object-cover"
               loading="eager"
             />
           </div>
           <p className="mt-4 text-right text-[10px] uppercase tracking-[0.18em] text-navy/38">
-            Constitutional observation · Pattern intelligence
+            Founder · Observer · Pattern Intelligence
           </p>
         </Reveal>
       </div>
