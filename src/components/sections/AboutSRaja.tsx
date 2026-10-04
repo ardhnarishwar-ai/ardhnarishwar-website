@@ -40,15 +40,11 @@ export function AboutSRaja() {
         <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20 xl:gap-24">
           <Reveal soft delay={120}>
             <div className="relative mx-auto max-w-md lg:max-w-none">
-              <div className="relative aspect-[3/4] overflow-hidden rounded-2xl shadow-luxury-lg">
+              <div className="relative aspect-[4/5] overflow-hidden bg-[#f7f7f4]">
                 <LazyImage
-                  src="/images/portrait.png"
+                  src="/images/hero-reference.png"
                   alt="S. Raja - Constitutional Observer & Pattern Analyst"
-                  className="rounded-2xl portrait-warm"
-                />
-                <div
-                  className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-inset ring-gold/25"
-                  aria-hidden
+                  className="portrait-warm"
                 />
               </div>
               <LuxuryCard
@@ -66,19 +62,14 @@ export function AboutSRaja() {
 
           <div>
             <Reveal soft delay={80}>
-           <p className="text-xs font-medium tracking-[0.20em] text-gold uppercase">
-The Observer Behind Ardhnarishwar
-</p>
+              <p className="text-xs font-medium tracking-[0.20em] text-gold uppercase">
+                The Observer Behind Ardhnarishwar
+              </p>
               <h2 className="mt-4 font-serif text-4xl leading-[1.08] text-navy md:text-5xl lg:text-[3.25rem]">
                 S. Raja
               </h2>
-             <p className="mt-2 text-gold">
-  Founder & Research Director
-</p>
-
-<p className="font-medium text-navy/80">
-  Ardhnarishwar Observatory
-</p>
+              <p className="mt-2 text-gold">Founder & Research Director</p>
+              <p className="font-medium text-navy/80">Ardhnarishwar Observatory</p>
               <p className="mt-3 text-sm font-medium tracking-[0.2em] text-navy/58 uppercase">
                 Founder • Observer • Constitutional Researcher
               </p>
@@ -131,9 +122,7 @@ My work is to observe the constitutional patterns from which events emerge.
 
             <Reveal soft delay={560}>
               <div className="mt-12">
-                <Button href={LINKS.consultationForm}>
-  Request Private Consultation
-</Button>
+                <Button href={LINKS.consultationForm}>Request Private Consultation</Button>
               </div>
             </Reveal>
           </div>
