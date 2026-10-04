@@ -1054,3 +1054,20 @@ body { background: #fff !important; background-image: none !important; }
 }
 .bg-ivory-deep\/50 { background-color: #fafaf8 !important; }
 .bg-ivory-deep\/40 { background-color: #fafaf8 !important; }
+
+/* Editorial photography */
+.editorial-hero-portrait {
+  aspect-ratio: 4 / 5;
+  background: #f7f7f4;
+}
+.editorial-hero-portrait img {
+  object-position: center 22%;
+  filter: saturate(.92) contrast(1.01);
+}
+#raja .portrait-warm {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  filter: saturate(.94) contrast(1.02);
+}
