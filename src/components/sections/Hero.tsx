@@ -1,5 +1,5 @@
 import { Calendar, ArrowRight } from 'lucide-react'
-import { BRAND, LINKS } from '../../data/site'
+import { LINKS } from '../../data/site'
 import { Button } from '../ui/Button'
 import { Reveal } from '../ui/Reveal'
 
