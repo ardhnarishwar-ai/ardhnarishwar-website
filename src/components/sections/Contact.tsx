@@ -2,10 +2,7 @@ import { useState, type FormEvent } from 'react'
 import { MapPin, MessageCircle, ExternalLink, Send } from 'lucide-react'
 import { InstagramIcon } from '../ui/SocialIcons'
 import { LINKS } from '../../data/site'
-import { IconBadge } from '../ui/IconBadge'
-import { LuxuryCard } from '../ui/LuxuryCard'
 import { Reveal } from '../ui/Reveal'
-import { SectionAtmosphere } from '../layout/SectionAtmosphere'
 import { SectionHeading } from '../ui/SectionHeading'
 import { Button } from '../ui/Button'
 import { FormEmbed } from './FormEmbed'
@@ -34,9 +31,6 @@ const contactCards = [
   },
 ]
 
-const CARD_STAGGER = 85
-const SECTION_DELAY = 100
-
 export function Contact() {
   const [submitted, setSubmitted] = useState(false)
 
@@ -47,72 +41,57 @@ export function Contact() {
   }
 
   return (
-    <section id="contact" className="section-flow section-lazy relative bg-ivory-deep/40 py-28 md:py-36 lg:py-40">
-      <SectionAtmosphere variant="warm" position="top" />
-      <div className="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
+    <section id="contact" className="editorial-section bg-[#f7f7f4]">
+      <div className="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32 lg:px-10">
         <SectionHeading
-          revealDelay={SECTION_DELAY}
           label="Private Inquiry"
-          title="Begin Your Observation Journey"
-          subtitle="All engagements are confidential. Begin with a confidential intake form designed to understand your constitutional patterns, timing cycles, and areas of inquiry."
+          title="Begin with a conversation."
+          subtitle="All engagements are handled with discretion. Start with a short inquiry and continue to the confidential intake form when you are ready."
         />
 
-        <div className="mb-16 grid gap-7 md:grid-cols-3 md:gap-8">
-          {contactCards.map((card, i) => (
-            <Reveal key={card.title} soft delay={260 + i * CARD_STAGGER}>
+        <div className="mt-14 grid border-y border-navy/10 md:grid-cols-3 md:divide-x md:divide-navy/10">
+          {contactCards.map((card) => {
+            const Icon = card.icon
+            return (
               <a
+                key={card.title}
                 href={card.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="card-luxury card-luxury--ivory group flex h-full min-h-[220px] flex-col p-8 md:p-9"
+                className="group flex min-h-[190px] flex-col border-b border-navy/10 p-7 last:border-b-0 md:border-b-0 md:p-8"
               >
-                <IconBadge icon={card.icon} className="mb-6" />
-                <h3 className="font-serif text-xl text-navy md:text-[1.35rem]">{card.title}</h3>
-                <p className="mt-3 flex-1 text-sm leading-[1.7] text-navy/58">{card.description}</p>
-                <span className="mt-8 inline-flex items-center gap-2 text-sm font-medium tracking-wide text-gold transition-colors duration-500 group-hover:text-gold-dark">
+                <Icon className="h-5 w-5 text-gold" strokeWidth={1.4} aria-hidden />
+                <h3 className="mt-6 font-serif text-2xl text-navy">{card.title}</h3>
+                <p className="mt-3 max-w-xs text-sm leading-6 text-navy/58">{card.description}</p>
+                <span className="mt-auto pt-7 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.16em] text-navy/55 transition-colors group-hover:text-gold">
                   {card.cta}
-                  <ExternalLink size={14} className="opacity-80" />
+                  <ExternalLink size={13} aria-hidden />
                 </span>
-                <div className="card-accent-line mt-5" aria-hidden />
               </a>
-            </Reveal>
-          ))}
+            )
+          })}
         </div>
 
-        <div className="grid gap-10 lg:grid-cols-2 lg:gap-14">
-          <Reveal soft delay={520}>
-            <LuxuryCard variant="ivory" className="p-8 md:p-10 lg:p-11">
-              <h3 className="font-serif text-2xl text-navy md:text-3xl">Consultation Inquiry</h3>
-              <p className="mt-4 text-sm leading-[1.75] text-navy/62">
-                Submit your details below.
-You will be directed to our confidential intake form where you may share relevant background information, areas of inquiry, and observational objectives.
+        <div className="mt-16 grid border-t border-navy/10 lg:grid-cols-2">
+          <Reveal soft>
+            <div className="border-b border-navy/10 py-10 lg:border-b-0 lg:border-r lg:pr-14">
+              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-navy/45">Consultation inquiry</p>
+              <h3 className="mt-4 font-serif text-3xl text-navy md:text-4xl">Tell us what you would like to understand.</h3>
+              <p className="mt-5 max-w-xl text-sm leading-7 text-navy/60">
+                Share a little context below. You will then be directed to the confidential intake form where you can provide relevant background information and your area of inquiry.
               </p>
 
               <form onSubmit={handleSubmit} className="mt-9 space-y-5">
                 <div className="grid gap-5 sm:grid-cols-2">
                   <FormField label="Full Name" name="name" required placeholder="Your name" />
-                  <FormField
-                    label="Email"
-                    name="email"
-                    type="email"
-                    required
-                    placeholder="you@email.com"
-                  />
+                  <FormField label="Email" name="email" type="email" required placeholder="you@email.com" />
                 </div>
                 <FormField label="Phone (optional)" name="phone" type="tel" placeholder="+91 ..." />
                 <div>
-                  <label
-                    htmlFor="concern"
-                    className="mb-2 block text-xs font-medium tracking-[0.16em] text-navy/65 uppercase"
-                  >
+                  <label htmlFor="concern" className="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-navy/55">
                     Primary Concern
                   </label>
-                  <select
-                    id="concern"
-                    name="concern"
-                    required
-                    className="input-luxury w-full rounded-xl px-4 py-3.5 text-sm text-navy"
-                  >
+                  <select id="concern" name="concern" required className="input-luxury w-full px-4 py-3.5 text-sm text-navy">
                     <option value="">Select consultation type</option>
                     <option>Constitutional Observation</option>
                     <option>Pattern Intelligence Review</option>
@@ -123,10 +102,7 @@ You will be directed to our confidential intake form where you may share relevan
                   </select>
                 </div>
                 <div>
-                  <label
-                    htmlFor="message"
-                    className="mb-2 block text-xs font-medium tracking-[0.16em] text-navy/65 uppercase"
-                  >
+                  <label htmlFor="message" className="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-navy/55">
                     Brief Message
                   </label>
                   <textarea
@@ -134,39 +110,33 @@ You will be directed to our confidential intake form where you may share relevan
                     name="message"
                     rows={4}
                     placeholder="Share context for your consultation (optional)"
-                    className="input-luxury w-full resize-none rounded-xl px-4 py-3.5 text-sm text-navy"
+                    className="input-luxury w-full resize-none px-4 py-3.5 text-sm text-navy"
                   />
                 </div>
 
                 {submitted ? (
-                  <p className="rounded-xl border border-gold/28 bg-gold/[0.07] px-4 py-3.5 text-sm text-navy/75">
-                    Thank you. Complete your secure intake in the opened form window.
+                  <p className="border-l-2 border-gold px-4 py-2 text-sm text-navy/65">
+                    Thank you. Complete your confidential intake in the opened form.
                   </p>
                 ) : null}
 
-                <Button type="submit" icon={<Send size={18} />}>
+                <Button type="submit" icon={<Send size={17} />}>
                   Continue to Secure Form
                 </Button>
               </form>
-            </LuxuryCard>
+            </div>
           </Reveal>
 
-          <Reveal soft delay={600}>
-            <LuxuryCard
-              variant="ivory"
-              className="flex h-full flex-col overflow-hidden p-0"
-              as="div"
-            >
-              <div className="border-b border-gold/14 bg-navy px-7 py-6 md:px-8">
-                <p className="text-xs font-medium tracking-[0.22em] text-gold uppercase">
-                  Secure Intake
-                </p>
-                <p className="mt-1.5 font-serif text-xl text-ivory md:text-2xl">
-                  Official Intake Form
-                </p>
+          <Reveal soft delay={120}>
+            <div className="lg:pl-14">
+              <div className="border-b border-navy/10 py-10">
+                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gold">Secure intake</p>
+                <h3 className="mt-3 font-serif text-2xl text-navy md:text-3xl">Official Intake Form</h3>
               </div>
-              <FormEmbed />
-            </LuxuryCard>
+              <div className="overflow-hidden">
+                <FormEmbed />
+              </div>
+            </div>
           </Reveal>
         </div>
       </div>
@@ -189,10 +159,7 @@ function FormField({
 }) {
   return (
     <div>
-      <label
-        htmlFor={name}
-        className="mb-2 block text-xs font-medium tracking-[0.16em] text-navy/65 uppercase"
-      >
+      <label htmlFor={name} className="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-navy/55">
         {label}
       </label>
       <input
@@ -201,7 +168,7 @@ function FormField({
         type={type}
         required={required}
         placeholder={placeholder}
-        className="input-luxury w-full rounded-xl px-4 py-3.5 text-sm text-navy"
+        className="input-luxury w-full px-4 py-3.5 text-sm text-navy"
       />
     </div>
   )
