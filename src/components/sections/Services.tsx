@@ -9,10 +9,7 @@ import {
   type LucideIcon,
 } from 'lucide-react'
 import { SERVICES } from '../../data/site'
-import { IconBadge } from '../ui/IconBadge'
-import { LuxuryCard } from '../ui/LuxuryCard'
 import { Reveal } from '../ui/Reveal'
-import { SectionAtmosphere } from '../layout/SectionAtmosphere'
 import { SectionHeading } from '../ui/SectionHeading'
 
 const iconMap: Record<string, LucideIcon> = {
@@ -25,36 +22,33 @@ const iconMap: Record<string, LucideIcon> = {
   file: FileText,
 }
 
-const STAGGER = 75
-const SECTION_DELAY = 40
-
 export function Services() {
   return (
-    <section id="services" className="section-flow section-lazy relative bg-ivory-deep/50 py-28 md:py-36 lg:py-40">
-      <SectionAtmosphere variant="ivory" position="both" />
-      <div className="mx-auto max-w-7xl px-5 md:px-8 lg:px-10">
+    <section id="services" className="editorial-section bg-[#f7f7f4]">
+      <div className="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32 lg:px-10">
         <SectionHeading
-          revealDelay={SECTION_DELAY}
           label="Consultations"
-          title="Private Astromedical Services"
-          subtitle="Each engagement is conducted with clinical discretion, structured observation, and research-grade chart analysis."
+          title="Private astromedical services"
+          subtitle="Each engagement is conducted with discretion, structured observation, and individualized review."
         />
 
-        <div className="grid gap-7 sm:grid-cols-2 lg:grid-cols-3 lg:gap-8">
+        <div className="mt-16 grid border-t border-navy/10 lg:grid-cols-2">
           {SERVICES.map((service, i) => {
             const Icon = iconMap[service.icon]
             return (
-              <Reveal key={service.title} soft delay={200 + i * STAGGER}>
-                <LuxuryCard variant="ivory" className="relative h-full overflow-hidden p-8 md:p-9">
-                  <div
-                    className="pointer-events-none absolute -right-10 -top-10 h-36 w-36 rounded-full bg-gold/[0.04]"
-                    aria-hidden
-                  />
-                  <IconBadge icon={Icon} className="mb-7" />
-                  <h3 className="font-serif text-xl text-navy md:text-2xl">{service.title}</h3>
-                  <p className="mt-4 text-sm leading-[1.75] text-navy/62">{service.description}</p>
-                  <div className="card-accent-line mt-8" aria-hidden />
-                </LuxuryCard>
+              <Reveal key={service.title} soft>
+                <article className="grid gap-6 border-b border-navy/10 py-9 md:grid-cols-[52px_1fr] md:gap-7 md:py-10 lg:pr-12">
+                  <Icon className="mt-1 h-5 w-5 text-gold" strokeWidth={1.25} aria-hidden />
+                  <div>
+                    <div className="flex items-baseline justify-between gap-5">
+                      <h3 className="font-serif text-2xl text-navy">{service.title}</h3>
+                      <span className="text-[10px] uppercase tracking-[0.18em] text-navy/35">
+                        0{i + 1}
+                      </span>
+                    </div>
+                    <p className="mt-3 max-w-xl text-sm leading-7 text-navy/58">{service.description}</p>
+                  </div>
+                </article>
               </Reveal>
             )
           })}
