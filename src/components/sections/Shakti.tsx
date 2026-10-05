@@ -1,30 +1,34 @@
 export function Shakti() {
   const layers = [
-    ['Physical constitution', 'Body structure, vitality, tendencies, and physical expression.'],
-    ['Mental constitution', 'Thought patterns, perception, focus, and cognitive tendencies.'],
-    ['Emotional constitution', 'Emotional responses, sensitivity, resilience, and expression.'],
-    ['Behavioural constitution', 'Habits, actions, decision patterns, and lifestyle tendencies.'],
-    ['Timing constitution', 'Life cycles, timing patterns, and constitutional rhythms.'],
+    ['01', 'Physical', 'Structure, vitality, tendencies, and physical expression.'],
+    ['02', 'Mental', 'Thought patterns, perception, focus, and cognitive tendencies.'],
+    ['03', 'Emotional', 'Sensitivity, resilience, responses, and emotional expression.'],
+    ['04', 'Behavioural', 'Habits, actions, decisions, and recurring lifestyle tendencies.'],
+    ['05', 'Timing', 'Cycles, transitions, rhythms, and the context in which patterns emerge.'],
   ]
 
   return (
-    <section id="shakti" className="editorial-section bg-[#f7f7f4]">
-      <div className="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32 lg:px-10">
-        <div className="grid gap-14 lg:grid-cols-[.75fr_1.25fr] lg:gap-24">
+    <section id="shakti" className="observatory-section observatory-constitution">
+      <div className="observatory-container">
+        <div className="observatory-section-intro">
           <div>
-            <p className="editorial-kicker">Human Constitution</p>
-            <h2 className="mt-5 font-serif text-4xl leading-tight text-navy md:text-5xl">The person is more than the symptom.</h2>
-            <p className="mt-6 max-w-md text-base leading-8 text-navy/58">Constitutional observation looks at interacting layers rather than reducing an individual to a single label.</p>
+            <p className="observatory-eyebrow">06 · HUMAN CONSTITUTION</p>
+            <h2>The person is more<br /><em>than the symptom.</em></h2>
           </div>
-          <div className="border-t border-navy/10">
-            {layers.map(([title, text], i) => (
-              <div key={title} className="grid gap-2 border-b border-navy/10 py-7 md:grid-cols-[48px_220px_1fr] md:items-start md:gap-5">
-                <span className="font-serif text-lg text-gold/70">{String(i + 1).padStart(2, '0')}</span>
-                <h3 className="font-serif text-xl text-navy">{title}</h3>
-                <p className="text-sm leading-7 text-navy/58">{text}</p>
-              </div>
-            ))}
-          </div>
+          <p>
+            Constitutional observation considers several interacting layers rather than
+            reducing an individual to one label.
+          </p>
+        </div>
+
+        <div className="observatory-constitution-list">
+          {layers.map(([number, title, text]) => (
+            <article key={title}>
+              <span>{number}</span>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
         </div>
       </div>
     </section>
