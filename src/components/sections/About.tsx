@@ -1,5 +1,4 @@
 import { ArrowUpRight } from 'lucide-react'
-import { SectionHeading } from '../ui/SectionHeading'
 
 const fields = [
   ['01', 'Constitution', 'The individual before the symptom: recurring tendencies, structure, temperament, and lived constitution.'],
