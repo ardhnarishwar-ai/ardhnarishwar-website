@@ -1257,7 +1257,7 @@ body { background: #fff !important; background-image: none !important; }
   .observatory-mobile-nav { display:flex; flex-direction:column; background:#fdfdfb; border-top:1px solid rgba(10,17,40,.1); padding:8px 18px 18px; }
   .observatory-mobile-nav a { padding:14px 2px; border-bottom:1px solid rgba(10,17,40,.09); color:#0a1128; text-decoration:none; font-size:14px; }
   .observatory-mobile-nav .mobile-cta { margin-top:12px; padding:14px; background:#0a1128; color:#fff; text-align:center; border:0; }
-  .observatory-container { width:min(100% - 40px, 680px); }
+  .observatory-container { width:calc(100% - 40px); max-width:680px; }
   .observatory-section { padding:88px 0; }
   .observatory-hero { padding-top:68px; }
   .observatory-hero-inner { display:flex; flex-direction:column; min-height:auto; }
