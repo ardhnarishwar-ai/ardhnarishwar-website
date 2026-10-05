@@ -7,7 +7,6 @@ interface SectionHeadingProps {
   align?: 'left' | 'center'
   id?: string
   theme?: 'light' | 'dark'
-  /** Section-specific reveal pacing offset */
   revealDelay?: number
 }
 
@@ -28,20 +27,13 @@ export function SectionHeading({
     <Reveal soft delay={revealDelay} className={`mb-14 max-w-3xl md:mb-20 ${alignClass}`}>
       <header id={id}>
         {label && (
-          <div
-            className={`mb-4 flex items-center gap-3 ${align === 'center' ? 'justify-center' : ''}`}
+          <p
+            className={`mb-4 text-[10px] font-semibold uppercase tracking-[0.2em] ${
+              theme === 'dark' ? 'text-ivory/50' : 'text-navy/45'
+            }`}
           >
-            {align === 'center' && (
-              <span className="hidden h-px w-12 bg-gold/50 md:block" aria-hidden />
-            )}
-            <p className="text-xs font-medium tracking-[0.28em] text-gold uppercase">{label}</p>
-            <span className="text-gold text-[10px]" aria-hidden>
-              ◆
-            </span>
-            {align === 'center' && (
-              <span className="hidden h-px w-12 bg-gold/50 md:block" aria-hidden />
-            )}
-          </div>
+            {label}
+          </p>
         )}
         <h2
           className={`type-section-title font-serif text-3xl sm:text-4xl md:text-5xl lg:text-[3.25rem] ${titleColor}`}
@@ -50,7 +42,7 @@ export function SectionHeading({
         </h2>
         {subtitle && (
           <p
-            className={`type-section-lead mt-6 text-base md:text-lg md:mt-7 ${subtitleColor}`}
+            className={`type-section-lead mt-6 max-w-2xl text-base md:mt-7 md:text-lg ${subtitleColor}`}
           >
             {subtitle}
           </p>
