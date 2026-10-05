@@ -1,85 +1,32 @@
-
 export function WhyWeExist() {
   return (
-    <section id="purpose">
-
-      <h2>
-  The Question Behind Ardhnarishwar
-</h2>
-
-<p>
-  We did not begin with an answer.
-  We began with a question.
-</p>
-
-      <div>
-
-        <div>
-          <h3>WHY WE EXIST</h3>
-
-          <p>
-            Health is one of humanity's most valuable assets,
-            yet many people spend years moving from symptom to symptom
-            without understanding the deeper patterns influencing
-            their well-being.
-          </p>
-
-          <p>
-            A recurring question inspired the foundation
-            of Ardhnarishwar:
-          </p>
-
-          <blockquote>
-            Why do individuals with similar symptoms often
-            experience entirely different outcomes?
-          </blockquote>
+    <section id="purpose" className="observatory-section observatory-purpose">
+      <div className="observatory-container">
+        <div className="observatory-purpose-grid">
+          <div>
+            <p className="observatory-eyebrow">05 · THE POSITION</p>
+            <h2>We began with a question,<br /><em>not an answer.</em></h2>
+          </div>
+          <div className="observatory-purpose-list">
+            <article>
+              <span>01</span>
+              <div><h3>Observation before interpretation</h3><p>Recurring evidence and context come before conclusions.</p></div>
+            </article>
+            <article>
+              <span>02</span>
+              <div><h3>The person before the symptom</h3><p>Constitution, behaviour, environment, and timing are considered together.</p></div>
+            </article>
+            <article>
+              <span>03</span>
+              <div><h3>Quiet, private, research-led</h3><p>The practice is deliberately free from spectacle, fear, and sensational prediction.</p></div>
+            </article>
+          </div>
         </div>
-
-        <div>
-          <h3>WHAT WE DO</h3>
-
-          <p>
-            Ardhnarishwar is a research-led initiative focused on
-            constitutional observation and astromedical
-            pattern intelligence.
-          </p>
-
-          <p>
-            Rather than focusing only on isolated symptoms,
-            we explore broader constitutional tendencies,
-            timing cycles, wellness patterns,
-            and individual differences.
-          </p>
-
-          <blockquote>
-            Symptoms may change.
-            Constitutional patterns leave signatures.
-          </blockquote>
-        </div>
-
-        <div>
-          <h3>FOR WHOM</h3>
-
-          <p>
-            Ardhnarishwar exists for individuals seeking
-            deeper understanding rather than temporary answers.
-          </p>
-
-          <p>
-            For those who wish to explore root patterns,
-            constitutional tendencies,
-            and a more personalized perspective
-            on wellness and life observation.
-          </p>
-
-          <blockquote>
-            Meaningful insight begins not with prediction,
-            but with observation.
-          </blockquote>
-        </div>
-
+        <blockquote className="observatory-large-quote">
+          Meaningful insight begins not with prediction,<br />
+          but with observation.
+        </blockquote>
       </div>
-
     </section>
   )
 }

@@ -1,84 +1,34 @@
 export function KnowledgeCenter() {
-  return (
-    <section id="knowledge" className="section-flow py-28 md:py-36">
-      <div className="mx-auto max-w-5xl px-5 md:px-8 lg:px-10">
+  const topics = [
+    ['01', 'Five Elements & Human Constitution', 'Traditional principles used as a language for observing structure, vitality, movement, transformation, and awareness.'],
+    ['02', 'Planetary Correspondences', 'Traditional relationships between planetary symbolism, constitutional tendencies, timing cycles, and wellness observation.'],
+    ['03', 'Zodiac & Human Body', 'Traditional perspectives connecting zodiac archetypes with anatomical regions and constitutional themes.'],
+    ['04', 'Solar–Lunar Framework', 'Symbolic solar and lunar cycles considered alongside personal rhythms, vitality patterns, and life observation.'],
+  ]
 
-        <div className="text-center mb-12">
-          <h2 className="font-serif text-4xl md:text-5xl text-navy">
-            Ancient Medical Astrology Knowledge Centre
-          </h2>
-          <p className="mt-4 text-navy/70 max-w-3xl mx-auto">
-            Educational resources exploring the traditional relationship
-            between astrology, constitutional tendencies, planetary symbolism,
-            and holistic wellness observation.
+  return (
+    <section id="knowledge" className="observatory-section observatory-knowledge">
+      <div className="observatory-container">
+        <div className="observatory-section-intro">
+          <div>
+            <p className="observatory-eyebrow">07 · KNOWLEDGE CENTRE</p>
+            <h2>Study the framework.<br /><em>Question the assumptions.</em></h2>
+          </div>
+          <p>
+            Educational material is presented for observation, reflection, and deeper
+            understanding—not as a substitute for medical diagnosis or treatment.
           </p>
         </div>
-<div className="rounded-2xl border border-gold/20 p-8 mb-10">
 
-  <h3>Foundation of Observation</h3>
-
-  <p>
-    Observation comes before interpretation.
-  </p>
-
-  <p>
-    The purpose of knowledge is not merely to collect information,
-    but to recognize recurring constitutional patterns.
-  </p>
-
-  <p>
-    Every framework in this knowledge centre is presented
-    as a tool for observation, reflection,
-    and deeper understanding.
-  </p>
-
-</div>
-        <div className="grid md:grid-cols-2 gap-6 mt-12">
-
-  <div className="rounded-2xl border border-gold/20 p-8">
-    <h3 className="font-serif text-2xl text-navy mb-3">
-      The Five Elements & Human Constitution
-    </h3>
-    <p className="text-navy/70">
-      Understanding Earth, Water, Fire, Air, and Space as foundational
-      principles influencing structure, vitality, movement,
-      transformation, and awareness.
-    </p>
-  </div>
-
-  <div className="rounded-2xl border border-gold/20 p-8">
-    <h3 className="font-serif text-2xl text-navy mb-3">
-      Planetary Correspondences
-    </h3>
-    <p className="text-navy/70">
-      Exploring traditional relationships between planetary symbolism,
-      constitutional tendencies, timing cycles, and wellness observation.
-    </p>
-  </div>
-
-  <div className="rounded-2xl border border-gold/20 p-8">
-    <h3 className="font-serif text-2xl text-navy mb-3">
-      Zodiac & Human Body
-    </h3>
-    <p className="text-navy/70">
-      Traditional perspectives connecting zodiac archetypes with
-      anatomical regions, physiological themes, and constitutional
-      observation.
-    </p>
-  </div>
-
-  <div className="rounded-2xl border border-gold/20 p-8">
-    <h3 className="font-serif text-2xl text-navy mb-3">
-      Solar–Lunar Energy Framework
-    </h3>
-    <p className="text-navy/70">
-      Understanding the symbolic influence of solar and lunar cycles in
-      personal rhythms, vitality patterns, and life observation.
-    </p>
-  </div>
-</div>   {/* grid */}
-</div>   {/* mx-auto wrapper */}
-</section>
-)
+        <div className="observatory-knowledge-list">
+          {topics.map(([number, title, text]) => (
+            <article key={title}>
+              <span>{number}</span>
+              <div><h3>{title}</h3><p>{text}</p></div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
 }
-

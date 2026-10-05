@@ -1,44 +1,36 @@
 export function Shakti() {
+  const layers = [
+    ['01', 'Physical', 'Structure, vitality, tendencies, and physical expression.'],
+    ['02', 'Mental', 'Thought patterns, perception, focus, and cognitive tendencies.'],
+    ['03', 'Emotional', 'Sensitivity, resilience, responses, and emotional expression.'],
+    ['04', 'Behavioural', 'Habits, actions, decisions, and recurring lifestyle tendencies.'],
+    ['05', 'Timing', 'Cycles, transitions, rhythms, and the context in which patterns emerge.'],
+  ]
+
   return (
-    <section id="shakti">
+    <section id="shakti" className="observatory-section observatory-constitution">
+      <div className="observatory-container">
+        <div className="observatory-section-intro">
+          <div>
+            <p className="observatory-eyebrow">06 · HUMAN CONSTITUTION</p>
+            <h2>The person is more<br /><em>than the symptom.</em></h2>
+          </div>
+          <p>
+            Constitutional observation considers several interacting layers rather than
+            reducing an individual to one label.
+          </p>
+        </div>
 
-  <h2>Human Constitution (Shakti)</h2>
-
-  <p>
-    Symptoms may change.
-    Constitutional patterns leave signatures.
-  </p>
-
-  <p>
-    The human constitution can be observed through
-    multiple interacting layers:
-  </p>
-
-  <div>
-  <h3>Physical Constitution</h3>
-  <p>Body structure, vitality, tendencies, and physical expression.</p>
-</div>
-
-<div>
-  <h3>Mental Constitution</h3>
-  <p>Thought patterns, perception, focus, and cognitive tendencies.</p>
-</div>
-
-<div>
-  <h3>Emotional Constitution</h3>
-  <p>Emotional responses, sensitivity, resilience, and expression.</p>
-</div>
-
-<div>
-  <h3>Behavioral Constitution</h3>
-  <p>Habits, actions, decision patterns, and lifestyle tendencies.</p>
-</div>
-
-<div>
-  <h3>Timing Constitution</h3>
-  <p>Life cycles, timing patterns, and constitutional rhythms.</p>
-</div>
-
-</section>
+        <div className="observatory-constitution-list">
+          {layers.map(([number, title, text]) => (
+            <article key={title}>
+              <span>{number}</span>
+              <h3>{title}</h3>
+              <p>{text}</p>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
   )
 }
