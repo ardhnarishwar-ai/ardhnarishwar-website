@@ -1315,3 +1315,282 @@ body { background: #fff !important; background-image: none !important; }
   .observatory-statement p,.observatory-statement p:nth-child(2) { border-right:0; }
   .observatory-statement p:last-child { border-bottom:0; }
 }
+
+
+/* ===== FINAL VISUAL CORRECTION PASS =====
+   Screenshot-led: stronger hero composition, tighter mobile rhythm,
+   cleaner type scale, and less vertical dead space. */
+.observatory-hero-inner {
+  grid-template-columns: .92fr 1.08fr;
+}
+
+.observatory-hero-image img {
+  object-position: center center;
+}
+
+@media (max-width: 900px) {
+  .observatory-header-inner {
+    height: 64px;
+    padding: 0 16px;
+  }
+
+  .observatory-header {
+    z-index: 100;
+  }
+
+  .observatory-brand {
+    gap: 9px;
+  }
+
+  .observatory-brand img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .observatory-brand strong {
+    font-size: 14px;
+    letter-spacing: .08em;
+  }
+
+  .observatory-menu {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+  }
+
+  .observatory-hero {
+    padding-top: 64px;
+  }
+
+  .observatory-hero-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .observatory-hero-image {
+    order: 0;
+    height: min(46svh, 560px);
+    min-height: 360px;
+  }
+
+  .observatory-hero-image img {
+    object-position: center 35%;
+  }
+
+  .observatory-image-caption {
+    left: 18px;
+    right: 18px;
+    bottom: 16px;
+    font-size: 8px;
+  }
+
+  .observatory-hero-copy {
+    order: 1;
+    padding: 52px 20px 58px;
+  }
+
+  .observatory-eyebrow {
+    font-size: 8px;
+    letter-spacing: .18em;
+  }
+
+  .observatory-hero h1 {
+    max-width: 11ch;
+    margin-top: 20px;
+    font-size: clamp(43px, 11.5vw, 60px);
+    line-height: .95;
+    letter-spacing: -.032em;
+  }
+
+  .observatory-hero-lead {
+    max-width: 35rem;
+    margin-top: 24px;
+    font-size: 14px;
+    line-height: 1.72;
+  }
+
+  .observatory-hero-actions {
+    margin-top: 30px;
+    gap: 12px;
+  }
+
+  .observatory-button {
+    min-height: 48px;
+    padding: 0 16px;
+  }
+
+  .observatory-index {
+    margin-top: 42px;
+    padding-top: 13px;
+  }
+
+  .observatory-section {
+    padding: 72px 0;
+  }
+
+  .observatory-manifesto {
+    padding-bottom: 54px;
+    gap: 32px;
+  }
+
+  .observatory-manifesto h2,
+  .observatory-purpose h2 {
+    font-size: clamp(40px, 10vw, 58px);
+    line-height: 1;
+  }
+
+  .observatory-manifesto p,
+  .observatory-section-intro > p,
+  .observatory-founder-copy > p:not(.observatory-founder-role) {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .observatory-field-index article,
+  .observatory-service-row {
+    padding: 22px 0;
+  }
+
+  .observatory-field-index h3,
+  .observatory-service-row h3 {
+    font-size: 22px;
+    line-height: 1.18;
+  }
+
+  .observatory-field-index p,
+  .observatory-service-row p,
+  .observatory-constitution-list p,
+  .observatory-knowledge-list p,
+  .observatory-timeline-list p {
+    font-size: 12px;
+    line-height: 1.65;
+  }
+
+  .observatory-statement {
+    margin-top: 58px;
+  }
+
+  .observatory-statement p {
+    padding: 18px 14px;
+    font-size: 16px;
+  }
+
+  .observatory-services .observatory-section-intro {
+    margin-bottom: 42px;
+  }
+
+  .observatory-process {
+    padding: 72px 0;
+  }
+
+  .observatory-process h2,
+  .observatory-testimonial-head h2 {
+    font-size: clamp(40px, 10vw, 58px);
+  }
+
+  .observatory-process-grid {
+    margin-top: 44px;
+  }
+
+  .observatory-process-grid article {
+    padding: 20px 0 24px;
+  }
+
+  .observatory-process-grid h3 {
+    margin-top: 20px;
+    font-size: 22px;
+    line-height: 1.25;
+  }
+
+  .observatory-founder-grid,
+  .observatory-purpose-grid {
+    gap: 34px;
+  }
+
+  .observatory-founder-image img {
+    aspect-ratio: 4 / 4.7;
+    object-position: center 18%;
+  }
+
+  .observatory-founder h2 {
+    font-size: clamp(48px, 12vw, 68px);
+  }
+
+  .observatory-founder-copy blockquote {
+    margin: 30px 0 28px;
+    padding-left: 18px;
+    font-size: clamp(25px, 7vw, 34px);
+  }
+
+  .observatory-large-quote {
+    margin-top: 58px;
+    font-size: clamp(27px, 7vw, 42px);
+  }
+
+  .observatory-constitution-list article,
+  .observatory-knowledge-list article {
+    padding: 20px 0;
+  }
+
+  .observatory-constitution-list h3,
+  .observatory-knowledge-list h3,
+  .observatory-timeline-list h3 {
+    font-size: 21px;
+    line-height: 1.25;
+  }
+
+  .observatory-timeline-list article {
+    padding: 21px 0;
+  }
+
+  .observatory-testimonials {
+    padding: 72px 0;
+  }
+
+  .observatory-testimonial-list {
+    margin-top: 42px;
+  }
+
+  .observatory-testimonial-list p {
+    margin: 25px 0 20px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+@media (max-width: 480px) {
+  .observatory-container {
+    width: calc(100% - 32px);
+  }
+
+  .observatory-hero-image {
+    height: min(44svh, 520px);
+    min-height: 350px;
+  }
+
+  .observatory-hero-copy {
+    padding: 46px 16px 52px;
+  }
+
+  .observatory-hero h1 {
+    max-width: 10.5ch;
+    font-size: 44px;
+  }
+
+  .observatory-hero-lead {
+    font-size: 14px;
+  }
+
+  .observatory-index {
+    gap: 10px;
+  }
+
+  .observatory-index span {
+    font-size: 7px;
+  }
+
+  .observatory-section {
+    padding: 64px 0;
+  }
+}
