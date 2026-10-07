@@ -1429,6 +1429,14 @@ body { background: #fff !important; background-image: none !important; }
     padding: 72px 0;
   }
 
+  .observatory-common-concerns {
+    padding-bottom: 28px;
+  }
+
+  .observatory-purpose {
+    padding-top: 44px;
+  }
+
   .observatory-manifesto {
     padding-bottom: 54px;
     gap: 32px;
