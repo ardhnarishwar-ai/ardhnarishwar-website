@@ -1804,3 +1804,52 @@ body { background: #fff !important; background-image: none !important; }
     background-position: 58% center;
   }
 }
+
+
+/* ===== HERO COVER: FULL-WIDTH LANDSCAPE PLATE ===== */
+.observatory-hero {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  min-height: 0;
+  height: auto;
+  background: transparent;
+}
+
+.observatory-hero-cover {
+  position: relative;
+  inset: auto;
+  z-index: 0;
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  background-image: url('/images/ardhnarishwar-hero-cover.jpg');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.observatory-hero-inner {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  min-height: 0;
+  pointer-events: none;
+}
+
+.observatory-hero-copy {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .observatory-hero {
+    min-height: 0;
+  }
+
+  .observatory-hero-cover {
+    aspect-ratio: 3 / 2;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+}
