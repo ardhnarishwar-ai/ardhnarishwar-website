@@ -23,9 +23,12 @@ export function Hero() {
 
           <Reveal immediate delay={180}>
             <p className="observatory-hero-lead">
-              A research-oriented observatory studying constitutional patterns,
-              planetary timing, behaviour, and human experience through disciplined
-              observation.
+              A private, research-oriented wellness observatory offering complementary
+              guidance around health, money, career, relationships, emotional well-being,
+              and important life decisions.
+            </p>
+            <p className="mt-5 max-w-2xl text-[10px] font-semibold uppercase tracking-[0.16em] text-navy/55">
+              Health & Wellness · Money · Career · Relationships · Emotional Well-being · Life Decisions
             </p>
           </Reveal>
 
@@ -43,8 +46,8 @@ export function Hero() {
 
           <Reveal immediate delay={340}>
             <div className="observatory-index">
-              <span>01 / OBSERVATION</span>
-              <span>02 / CONSTITUTION</span>
+              <span>01 / YOUR CONCERN</span>
+              <span>02 / OBSERVATION</span>
               <span>03 / TIMING</span>
               <span>04 / CONTEXT</span>
             </div>
