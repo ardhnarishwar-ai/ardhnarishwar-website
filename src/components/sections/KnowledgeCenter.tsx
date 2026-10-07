@@ -22,8 +22,8 @@ export function KnowledgeCenter() {
 
         <figure className="observatory-knowledge-visual">
           <img
-            src="/images/five-elements-human-body.webp"
-            alt="The five elements in the human body: Earth in the legs, Water in the thighs, Fire in the stomach, Air in the chest, and Space or Ether in the head"
+            src="/images/five-elements-reference.jpg"
+            alt="Traditional Pancha Mahabhuta framework: Earth, Water, Fire, Air, and Space as a philosophical language for observing the human constitution"
             loading="lazy"
           />
           <figcaption>
