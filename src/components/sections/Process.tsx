@@ -5,7 +5,7 @@ export function Process() {
     <section id="process" className="observatory-process">
       <div className="observatory-container">
         <div className="observatory-process-head">
-          <p className="observatory-eyebrow">03 · THE METHOD</p>
+          <p className="observatory-eyebrow">THE METHOD</p>
           <h2>From intake to insight.<br /><em>Nothing is rushed.</em></h2>
           <p>
             A four-stage framework keeps the work grounded: collect the context, map the
