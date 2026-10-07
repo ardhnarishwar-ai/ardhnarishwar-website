@@ -31,12 +31,22 @@ export function Header() {
 
   return (
     <header className="observatory-header">
-      <div className="observatory-header-inner">
-        <a href="#hero" className="observatory-brand" aria-label="ardhnarishwar.in">
+      <div className="observatory-header-inner" style={{ position: 'relative' }}>
+        <a
+          href="#hero"
+          className="observatory-brand"
+          aria-label="ardhnarishwar.in"
+          style={{
+            position: 'absolute',
+            left: '16px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+          }}
+        >
           <img
             src="/images/ardhnarishwar-logo.jpg"
             alt="ardhnarishwar.in — Astromedical Solutions"
-            style={{ width: 'min(300px, 64vw)', height: '58px', objectFit: 'contain' }}
+            style={{ width: 'clamp(190px, 42vw, 300px)', height: '58px', objectFit: 'contain' }}
           />
         </a>
 
