@@ -8,7 +8,7 @@ fullName: 'Ardhnarishwar Observatory',
 /** Trust & local business placeholders — replace with verified production values */
 export const BUSINESS = {
   phone: '+91-9111855115',
-  email: 'consult@ardhnarishwar.com',
+  email: 'ardhnarishwar.in@gmail.com',
   address: {
     streetAddress: '[Street Address — update from Google Business Profile]',
     addressLocality: '[City]',
@@ -48,39 +48,39 @@ export const HERO_PILLARS = [
 
 export const SERVICES = [
   {
-    title: 'Constitutional Observation',
-description:
-'Structured observation of recurring constitutional indicators, wellness tendencies, and timing cycles across life patterns.',
- icon: 'eye',
+    title: 'Health & Wellness Guidance',
+    description:
+      'Personalised wellness, lifestyle, dietary, and constitutional guidance using the observatory\'s complementary framework.',
+    icon: 'eye',
   },
   {
-    title: 'Relationship Pattern Review',
+    title: 'Relationships & Family',
     description:
-'Structured analysis of relational dynamics, attachment patterns, communication tendencies, and recurring interaction themes.',
+      'Explore recurring relationship dynamics, communication tendencies, family patterns, and personal boundaries.',
     icon: 'heart',
   },
   {
-    title: 'Life Pattern Assessment',
+    title: 'Life, Work & Career',
     description:
-'Directional insight into vocation, reputation cycles, decision patterns, and long-term life development trends.',
+      'Gain perspective on career direction, professional choices, transitions, and recurring life patterns.',
     icon: 'compass',
   },
   {
-    title: 'Psychological Observation',
+    title: 'Stress & Emotional Well-being',
     description:
-      'Root-cause oriented reading of emotional landscapes, instinctual responses, and psychological pattern signatures.',
+      'A private, reflective space for understanding emotional patterns, reactions, and personal well-being.',
     icon: 'brain',
   },
   {
-    title: 'Timing Cycle Assessment',
+    title: 'Timing & Future Planning',
     description:
-'Structured timing-cycle assessment highlighting decision windows, transition phases, recovery periods, and recurring life rhythms.',
+      'Structured timing-cycle perspectives for important phases, transitions, decisions, and future planning.',
     icon: 'clock',
   },
   {
-    title: 'Constitutional Intelligence Report',
+    title: 'Private Personal Consultation',
     description:
-'Documented pattern report integrating constitutional observation, timing cycles, lifestyle indicators, and recurring behavioral signatures.',
+      'A one-to-one consultation for concerns that do not fit neatly into a single category.',
     icon: 'file',
   },
 ] as const
