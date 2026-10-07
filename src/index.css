@@ -1675,3 +1675,86 @@ body { background: #fff !important; background-image: none !important; }
     order: 2;
   }
 }
+
+
+/* ===== HEADER RESPONSIVE CORRECTION — DESKTOP + MOBILE =====
+   Keep the desktop header in normal flex flow; only anchor the
+   compact logo/menu on mobile. */
+@media (min-width: 901px) {
+  .observatory-header-inner {
+    position: relative;
+  }
+
+  .observatory-brand {
+    position: static !important;
+    transform: none !important;
+    flex: 0 0 auto;
+  }
+
+  .observatory-brand img {
+    width: clamp(170px, 18vw, 220px) !important;
+    height: 44px !important;
+    object-fit: contain;
+  }
+
+  .observatory-nav {
+    margin-left: auto;
+    gap: 20px;
+    flex: 0 1 auto;
+  }
+
+  .observatory-menu {
+    display: none !important;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1100px) {
+  .observatory-header-inner {
+    padding: 0 20px;
+  }
+
+  .observatory-brand img {
+    width: 175px !important;
+    height: 40px !important;
+  }
+
+  .observatory-nav {
+    gap: 14px;
+  }
+
+  .observatory-nav a {
+    font-size: 10px;
+  }
+
+  .observatory-nav .observatory-nav-cta {
+    padding: 9px 11px;
+  }
+}
+
+@media (max-width: 900px) {
+  .observatory-header-inner {
+    position: relative;
+  }
+
+  .observatory-brand {
+    position: absolute !important;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%) !important;
+    z-index: 3;
+  }
+
+  .observatory-brand img {
+    width: 145px !important;
+    height: 44px !important;
+    object-fit: contain;
+  }
+
+  .observatory-menu {
+    position: absolute !important;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%) !important;
+    z-index: 4;
+  }
+}
