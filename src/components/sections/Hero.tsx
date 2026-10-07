@@ -5,15 +5,8 @@ import { Reveal } from '../ui/Reveal'
 export function Hero() {
   return (
     <section id="hero" className="observatory-hero">
+      <div className="observatory-hero-cover" aria-hidden="true" />
       <div className="observatory-hero-inner">
-        <Reveal immediate delay={120} className="observatory-hero-visual">
-          <img
-            src="/images/hero-observatory.svg"
-            alt="Ardhanarishwar-inspired observatory landscape with the five elements, Himalayan lake, and celestial geometry"
-            className="observatory-hero-visual-image"
-          />
-        </Reveal>
-
         <div className="observatory-hero-copy">
           <Reveal immediate>
             <p className="observatory-eyebrow">ARDHNARISHWAR OBSERVATORY · EST. 2012</p>
