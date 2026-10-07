@@ -14,7 +14,7 @@ export function About() {
       <div className="observatory-container">
         <div className="observatory-manifesto">
           <div>
-            <p className="observatory-eyebrow">01 · WHY OBSERVATION MATTERS</p>
+            <p className="observatory-eyebrow">WHY OBSERVATION MATTERS</p>
           </div>
           <div>
             <h2>Many symptoms are visible.<br /><em>Patterns are not.</em></h2>
