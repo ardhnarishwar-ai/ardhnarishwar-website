@@ -1434,6 +1434,10 @@ body { background: #fff !important; background-image: none !important; }
     padding-bottom: 0 !important;
   }
 
+  .observatory-about {
+    padding-top: 0 !important;
+  }
+
   .observatory-purpose {
     padding-top: 0 !important;
   }
