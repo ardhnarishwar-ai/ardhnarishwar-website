@@ -50,6 +50,8 @@ export function Footer() {
             </div>
             <div className="mt-6 space-y-2 text-xs text-navy/45">
               <a href={`tel:${BUSINESS.phone.replace(/[^\\d+]/g, '')}`} className="block hover:text-gold">{BUSINESS.phone}</a>
+              <a href="mailto:ardhnarishwar.in@gmail.com" className="block hover:text-gold">ardhnarishwar.in@gmail.com</a>
+              <a href="mailto:ardhnarishwar.astro@gmail.com" className="block hover:text-gold">ardhnarishwar.astro@gmail.com</a>
             </div>
           </div>
         </div>
