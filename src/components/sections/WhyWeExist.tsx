@@ -4,7 +4,7 @@ export function WhyWeExist() {
       <div className="observatory-container">
         <div className="observatory-purpose-grid">
           <div>
-            <p className="observatory-eyebrow">05 · THE POSITION</p>
+            <p className="observatory-eyebrow">THE POSITION</p>
             <h2>We began with a question,<br /><em>not an answer.</em></h2>
           </div>
           <div className="observatory-purpose-list">
