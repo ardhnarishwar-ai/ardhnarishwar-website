@@ -5,7 +5,7 @@ export function Testimonials() {
     <section id="testimonials" className="observatory-testimonials">
       <div className="observatory-container">
         <div className="observatory-testimonial-head">
-          <p className="observatory-eyebrow">09 · PRIVATE REFLECTIONS</p>
+          <p className="observatory-eyebrow">PRIVATE REFLECTIONS</p>
           <h2>Depth over spectacle.</h2>
         </div>
         <div className="observatory-testimonial-list">
