@@ -1,4 +1,5 @@
 import { ArrowDownRight, Calendar } from 'lucide-react'
+import fiveElementsImage from '../../assets/hero.png'
 import { LINKS } from '../../data/site'
 import { Reveal } from '../ui/Reveal'
 
@@ -8,7 +9,7 @@ export function Hero() {
       <div className="observatory-hero-inner">
         <Reveal immediate delay={120} className="observatory-hero-visual">
           <img
-            src="/images/five-elements-observation-mobile.jpg"
+            src={fiveElementsImage}
             alt="Five elements and human constitution observation"
             className="observatory-hero-visual-image"
           />
