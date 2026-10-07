@@ -1430,11 +1430,11 @@ body { background: #fff !important; background-image: none !important; }
   }
 
   .observatory-common-concerns {
-    padding-bottom: 28px;
+    padding-bottom: 0;
   }
 
   .observatory-purpose {
-    padding-top: 44px;
+    padding-top: 20px;
   }
 
   .observatory-manifesto {
