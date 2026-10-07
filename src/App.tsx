@@ -6,6 +6,7 @@ import { Header } from './components/layout/Header'
 import { Footer } from './components/layout/Footer'
 import { Seo } from './components/Seo'
 import { Hero } from './components/sections/Hero'
+import { CommonConcerns } from './components/sections/CommonConcerns'
 import { About } from './components/sections/About'
 import { Services } from './components/sections/Services'
 import { Process } from './components/sections/Process'
@@ -21,6 +22,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <CommonConcerns />
         <About />
         <Services />
         <Process />
