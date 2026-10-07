@@ -7,7 +7,7 @@ export function Services() {
       <div className="observatory-container">
         <div className="observatory-section-intro">
           <div>
-            <p className="observatory-eyebrow">02 · PRIVATE CONSULTATIONS</p>
+            <p className="observatory-eyebrow">PRIVATE CONSULTATIONS</p>
             <h2>Astromedical work,<br /><em>treated as observation.</em></h2>
           </div>
           <p>
