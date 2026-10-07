@@ -34,9 +34,9 @@ export function Header() {
       <div className="observatory-header-inner">
         <a href="#hero" className="observatory-brand" aria-label="ardhnarishwar.in">
           <img
-            src="/images/ardhnarishwar-header-logo.jpg"
+            src="/images/ardhnarishwar-logo.jpg"
             alt="ardhnarishwar.in — Astromedical Solutions"
-            style={{ width: 'min(260px, 52vw)', height: '58px', objectFit: 'contain' }}
+            style={{ width: 'min(300px, 64vw)', height: '58px', objectFit: 'contain' }}
           />
         </a>
 
