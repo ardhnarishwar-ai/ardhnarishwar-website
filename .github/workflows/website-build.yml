@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - website-finish-2026-10-07
+      - main
   pull_request:
     branches:
       - main
