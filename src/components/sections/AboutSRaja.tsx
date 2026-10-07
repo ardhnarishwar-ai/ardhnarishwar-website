@@ -7,15 +7,15 @@ export function AboutSRaja() {
       <div className="observatory-container">
         <div className="observatory-founder-grid">
           <div className="observatory-founder-note">
-            <p className="observatory-eyebrow">04 · THE OBSERVER</p>
-            <div className="observatory-founder-mark">AR</div>
+            <p className="observatory-eyebrow">THE OBSERVER</p>
+            <div className="observatory-founder-logo"><img src="/images/ardhnarishwar-logo.jpg" alt="ardhnarishwar.in — Astromedical Solutions" /></div>
             <span>ARDHNARISHWAR OBSERVATORY</span>
             <div className="observatory-founder-rule" />
             <div className="observatory-founder-index">
-              <p><span>01</span> Observation before interpretation</p>
-              <p><span>02</span> Constitution before symptom</p>
-              <p><span>03</span> Timing within context</p>
-              <p><span>04</span> Research before certainty</p>
+              <p>Observation before interpretation</p>
+              <p>Constitution before symptom</p>
+              <p>Timing within context</p>
+              <p>Research before certainty</p>
             </div>
           </div>
 
