@@ -20,10 +20,11 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <div>
-              <div>
-                <p className="font-serif text-xl tracking-wide text-navy">{BRAND.name}</p>
-                <p className="mt-1 text-[9px] font-medium uppercase tracking-[0.2em] text-navy/45">{BRAND.tagline}</p>
-              </div>
+              <img
+                src="/images/ardhnarishwar-logo.jpg"
+                alt="ardhnarishwar.in — Astromedical Solutions"
+                className="h-auto w-[300px] max-w-full object-contain"
+              />
             </div>
             <p className="mt-7 max-w-lg text-sm leading-7 text-navy/58">
               A research-oriented observatory focused on constitutional observation,
