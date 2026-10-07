@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { Menu, X } from 'lucide-react'
-import { BRAND } from '../../data/site'
 
 const NAV = [
   { label: 'About', href: '#about', id: 'about' },
@@ -33,12 +32,12 @@ export function Header() {
   return (
     <header className="observatory-header">
       <div className="observatory-header-inner">
-        <a href="#hero" className="observatory-brand">
-          <img src="/images/logo.png" alt="" />
-          <span>
-            <strong>{BRAND.name.toUpperCase()}</strong>
-            <small>{BRAND.tagline}</small>
-          </span>
+        <a href="#hero" className="observatory-brand" aria-label="ardhnarishwar.in">
+          <img
+            src="/images/ardhnarishwar-header-logo.jpg"
+            alt="ardhnarishwar.in — Astromedical Solutions"
+            style={{ width: 'min(260px, 52vw)', height: '58px', objectFit: 'contain' }}
+          />
         </a>
 
         <nav className="observatory-nav" aria-label="Main">
