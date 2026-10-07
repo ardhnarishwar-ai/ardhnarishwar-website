@@ -26,8 +26,8 @@ export function Seo() {
       <link rel="canonical" href={SITE_URL} />
 
       <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-      <link rel="icon" href="/images/logo.png" type="image/png" sizes="any" />
-      <link rel="apple-touch-icon" href="/images/logo.png" />
+      <link rel="icon" href="/images/ardhnarishwar-logo.jpg" type="image/png" sizes="any" />
+      <link rel="apple-touch-icon" href="/images/ardhnarishwar-logo.jpg" />
 
       <meta property="og:site_name" content={BRAND.fullName} />
       <meta property="og:locale" content={SEO.locale} />
