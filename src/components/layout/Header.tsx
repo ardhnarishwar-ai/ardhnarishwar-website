@@ -41,12 +41,13 @@ export function Header() {
             left: '16px',
             top: '50%',
             transform: 'translateY(-50%)',
+            zIndex: 3,
           }}
         >
           <img
             src="/images/ardhnarishwar-logo.jpg"
             alt="ardhnarishwar.in — Astromedical Solutions"
-            style={{ width: 'clamp(190px, 42vw, 300px)', height: '58px', objectFit: 'contain' }}
+            style={{ width: 'clamp(145px, 34vw, 220px)', height: '44px', objectFit: 'contain' }}
           />
         </a>
 
@@ -62,6 +63,13 @@ export function Header() {
         <button
           type="button"
           className="observatory-menu"
+          style={{
+            position: 'absolute',
+            right: '16px',
+            top: '50%',
+            transform: 'translateY(-50%)',
+            zIndex: 4,
+          }}
           onClick={() => setOpen(!open)}
           aria-label={open ? 'Close menu' : 'Open menu'}
           aria-expanded={open}
