@@ -19,8 +19,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-5 py-16 md:px-8 md:py-20 lg:px-10">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
-            <div className="flex items-center gap-4">
-              <img src="/images/logo.png" alt="" className="h-12 w-12 object-contain" width={48} height={48} />
+            <div>
               <div>
                 <p className="font-serif text-xl tracking-wide text-navy">{BRAND.name}</p>
                 <p className="mt-1 text-[9px] font-medium uppercase tracking-[0.2em] text-navy/45">{BRAND.tagline}</p>
