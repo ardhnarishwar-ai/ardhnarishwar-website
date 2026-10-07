@@ -25,8 +25,7 @@ export function Seo() {
       <meta name="theme-color" content="#f9f5f0" />
       <link rel="canonical" href={SITE_URL} />
 
-      <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-      <link rel="icon" href="/images/ardhnarishwar-logo.jpg" type="image/png" sizes="any" />
+      <link rel="icon" href="/images/ardhnarishwar-logo.jpg?v=2" type="image/jpeg" sizes="any" />
       <link rel="apple-touch-icon" href="/images/ardhnarishwar-logo.jpg" />
 
       <meta property="og:site_name" content={BRAND.fullName} />
