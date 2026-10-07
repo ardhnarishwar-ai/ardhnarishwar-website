@@ -44,13 +44,12 @@ export function Footer() {
           <div className="lg:col-span-3">
             <p className="editorial-footer-label">Connect</p>
             <div className="mt-5 flex gap-3">
-              <SocialIcon href={LINKS.whatsapp} label="WhatsApp" icon={<MessageCircle size={19} strokeWidth={1.25} />} />
-              <SocialIcon href={LINKS.instagram} label="Instagram" icon={<InstagramIcon width={19} height={19} />} />
+              <SocialIcon href={LINKS.whatsapp} label="WhatsApp" tone="whatsapp" icon={<MessageCircle size={19} strokeWidth={1.25} />} />
+              <SocialIcon href={LINKS.instagram} label="Instagram" tone="instagram" icon={<InstagramIcon width={19} height={19} />} />
               <SocialIcon href={LINKS.googleBusiness} label="Google Business" icon={<MapPin size={19} strokeWidth={1.25} />} />
             </div>
             <div className="mt-6 space-y-2 text-xs text-navy/45">
               <a href={`tel:${BUSINESS.phone.replace(/[^\\d+]/g, '')}`} className="block hover:text-gold">{BUSINESS.phone}</a>
-              <a href={`mailto:${BUSINESS.email}`} className="block hover:text-gold">{BUSINESS.email}</a>
             </div>
           </div>
         </div>
@@ -64,10 +63,11 @@ export function Footer() {
   )
 }
 
-function SocialIcon({ href, label, icon }: { href: string; label: string; icon: ReactNode }) {
+function SocialIcon({ href, label, icon, tone }: { href: string; label: string; icon: ReactNode; tone?: 'whatsapp' | 'instagram' }) {
+  const toneClass = tone === 'whatsapp' ? 'text-[#25D366]' : tone === 'instagram' ? 'text-[#E4405F]' : 'text-navy/55'
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
-      className="flex h-10 w-10 items-center justify-center rounded-full border border-navy/12 text-navy/55 transition-colors hover:border-gold/45 hover:text-gold">
+      className={`flex h-10 w-10 items-center justify-center rounded-full border border-navy/12 ${toneClass} transition-colors hover:border-gold/45`}>
       {icon}
     </a>
   )
