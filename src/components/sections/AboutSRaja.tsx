@@ -6,16 +6,20 @@ export function AboutSRaja() {
     <section id="raja" className="observatory-section observatory-founder">
       <div className="observatory-container">
         <div className="observatory-founder-grid">
-          <div className="observatory-founder-image">
-            <img src="/images/hero-reference.png" alt="S. Raja, founder and research director" loading="lazy" />
-            <div>
-              <span>FOUNDER PROFILE</span>
-              <span>15+ YEARS OF OBSERVATION</span>
+          <div className="observatory-founder-note">
+            <p className="observatory-eyebrow">04 · THE OBSERVER</p>
+            <div className="observatory-founder-mark">AR</div>
+            <span>ARDHNARISHWAR OBSERVATORY</span>
+            <div className="observatory-founder-rule" />
+            <div className="observatory-founder-index">
+              <p><span>01</span> Observation before interpretation</p>
+              <p><span>02</span> Constitution before symptom</p>
+              <p><span>03</span> Timing within context</p>
+              <p><span>04</span> Research before certainty</p>
             </div>
           </div>
 
           <div className="observatory-founder-copy">
-            <p className="observatory-eyebrow">04 · THE OBSERVER</p>
             <h2>S. Raja</h2>
             <p className="observatory-founder-role">Founder & Research Director · Ardhnarishwar Observatory</p>
 

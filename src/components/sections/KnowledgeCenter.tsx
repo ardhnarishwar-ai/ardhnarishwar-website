@@ -20,6 +20,18 @@ export function KnowledgeCenter() {
           </p>
         </div>
 
+        <figure className="observatory-knowledge-visual">
+          <img
+            src="/images/five-elements-reference.jpg"
+            alt="Five elements and human constitution educational reference"
+            loading="lazy"
+          />
+          <figcaption>
+            <span>REFERENCE PLATE · 01</span>
+            <span>FIVE ELEMENTS & HUMAN CONSTITUTION</span>
+          </figcaption>
+        </figure>
+
         <div className="observatory-knowledge-list">
           {topics.map(([number, title, text]) => (
             <article key={title}>
