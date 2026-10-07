@@ -22,13 +22,13 @@ export function KnowledgeCenter() {
 
         <figure className="observatory-knowledge-visual">
           <img
-            src="/images/five-elements-reference.jpg"
-            alt="Five elements and human constitution educational reference"
+            src="/images/five-elements-human-body.webp"
+            alt="The five elements in the human body: Earth in the legs, Water in the thighs, Fire in the stomach, Air in the chest, and Space or Ether in the head"
             loading="lazy"
           />
           <figcaption>
             <span>REFERENCE PLATE · 01</span>
-            <span>FIVE ELEMENTS & HUMAN CONSTITUTION</span>
+            <span>FIVE ELEMENTS · HUMAN BODY SEQUENCE</span>
           </figcaption>
         </figure>
 
