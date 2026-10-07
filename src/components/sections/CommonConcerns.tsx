@@ -87,8 +87,8 @@ export function CommonConcerns() {
           ))}
         </div>
 
-        <p className="mt-5 text-center text-[9px] leading-4 text-navy/40">
-          Health and emotional well-being guidance is complementary and educational; it is not a substitute for diagnosis or treatment by a qualified medical professional.
+        <p className="mt-4 text-center text-[8px] leading-3.5 text-navy/35">
+          Health and emotional well-being guidance is complementary and educational, it is not a substitute for diagnosis or treatment by a qualified medical professional.
         </p>
       </div>
     </section>
