@@ -12,7 +12,7 @@ export function Timeline() {
       <div className="observatory-container">
         <div className="observatory-section-intro">
           <div>
-            <p className="observatory-eyebrow">08 · THE JOURNEY</p>
+            <p className="observatory-eyebrow">THE JOURNEY</p>
             <h2>One question.<br /><em>Years of observation.</em></h2>
           </div>
           <p>Ardhnarishwar did not begin with a finished answer. It began with a question—and the discipline to keep observing.</p>
