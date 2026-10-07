@@ -1,6 +1,5 @@
 import type { ReactNode } from 'react'
-import { MessageCircle, MapPin } from 'lucide-react'
-import { InstagramIcon } from '../ui/SocialIcons'
+import { InstagramIcon, WhatsAppIcon, GoogleMapsIcon } from '../ui/SocialIcons'
 import { BRAND, BUSINESS, LINKS } from '../../data/site'
 
 const FOOTER_NAV = [
@@ -44,9 +43,9 @@ export function Footer() {
           <div className="lg:col-span-3">
             <p className="editorial-footer-label">Connect</p>
             <div className="mt-5 flex gap-3">
-              <SocialIcon href={LINKS.whatsapp} label="WhatsApp" tone="whatsapp" icon={<MessageCircle size={19} strokeWidth={1.25} />} />
-              <SocialIcon href={LINKS.instagram} label="Instagram" tone="instagram" icon={<InstagramIcon width={19} height={19} />} />
-              <SocialIcon href={LINKS.googleBusiness} label="Google Business" icon={<MapPin size={19} strokeWidth={1.25} />} />
+              <SocialIcon href={LINKS.whatsapp} label="WhatsApp" icon={<WhatsAppIcon width={20} height={20} />} />
+              <SocialIcon href={LINKS.instagram} label="Instagram" icon={<InstagramIcon width={20} height={20} />} />
+              <SocialIcon href={LINKS.googleBusiness} label="Google Business" icon={<GoogleMapsIcon width={20} height={20} />} />
             </div>
             <div className="mt-6 space-y-2 text-xs text-navy/45">
               <a href={`tel:${BUSINESS.phone.replace(/[^\\d+]/g, '')}`} className="block hover:text-gold">{BUSINESS.phone}</a>
@@ -65,11 +64,10 @@ export function Footer() {
   )
 }
 
-function SocialIcon({ href, label, icon, tone }: { href: string; label: string; icon: ReactNode; tone?: 'whatsapp' | 'instagram' }) {
-  const toneClass = tone === 'whatsapp' ? 'text-[#25D366]' : tone === 'instagram' ? 'text-[#E4405F]' : 'text-navy/55'
+function SocialIcon({ href, label, icon }: { href: string; label: string; icon: ReactNode }) {
   return (
     <a href={href} target="_blank" rel="noopener noreferrer" aria-label={label}
-      className={`flex h-10 w-10 items-center justify-center rounded-full border border-navy/12 ${toneClass} transition-colors hover:border-gold/45`}>
+      className="flex h-10 w-10 items-center justify-center rounded-full border border-navy/12 bg-white transition-all hover:border-gold/45 hover:shadow-sm">
       {icon}
     </a>
   )
