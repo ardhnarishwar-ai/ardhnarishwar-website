@@ -89,16 +89,18 @@ export function Contact() {
                 <FormField label="Phone (optional)" name="phone" type="tel" placeholder="+91 ..." />
                 <div>
                   <label htmlFor="concern" className="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-navy/55">
-                    Primary Concern
+                    What would you like guidance with?
                   </label>
                   <select id="concern" name="concern" required className="input-luxury w-full px-4 py-3.5 text-sm text-navy">
-                    <option value="">Select consultation type</option>
-                    <option>Constitutional Observation</option>
-                    <option>Pattern Intelligence Review</option>
-                    <option>Life Pattern Analysis</option>
-                    <option>Psychological Observation</option>
-                    <option>Timing Cycle Assessment</option>
-                    <option>Private Research Consultation</option>
+                    <option value="">Choose what you need help with</option>
+                    <option>Health & Wellness</option>
+                    <option>Money & Financial Concerns</option>
+                    <option>Work & Career</option>
+                    <option>Stress, Anxiety & Emotional Well-being</option>
+                    <option>Relationships & Family</option>
+                    <option>Life & Future Guidance</option>
+                    <option>Personal Direction & Decisions</option>
+                    <option>Something Else / Private Consultation</option>
                   </select>
                 </div>
                 <div>
