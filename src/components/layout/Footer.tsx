@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { InstagramIcon, WhatsAppIcon, GoogleMapsIcon } from '../ui/SocialIcons'
+import { InstagramIcon, WhatsAppIcon, GoogleMapsIcon, GmailIcon, GoogleFormsIcon, PhoneIcon } from '../ui/SocialIcons'
 import { BRAND, BUSINESS, LINKS } from '../../data/site'
 
 const FOOTER_NAV = [
@@ -19,11 +19,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-16">
           <div className="lg:col-span-5">
             <div>
-              <img
-                src="/images/ardhnarishwar-logo.jpg"
-                alt="ardhnarishwar.in — Astromedical Solutions"
-                className="h-auto w-[300px] max-w-full object-contain"
-              />
+              <img src="/images/ardhnarishwar-logo.jpg" alt="ardhnarishwar.in — Astromedical Solutions" className="h-auto w-[300px] max-w-full object-contain" />
             </div>
             <p className="mt-7 max-w-lg text-sm leading-7 text-navy/58">
               A research-oriented observatory focused on constitutional observation,
@@ -42,15 +38,22 @@ export function Footer() {
 
           <div className="lg:col-span-3">
             <p className="editorial-footer-label">Connect</p>
-            <div className="mt-5 flex gap-3">
+            <div className="mt-5 flex flex-wrap gap-3">
               <SocialIcon href={LINKS.whatsapp} label="WhatsApp" icon={<WhatsAppIcon width={20} height={20} />} />
               <SocialIcon href={LINKS.instagram} label="Instagram" icon={<InstagramIcon width={20} height={20} />} />
+              <SocialIcon href={LINKS.consultationForm} label="Consultation Form" icon={<GoogleFormsIcon width={20} height={20} />} />
               <SocialIcon href={LINKS.googleBusiness} label="Google Business" icon={<GoogleMapsIcon width={20} height={20} />} />
             </div>
-            <div className="mt-6 space-y-2 text-xs text-navy/45">
-              <a href={`tel:${BUSINESS.phone.replace(/[^\\d+]/g, '')}`} className="block hover:text-gold">{BUSINESS.phone}</a>
-              <a href="mailto:ardhnarishwar.in@gmail.com" className="block hover:text-gold">ardhnarishwar.in@gmail.com</a>
-              <a href="mailto:ardhnarishwar.astro@gmail.com" className="block hover:text-gold">ardhnarishwar.astro@gmail.com</a>
+            <div className="mt-6 space-y-3 text-xs text-navy/45">
+              <a href={`tel:${BUSINESS.phone.replace(/[^\\d+]/g, '')}`} className="flex items-center gap-2 hover:text-gold">
+                <PhoneIcon width={18} height={18} /><span>{BUSINESS.phone}</span>
+              </a>
+              <a href="mailto:ardhnarishwar.in@gmail.com" className="flex items-center gap-2 hover:text-gold">
+                <GmailIcon width={18} height={18} /><span>ardhnarishwar.in@gmail.com</span>
+              </a>
+              <a href="mailto:ardhnarishwar.astro@gmail.com" className="flex items-center gap-2 hover:text-gold">
+                <GmailIcon width={18} height={18} /><span>ardhnarishwar.astro@gmail.com</span>
+              </a>
             </div>
           </div>
         </div>
