@@ -12,7 +12,7 @@ export function Shakti() {
       <div className="observatory-container">
         <div className="observatory-section-intro">
           <div>
-            <p className="observatory-eyebrow">06 · HUMAN CONSTITUTION</p>
+            <p className="observatory-eyebrow">HUMAN CONSTITUTION</p>
             <h2>The person is more<br /><em>than the symptom.</em></h2>
           </div>
           <p>
