@@ -2,22 +2,27 @@ import { BRAND, BUSINESS, LINKS } from '../data/site'
 
 /** Production site URL — set VITE_SITE_URL in hosting dashboard */
 export const SITE_URL = (
-  import.meta.env.VITE_SITE_URL ?? 'https://ardhnarishwar.com'
+  import.meta.env.VITE_SITE_URL ?? 'https://www.ardhnarishwar.in'
 ).replace(/\/$/, '')
 
 export const SEO = {
-  title: 'Ardhnarishwar Astromedical Solutions | Medical Astrology Consultation',
+  title: 'Ardhnarishwar Astromedical Solutions | Wellness & Medical Astrology Consultation',
   description:
-    'Root-cause oriented astrological guidance integrating planetary timing, wellness intelligence, and structured consultation systems.',
+    'Private complementary wellness guidance for health, money, career, relationships, emotional well-being, life decisions, and medical astrology.',
   keywords: [
     'medical astrology',
     'astromedical solutions',
-    'pattern analysis',
+    'health and wellness guidance',
+    'money and financial concerns',
+    'career and work guidance',
+    'stress and emotional well-being',
+    'relationships and family guidance',
+    'life and future guidance',
+    'personal direction and decisions',
     'planetary timing',
     'wellness astrology',
-    'private astrology consultation',
+    'private consultation',
     'S. Raja',
-    'clinical astrology',
     'structured observation',
     'Ardhnarishwar',
   ].join(', '),
@@ -95,9 +100,15 @@ export function buildLocalBusinessSchema() {
       '@type': 'Country',
       name: 'Worldwide',
     },
-    serviceType: 'Medical Astrology Consultation',
+    serviceType: ['Complementary Wellness Consultation', 'Medical Astrology Consultation'],
     knowsAbout: [
       'Medical Astrology',
+      'Health and Wellness Guidance',
+      'Money and Financial Concerns',
+      'Work and Career',
+      'Relationships and Family',
+      'Emotional Well-being',
+      'Life and Future Guidance',
       'Planetary Timing',
       'Wellness Pattern Analysis',
       'Structured Observation',
