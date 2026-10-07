@@ -22,9 +22,17 @@ export function KnowledgeCenter() {
 
         <figure className="observatory-knowledge-visual">
           <img
-            src="/images/five-elements-human-body.svg"
+            src="/images/five-elements-human-body.jpg"
             alt="Traditional Pancha Mahabhuta framework: Earth, Water, Fire, Air, and Space as a philosophical language for observing the human constitution"
             loading="lazy"
+            style={{
+              width: '100%',
+              height: 'auto',
+              maxWidth: '900px',
+              margin: '0 auto',
+              display: 'block',
+              objectFit: 'contain'
+            }}
           />
           <figcaption>
             <span>REFERENCE PLATE · 01</span>
