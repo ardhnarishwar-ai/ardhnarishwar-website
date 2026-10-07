@@ -35,10 +35,11 @@ export function GoogleMapsIcon({ width = 24, height = 24, ...props }: SVGProps<S
 
 export function GmailIcon({ width = 24, height = 24, ...props }: SVGProps<SVGSVGElement>) {
   return (
-    <svg viewBox="0 0 24 24" width={width} height={height} {...props}>
-      <path fill="#4285F4" d="M3 5.5A2.5 2.5 0 0 1 5.5 3H18.5A2.5 2.5 0 0 1 21 5.5V18.5A2.5 2.5 0 0 1 18.5 21H5.5A2.5 2.5 0 0 1 3 18.5Z" opacity=".08" />
-      <path fill="#EA4335" d="M4 6.2 12 12l8-5.8V18a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z" />
-      <path fill="#4285F4" d="M4 6.2V18a2 2 0 0 0 2 2h2V9.6Z" /><path fill="#34A853" d="M20 6.2V18a2 2 0 0 1-2 2h-2V9.6Z" /><path fill="#FBBC04" d="M4 6.2 12 12l8-5.8-2-2.2-6 4.4-6-4.4Z" />
+    <svg viewBox="0 0 48 36" width={width} height={height} {...props}>
+      <path fill="#4285F4" d="M4 7v24c0 2.2 1.8 4 4 4h5V13L4 7Z" />
+      <path fill="#34A853" d="M35 13v22h5c2.2 0 4-1.8 4-4V7l-9 6Z" />
+      <path fill="#EA4335" d="M4 7 24 22 44 7c0-2.2-1.8-4-4-4H8C5.8 3 4 4.8 4 7Z" />
+      <path fill="#FBBC04" d="M4 7v1l20 15L44 8V7L24 22 4 7Z" />
     </svg>
   )
 }
