@@ -11,7 +11,7 @@ export function KnowledgeCenter() {
       <div className="observatory-container">
         <div className="observatory-section-intro">
           <div>
-            <p className="observatory-eyebrow">07 · KNOWLEDGE CENTRE</p>
+            <p className="observatory-eyebrow">KNOWLEDGE CENTRE</p>
             <h2>Study the framework.<br /><em>Question the assumptions.</em></h2>
           </div>
           <p>
