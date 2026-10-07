@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 900" role="img" aria-labelledby="title desc">
+  <title id="title">Ardhnarishwar Observatory — elemental landscape</title>
+  <desc id="desc">A refined editorial illustration of an Ardhanarishvara-inspired meditative figure beside a Himalayan lake, surrounded by five elemental motifs and celestial geometry.</desc>
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8f5ee"/>
+      <stop offset=".58" stop-color="#eee8dc"/>
+      <stop offset="1" stop-color="#d8d5cc"/>
+    </linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#c9d5d4"/>
+      <stop offset="1" stop-color="#8fa5a7"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#b88927"/>
+      <stop offset=".5" stop-color="#e3c77d"/>
+      <stop offset="1" stop-color="#a4741d"/>
+    </linearGradient>
+    <linearGradient id="figure" x1="0" y1="0" x2="1" y2="0">
+      <stop offset=".49" stop-color="#566575"/>
+      <stop offset=".5" stop-color="#c89e78"/>
+      <stop offset="1" stop-color="#e0bd94"/>
+    </linearGradient>
+    <radialGradient id="sun">
+      <stop offset="0" stop-color="#fff8cf"/>
+      <stop offset=".55" stop-color="#e6c66c"/>
+      <stop offset="1" stop-color="#b88927" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="soft"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+
+  <rect width="1400" height="900" fill="url(#sky)"/>
+  <circle cx="1040" cy="210" r="150" fill="url(#sun)" opacity=".75"/>
+  <circle cx="1040" cy="210" r="55" fill="#f4d77f" opacity=".72"/>
+
+  <!-- celestial geometry -->
+  <g fill="none" stroke="url(#gold)" opacity=".42">
+    <circle cx="500" cy="365" r="270" stroke-width="2"/>
+    <circle cx="500" cy="365" r="205" stroke-width="1.5" stroke-dasharray="3 9"/>
+    <ellipse cx="500" cy="365" rx="335" ry="115" stroke-width="1"/>
+    <ellipse cx="500" cy="365" rx="115" ry="335" stroke-width="1"/>
+  </g>
+
+  <!-- distant Himalayas -->
+  <path d="M0 500 L125 375 210 445 315 295 430 445 540 340 665 465 790 315 930 450 1055 355 1180 465 1290 330 1400 470 V610 H0Z" fill="#a8aaa6" opacity=".62"/>
+  <path d="M0 530 L160 420 260 500 390 380 510 505 640 400 760 500 900 385 1010 510 1130 420 1240 505 1370 390 1400 415 V610 H0Z" fill="#7f8787" opacity=".38"/>
+
+  <!-- snow accents -->
+  <g fill="#f7f3e9" opacity=".82">
+    <path d="M315 295 l-42 55 43-19 35 31z"/>
+    <path d="M790 315 l-43 53 45-20 36 28z"/>
+    <path d="M1290 330 l-38 51 39-19 32 25z"/>
+  </g>
+
+  <!-- lake -->
+  <path d="M0 565 Q350 535 700 570 T1400 555 V900 H0Z" fill="url(#lake)"/>
+  <g fill="none" stroke="#e7dfc9" opacity=".45">
+    <path d="M60 650 Q360 625 660 652 T1340 645"/>
+    <path d="M120 700 Q390 678 670 704 T1300 695"/>
+    <path d="M40 765 Q380 735 720 766 T1370 758"/>
+    <path d="M210 825 Q480 800 760 830 T1250 820"/>
+  </g>
+
+  <!-- earth island -->
+  <ellipse cx="510" cy="670" rx="300" ry="45" fill="#5c604f" opacity=".48"/>
+  <g fill="#4c5943">
+    <path d="M250 670 q25-105 42 0z"/><path d="M285 665 q30-135 52 0z"/>
+    <path d="M730 670 q25-115 45 0z"/><path d="M760 668 q28-90 43 0z"/>
+  </g>
+
+  <!-- central meditative dual-aspect figure -->
+  <g stroke="#2e3540" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <ellipse cx="500" cy="440" rx="88" ry="125" fill="url(#figure)" stroke="none"/>
+    <path d="M500 300 C465 262 430 280 420 322 C447 302 472 302 500 325"/>
+    <path d="M500 300 C535 260 578 282 586 323 C558 302 532 303 500 325"/>
+    <circle cx="500" cy="392" r="46" fill="url(#figure)" stroke="none"/>
+    <path d="M485 390 q15 12 30 0 M484 410 q16 9 32 0" fill="none"/>
+    <path d="M500 346 v92" stroke="#d9c083" stroke-width="2"/>
+    <path d="M420 425 Q355 485 370 560 Q405 585 450 550"/>
+    <path d="M580 425 Q645 485 630 560 Q595 585 550 550"/>
+    <path d="M445 535 Q400 585 340 620"/>
+    <path d="M555 535 Q600 585 660 620"/>
+    <path d="M450 540 Q420 610 355 650"/>
+    <path d="M550 540 Q580 610 645 650"/>
+    <path d="M355 650 Q500 710 645 650"/>
+    <path d="M450 505 Q500 545 550 505" fill="none"/>
+  </g>
+
+  <!-- sun / moon -->
+  <circle cx="285" cy="300" r="38" fill="#e2b95f" opacity=".9"/>
+  <g fill="none" stroke="#d2ae58" stroke-width="2" opacity=".7">
+    <path d="M285 247v-22M285 353v22M232 300h-22M338 300h22"/>
+  </g>
+  <circle cx="710" cy="300" r="34" fill="#9eafb4"/>
+  <path d="M700 276 q30 18 8 49 q-24-4-30-28 q4-15 22-21z" fill="#dfe5e2" opacity=".7"/>
+
+  <!-- five element portals -->
+  <g font-family="Georgia,serif" font-size="18" letter-spacing="2" fill="#17233d">
+    <g transform="translate(115 170)">
+      <circle r="58" fill="#d7c8a0" opacity=".95"/><circle r="49" fill="#f2eee3"/>
+      <path d="M-28 20 Q-8-20 2 8 Q15-25 35 18" fill="none" stroke="#5d754c" stroke-width="7"/>
+      <text x="-48" y="88">EARTH</text>
+    </g>
+    <g transform="translate(875 160)">
+      <circle r="58" fill="#a8c6ca" opacity=".95"/><circle r="49" fill="#e9f0ed"/>
+      <path d="M-38 8 Q-10-12 10 8 T50 8" fill="none" stroke="#5d8c98" stroke-width="8"/>
+      <text x="-54" y="88">WATER</text>
+    </g>
+    <g transform="translate(170 500)">
+      <circle r="48" fill="#d6a05a" opacity=".9"/><path d="M0-27 C-32 5 0 31 0 31 C0 31 32 5 0-27Z" fill="#bd6f36"/>
+      <text x="-43" y="78">FIRE</text>
+    </g>
+    <g transform="translate(820 500)">
+      <circle r="48" fill="#d5ded9" opacity=".9"/><path d="M-28 8 Q0-35 30 8 Q0-4-28 8Z" fill="#6d8c83"/>
+      <text x="-40" y="78">AIR</text>
+    </g>
+    <g transform="translate(675 100)">
+      <circle r="42" fill="#c4c5cf" opacity=".65"/><circle r="28" fill="none" stroke="#6f7181" stroke-dasharray="2 6" stroke-width="2"/>
+      <text x="-48" y="68">SPACE</text>
+    </g>
+  </g>
+
+  <!-- lotus -->
+  <g transform="translate(500 735)" fill="#f2e8d3" stroke="#b9903e" stroke-width="2">
+    <path d="M0 45 C-85 35-95-15-45 5 C-55-45-10-52 0-5 C10-52 55-45 45 5 C95-15 85 35 0 45Z"/>
+    <path d="M0 45 C-40 25-40-20 0-5 C40-20 40 25 0 45Z" fill="#d8c29a"/>
+  </g>
+
+  <!-- editorial framing -->
+  <g fill="none" stroke="#b9903e" opacity=".32">
+    <path d="M55 55 H360"/><path d="M1040 840 H1345"/>
+    <circle cx="1180" cy="690" r="120" stroke-dasharray="2 10"/>
+  </g>
+</svg>
