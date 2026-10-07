@@ -2,18 +2,18 @@ import { ArrowDownRight, Calendar } from 'lucide-react'
 import { LINKS } from '../../data/site'
 import { Reveal } from '../ui/Reveal'
 
-const ELEMENTS = [
-  ['EARTH', 'Structure'],
-  ['WATER', 'Flow'],
-  ['FIRE', 'Transformation'],
-  ['AIR', 'Movement'],
-  ['SPACE', 'Awareness'],
-]
-
 export function Hero() {
   return (
     <section id="hero" className="observatory-hero">
       <div className="observatory-hero-inner">
+        <Reveal immediate delay={120} className="observatory-hero-visual">
+          <img
+            src="/images/five-elements-observation-mobile.jpg"
+            alt="Five elements and human constitution observation"
+            className="observatory-hero-visual-image"
+          />
+        </Reveal>
+
         <div className="observatory-hero-copy">
           <Reveal immediate>
             <p className="observatory-eyebrow">ARDHNARISHWAR OBSERVATORY · EST. 2012</p>
@@ -57,29 +57,6 @@ export function Hero() {
             </div>
           </Reveal>
         </div>
-
-        <Reveal immediate delay={120} className="observatory-hero-visual">
-          <div className="observatory-hero-orbit observatory-hero-orbit-outer" />
-          <div className="observatory-hero-orbit observatory-hero-orbit-inner" />
-          <div className="observatory-hero-core">
-            <span>ARDHNARISHWAR</span>
-            <strong>OBSERVATION</strong>
-            <small>CONSTITUTION · TIMING · CONTEXT</small>
-          </div>
-
-          {ELEMENTS.map(([name, descriptor], index) => (
-            <div key={name} className={`observatory-element observatory-element-${index + 1}`}>
-              <span>{String(index + 1).padStart(2, '0')}</span>
-              <strong>{name}</strong>
-              <small>{descriptor}</small>
-            </div>
-          ))}
-
-          <div className="observatory-visual-caption">
-            <span>FIELD OF STUDY</span>
-            <span>FIVE ELEMENTS · HUMAN CONSTITUTION</span>
-          </div>
-        </Reveal>
       </div>
     </section>
   )

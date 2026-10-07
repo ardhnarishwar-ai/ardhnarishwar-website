@@ -1637,3 +1637,41 @@ body { background: #fff !important; background-image: none !important; }
 .observatory-element-1{left:5%;top:15%}.observatory-element-2{right:5%;top:15%}.observatory-element-3{right:5%;bottom:21%}.observatory-element-4{left:5%;bottom:21%}
 .observatory-visual-caption{left:12px;right:12px;font-size:6px}.observatory-knowledge-visual figcaption{flex-direction:column;gap:5px}
 }
+
+/* HERO EDITORIAL IMAGE — selected five-elements observation visual */
+.observatory-hero-visual-image {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  height: auto;
+  margin: 0 auto;
+  border: 1px solid rgba(12, 30, 61, 0.08);
+  object-fit: cover;
+  object-position: center;
+}
+
+@media (max-width: 767px) {
+  .observatory-hero {
+    overflow: hidden;
+  }
+
+  .observatory-hero-inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .observatory-hero-visual {
+    order: 1;
+    width: 100%;
+    margin: 0 auto 1.5rem;
+  }
+
+  .observatory-hero-visual-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .observatory-hero-copy {
+    order: 2;
+  }
+}
