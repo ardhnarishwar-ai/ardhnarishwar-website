@@ -34,7 +34,7 @@ export function Hero() {
 
           <Reveal immediate delay={260}>
             <div className="observatory-hero-actions">
-              <a className="observatory-button observatory-button-dark" href={LINKS.consultationForm}>
+              <a className="observatory-button observatory-button-dark" href={LINKS.whatsapp} target="_blank" rel="noopener noreferrer">
                 <Calendar size={16} strokeWidth={1.5} />
                 Private consultation
               </a>
@@ -46,10 +46,10 @@ export function Hero() {
 
           <Reveal immediate delay={340}>
             <div className="observatory-index">
-              <span>01 / YOUR CONCERN</span>
-              <span>02 / OBSERVATION</span>
-              <span>03 / TIMING</span>
-              <span>04 / CONTEXT</span>
+              <a href="#concerns">01 / YOUR CONCERN</a>
+              <a href="#process">02 / OBSERVATION</a>
+              <a href="#timeline">03 / TIMING</a>
+              <a href="#purpose">04 / CONTEXT</a>
             </div>
           </Reveal>
         </div>
