@@ -40,7 +40,7 @@ export function AboutSRaja() {
               framework for constitutional study, planetary timing, and pattern intelligence.
             </p>
 
-            <a className="observatory-inline-link" href={LINKS.consultationForm}>
+            <a className="observatory-inline-link" href={LINKS.whatsapp} target="_blank" rel="noopener noreferrer">
               Request a private consultation <ArrowUpRight size={16} strokeWidth={1.3} />
             </a>
           </div>
