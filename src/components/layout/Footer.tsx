@@ -47,8 +47,8 @@ export function Footer() {
             </div>
             <a href={LINKS.googleBusiness} target="_blank" rel="noopener noreferrer" aria-label="Google Business Profile"
               className="mt-6 flex items-center gap-3 text-sm text-navy/60 transition-colors hover:text-gold">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-navy/12 bg-white shadow-sm">
-                <GoogleBusinessIcon width={28} height={28} />
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center">
+                <GoogleBusinessIcon width={36} height={36} />
               </span>
               <span>
                 <span className="block text-[10px] uppercase tracking-[0.16em] text-navy/40">Find us on</span>
