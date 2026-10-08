@@ -25,8 +25,8 @@ export function Seo() {
       <meta name="theme-color" content="#f9f5f0" />
       <link rel="canonical" href={SITE_URL} />
 
-      <link rel="icon" href="/images/ardhnarishwar-logo.jpg?v=2" type="image/jpeg" sizes="any" />
-      <link rel="apple-touch-icon" href="/images/ardhnarishwar-logo.jpg" />
+      <link rel="icon" href="/images/ardhnarishwar-logo-main-uhd.png" type="image/png" sizes="512x512" />
+      <link rel="apple-touch-icon" href="/images/ardhnarishwar-logo-main-uhd.png" />
 
       <meta property="og:site_name" content={BRAND.fullName} />
       <meta property="og:locale" content={SEO.locale} />
