@@ -8,7 +8,7 @@ export function AboutSRaja() {
         <div className="observatory-founder-grid">
           <div className="observatory-founder-note">
             <p className="observatory-eyebrow">THE OBSERVER</p>
-            <div className="observatory-founder-logo"><img src="/images/ardhnarishwar-logo.jpg" alt="ardhnarishwar.in — Astromedical Solutions" /></div>
+            <div className="observatory-founder-logo"><img src="/images/ardhnarishwar-logo-main-uhd.png" alt="ardhnarishwar.in — Astromedical Solutions" /></div>
             <span>ARDHNARISHWAR OBSERVATORY</span>
             <div className="observatory-founder-rule" />
             <div className="observatory-founder-index">
