@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { InstagramIcon, WhatsAppIcon, GoogleMapsIcon, GmailIcon, GoogleFormsIcon, PhoneIcon } from '../ui/SocialIcons'
+import { InstagramIcon, WhatsAppIcon, ChromeIcon, GmailIcon, GoogleFormsIcon, GoogleBusinessIcon, PhoneIcon } from '../ui/SocialIcons'
 import { BRAND, BUSINESS, LINKS } from '../../data/site'
 
 const FOOTER_NAV = [
@@ -42,7 +42,8 @@ export function Footer() {
               <SocialIcon href={LINKS.whatsapp} label="WhatsApp" icon={<WhatsAppIcon width={20} height={20} />} />
               <SocialIcon href={LINKS.instagram} label="Instagram" icon={<InstagramIcon width={20} height={20} />} />
               <SocialIcon href={LINKS.consultationForm} label="Consultation Form" icon={<GoogleFormsIcon width={20} height={20} />} />
-              <SocialIcon href={LINKS.googleBusiness} label="Google Business" icon={<GoogleMapsIcon width={20} height={20} />} />
+              <SocialIcon href={LINKS.googleBusiness} label="Google Business" icon={<ChromeIcon width={20} height={20} />} />
+              <SocialIcon href={LINKS.googleBusiness} label="Google Business Profile" icon={<GoogleBusinessIcon width={20} height={20} />} />
             </div>
             <div className="mt-6 space-y-3 text-xs text-navy/45">
               <a href={`tel:${BUSINESS.phone.replace(/[^\\d+]/g, '')}`} className="flex items-center gap-2 hover:text-gold">
