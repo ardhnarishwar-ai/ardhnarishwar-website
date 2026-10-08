@@ -24,13 +24,16 @@ export const CANONICAL_CONCERNS = [
 
 export type CanonicalConcern = typeof CANONICAL_CONCERNS[number];
 
+export const ALLOWED_CHANNELS = ['whatsapp', 'email', 'phone'] as const;
+export type PreferredChannel = typeof ALLOWED_CHANNELS[number];
+
 interface CanonicalSubmission {
   consent: boolean;
   email: string;
   message: string;
   name: string;
   phone: string;
-  preferred_contact: string;
+  preferred_contact: PreferredChannel;
   primary_concern: CanonicalConcern;
 }
 
@@ -63,10 +66,19 @@ export default async function handler(req: VercelReq, res: VercelRes) {
   try {
     const body = req.body || {};
     const rawConcern = String(body.primary_concern || '').trim();
+    const rawChannel = String(body.preferred_contact || '').trim().toLowerCase();
 
+    // 1. Strict Canonical Concern Validation (Zero Silent Conversion)
     if (!CANONICAL_CONCERNS.includes(rawConcern as CanonicalConcern)) {
       return res.status(400).json({ 
         error: 'Invalid concern selection. Value must match canonical observatory vocabulary.' 
+      });
+    }
+
+    // 2. Strict Preferred Contact Validation (Zero Silent Conversion -> 400 Bad Request)
+    if (!ALLOWED_CHANNELS.includes(rawChannel as PreferredChannel)) {
+      return res.status(400).json({
+        error: 'Invalid preferred contact channel. Must be one of: whatsapp, email, phone.'
       });
     }
 
@@ -76,9 +88,7 @@ export default async function handler(req: VercelReq, res: VercelRes) {
       message: String(body.message || '').replace(/<[^>]*>?/gm, '').trim().slice(0, 1000),
       name: String(body.name || '').replace(/<[^>]*>?/gm, '').trim().slice(0, 100),
       phone: String(body.phone || '').trim().slice(0, 20),
-      preferred_contact: ['whatsapp', 'email', 'phone'].includes(String(body.preferred_contact).toLowerCase())
-        ? String(body.preferred_contact).toLowerCase()
-        : 'whatsapp',
+      preferred_contact: rawChannel as PreferredChannel,
       primary_concern: rawConcern as CanonicalConcern
     };
 

@@ -108,10 +108,45 @@ export function Contact() {
           theme="light"
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 mt-12 items-start">
-          {/* Main Form Container */}
-          <Reveal className="lg:col-span-7">
-            <div className="card-luxury p-8 sm:p-10">
+        {/* Original Stacked Layout: Contact Cards on Top */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          {contactCards.map((card, index) => {
+            const Icon = card.icon;
+            return (
+              <Reveal key={card.title} delay={index * 100}>
+                <a
+                  href={card.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card-luxury p-6 block group hover:border-gold/40 transition-all duration-300"
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="p-2.5 rounded-lg bg-ivory text-gold group-hover:bg-gold group-hover:text-white transition-colors duration-300">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-serif text-navy group-hover:text-gold transition-colors duration-300">
+                        {card.title}
+                      </h4>
+                      <p className="text-xs text-navy/60 mt-1">
+                        {card.description}
+                      </p>
+                      <span className="inline-flex items-center text-xs font-mono text-gold mt-3 group-hover:underline">
+                        {card.cta}
+                        <ExternalLink className="w-3 h-3 ml-1.5 opacity-70 group-hover:opacity-100" />
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </Reveal>
+            );
+          })}
+        </div>
+
+        {/* Full-Width Editorial Form Container (Original main layout) */}
+        <div className="mt-12 max-w-3xl mx-auto">
+          <Reveal>
+            <div className="card-luxury p-8 sm:p-12">
               {!submittedLead ? (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
@@ -287,43 +322,6 @@ export function Contact() {
               )}
             </div>
           </Reveal>
-
-          {/* Original Contact Cards Sidebar */}
-          <div className="lg:col-span-5 space-y-4">
-            {contactCards.map((card, index) => {
-              const Icon = card.icon;
-              return (
-                <Reveal key={card.title} delay={index * 100}>
-                  <a
-                    href={card.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="card-luxury p-6 block group hover:border-gold/40 transition-all duration-300"
-                  >
-                    <div className="flex items-start justify-between">
-                      <div className="flex items-start space-x-4">
-                        <div className="p-2.5 rounded-lg bg-ivory text-gold group-hover:bg-gold group-hover:text-white transition-colors duration-300">
-                          <Icon className="w-5 h-5" />
-                        </div>
-                        <div>
-                          <h4 className="font-serif text-navy group-hover:text-gold transition-colors duration-300">
-                            {card.title}
-                          </h4>
-                          <p className="text-xs text-navy/60 mt-1">
-                            {card.description}
-                          </p>
-                          <span className="inline-flex items-center text-xs font-mono text-gold mt-3 group-hover:underline">
-                            {card.cta}
-                            <ExternalLink className="w-3 h-3 ml-1.5 opacity-70 group-hover:opacity-100" />
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </a>
-                </Reveal>
-              );
-            })}
-          </div>
         </div>
       </div>
     </section>
