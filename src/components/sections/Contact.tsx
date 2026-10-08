@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from 'react'
-import { MapPin, MessageCircle, ExternalLink, Send } from 'lucide-react'
-import { InstagramIcon } from '../ui/SocialIcons'
+import { ExternalLink, Send } from 'lucide-react'
+import { InstagramIcon, WhatsAppIcon, GoogleBusinessIcon } from '../ui/SocialIcons'
 import { LINKS } from '../../data/site'
 import { Reveal } from '../ui/Reveal'
 import { SectionHeading } from '../ui/SectionHeading'
@@ -12,7 +12,7 @@ const contactCards = [
     title: 'WhatsApp',
     description: 'Direct private message for consultation inquiries.',
     href: LINKS.whatsapp,
-    icon: MessageCircle,
+    icon: WhatsAppIcon,
     cta: 'Message on WhatsApp',
   },
   {
@@ -26,7 +26,7 @@ const contactCards = [
     title: 'Google Business',
     description: 'Verified location and business profile.',
     href: LINKS.googleBusiness,
-    icon: MapPin,
+    icon: GoogleBusinessIcon,
     cta: 'View Profile',
   },
 ]
