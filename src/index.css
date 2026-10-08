@@ -1868,3 +1868,60 @@ body { background: #fff !important; background-image: none !important; }
     background-position: center;
   }
 }
+
+
+/* ===== FINAL MOBILE HERO READABILITY PASS =====
+   Keep the cinematic hero artwork, but restore the HTML headline
+   as a clean readable content block below it on small screens. */
+@media (max-width: 767px) {
+  .observatory-hero {
+    min-height: 0;
+    background: var(--color-ivory);
+  }
+
+  .observatory-hero-cover {
+    aspect-ratio: 3 / 2;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+  }
+
+  .observatory-hero-inner {
+    position: relative;
+    inset: auto;
+    min-height: 0;
+    pointer-events: auto;
+    background: var(--color-ivory);
+  }
+
+  .observatory-hero-copy {
+    display: block;
+    padding: 2rem 1.25rem 2.5rem;
+    background: linear-gradient(180deg, rgba(249, 245, 240, 0.98), rgba(249, 245, 240, 1));
+  }
+
+  .observatory-hero-copy h1 {
+    font-size: clamp(2.2rem, 9vw, 3.25rem);
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+  }
+
+  .observatory-hero-lead {
+    max-width: 34rem;
+    margin-top: 1.15rem;
+    font-size: 0.92rem;
+    line-height: 1.7;
+    color: rgba(10, 17, 40, 0.7);
+  }
+
+  .observatory-hero-actions {
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+
+  .observatory-index {
+    flex-wrap: wrap;
+    gap: 0.65rem 1rem;
+    margin-top: 1.5rem;
+  }
+}
