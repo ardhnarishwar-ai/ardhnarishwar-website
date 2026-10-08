@@ -5,7 +5,6 @@ import { LINKS } from '../../data/site'
 import { Reveal } from '../ui/Reveal'
 import { SectionHeading } from '../ui/SectionHeading'
 import { Button } from '../ui/Button'
-import { FormEmbed } from './FormEmbed'
 
 const contactCards = [
   {
@@ -72,9 +71,9 @@ export function Contact() {
           })}
         </div>
 
-        <div className="mt-16 grid border-t border-navy/10 lg:grid-cols-2">
+        <div className="mt-16 grid grid-cols-1 border-t border-navy/10">
           <Reveal soft>
-            <div className="border-b border-navy/10 py-10 lg:border-b-0 lg:border-r lg:pr-14">
+            <div className="border-b border-navy/10 py-10 lg:pr-14">
               <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-navy/45">Consultation inquiry</p>
               <h3 className="mt-4 font-serif text-3xl text-navy md:text-4xl">Tell us what you would like to understand.</h3>
               <p className="mt-5 max-w-xl text-sm leading-7 text-navy/60">
@@ -129,17 +128,7 @@ export function Contact() {
             </div>
           </Reveal>
 
-          <Reveal soft delay={120}>
-            <div className="lg:pl-14">
-              <div className="border-b border-navy/10 py-10">
-                <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-gold">Secure intake</p>
-                <h3 className="mt-3 font-serif text-2xl text-navy md:text-3xl">Official Intake Form</h3>
-              </div>
-              <div className="overflow-hidden">
-                <FormEmbed />
-              </div>
-            </div>
-          </Reveal>
+
         </div>
       </div>
     </section>
