@@ -35,7 +35,6 @@ export function KnowledgeCenter() {
             }}
           />
           <figcaption>
-            <span>REFERENCE PLATE · 01</span>
             <span>FIVE ELEMENTS · HUMAN BODY SEQUENCE</span>
           </figcaption>
         </figure>
