@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { LINKS } from '../../data/site'
 import { Menu, X } from 'lucide-react'
 
 const NAV = [
@@ -51,7 +52,7 @@ export function Header() {
               {item.label}
             </a>
           ))}
-          <a className="observatory-nav-cta" href="#contact">Private consultation</a>
+          <a className="observatory-nav-cta" href={LINKS.whatsapp} target="_blank" rel="noopener noreferrer">Private consultation</a>
         </nav>
 
         <button
