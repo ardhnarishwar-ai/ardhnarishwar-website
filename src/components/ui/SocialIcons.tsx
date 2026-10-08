@@ -22,13 +22,14 @@ export function WhatsAppIcon({ width = 24, height = 24, ...props }: SVGProps<SVG
 }
 
 
-export function GoogleBusinessIcon({ width = 24, height = 24, ...props }: SVGProps<SVGSVGElement>) {
+export function GoogleBusinessIcon({ width = 30, height = 30, ...props }: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 48 48" width={width} height={height} {...props}>
-      <rect x="5" y="4" width="38" height="40" rx="5" fill="#4285F4" />
-      <path fill="#7EA8F0" d="M5 4h38l-3.8 16H8.8L5 4Z" />
-      <path fill="#4960B7" d="M14.5 4h9.5v16h-9.5zM33.5 4H43l-3.8 16h-9.5z" />
-      <path fill="#fff" d="M29.5 29.5a8 8 0 1 0 5.9 13.4h-5.9v-5.2h12.1c.2-1 .4-2 .4-3.1a12.5 12.5 0 1 0-12.5 12.5c3.4 0 6.5-1.4 8.8-3.6l-3.7-3.7a7.2 7.2 0 1 1-5.1-12.3Z"/>
+      <rect x="6" y="5" width="36" height="38" rx="5" fill="#4285F4" />
+      <path fill="#8AB4F8" d="M6 5h36l-3.2 14H9.2L6 5Z" />
+      <path fill="#5F73C6" d="M15 5h9v14h-9zM33 5h9l-3.2 14h-9z" />
+      <circle cx="24" cy="32" r="8.5" fill="#fff" />
+      <path fill="#4285F4" d="M24 24a8.5 8.5 0 0 0 0 17h5.8v-4.6H24a3.9 3.9 0 1 1 3.5-5.6h5.2A8.6 8.6 0 0 0 24 24Z" />
     </svg>
   )
 }
