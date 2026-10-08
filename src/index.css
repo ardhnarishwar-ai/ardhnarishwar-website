@@ -1105,7 +1105,7 @@ body { background: #fff !important; background-image: none !important; }
   justify-content: space-between;
 }
 .observatory-brand { display:flex; align-items:center; gap:11px; color:#0a1128; text-decoration:none; }
-.observatory-brand img { width:32px; height:32px; object-fit:contain; }
+.observatory-brand img { width:32px; height:32px; object-fit:contain; mix-blend-mode:multiply; }
 .observatory-brand span { display:flex; flex-direction:column; gap:2px; }
 .observatory-brand strong { font-family:var(--font-serif); font-size:18px; font-weight:500; letter-spacing:.08em; line-height:1; }
 .observatory-brand small { font-size:7px; letter-spacing:.20em; text-transform:uppercase; color:rgba(10,17,40,.52); }
