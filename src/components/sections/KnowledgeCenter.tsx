@@ -22,7 +22,7 @@ export function KnowledgeCenter() {
 
         <figure className="observatory-knowledge-visual">
           <img
-            src="/images/Shakti-five-elements-human-body.jpg"
+            src="/images/Shakti-five-elements-human-body-uhd.png"
             alt="Traditional Pancha Mahabhuta framework: Earth, Water, Fire, Air, and Space as a philosophical language for observing the human constitution"
             loading="lazy"
             style={{
