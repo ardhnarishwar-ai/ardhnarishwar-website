@@ -21,6 +21,29 @@ export function WhatsAppIcon({ width = 24, height = 24, ...props }: SVGProps<SVG
   )
 }
 
+
+export function GoogleBusinessIcon({ width = 24, height = 24, ...props }: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 48 48" width={width} height={height} {...props}>
+      <rect x="5" y="4" width="38" height="40" rx="5" fill="#4285F4" />
+      <path fill="#7EA8F0" d="M5 4h38l-3.8 16H8.8L5 4Z" />
+      <path fill="#4960B7" d="M14.5 4h9.5v16h-9.5zM33.5 4H43l-3.8 16h-9.5z" />
+      <path fill="#fff" d="M29.5 29.5a8 8 0 1 0 5.9 13.4h-5.9v-5.2h12.1c.2-1 .4-2 .4-3.1a12.5 12.5 0 1 0-12.5 12.5c3.4 0 6.5-1.4 8.8-3.6l-3.7-3.7a7.2 7.2 0 1 1-5.1-12.3Z"/>
+    </svg>
+  )
+}
+
+export function ChromeIcon({ width = 24, height = 24, ...props }: SVGProps<SVGSVGElement>) {
+  return (
+    <svg viewBox="0 0 48 48" width={width} height={height} {...props}>
+      <path fill="#EA4335" d="M24 3a21 21 0 0 1 18.2 10.5L31 21H24a7 7 0 0 0-6.1 3.5L11 13.2A21 21 0 0 1 24 3Z"/>
+      <path fill="#FBBC04" d="M5.8 13.5A21 21 0 0 0 24 45l7.8-13.5A8.9 8.9 0 0 1 24 36a12 12 0 0 1-10.4-6L5.8 13.5Z"/>
+      <path fill="#34A853" d="M24 45a21 21 0 0 0 18.2-31.5L31 21a7 7 0 0 1-1.2 10.5L24 45Z"/>
+      <circle cx="24" cy="24" r="9" fill="#4285F4"/><circle cx="24" cy="24" r="5" fill="#fff"/>
+    </svg>
+  )
+}
+
 export function GoogleMapsIcon({ width = 24, height = 24, ...props }: SVGProps<SVGSVGElement>) {
   return (
     <svg viewBox="0 0 48 48" width={width} height={height} {...props}>
