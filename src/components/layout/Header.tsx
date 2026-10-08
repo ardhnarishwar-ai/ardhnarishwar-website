@@ -40,7 +40,7 @@ export function Header() {
           
         >
           <img
-            src="/images/ardhnarishwar-logo.jpg"
+            src="/images/ardhnarishwar-logo-header-uhd.png"
             alt="ardhnarishwar.in — Astromedical Solutions"
             
           />
