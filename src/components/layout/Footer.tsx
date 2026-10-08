@@ -64,7 +64,7 @@ export function Footer() {
               <a href={LINKS.whatsapp} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-gold">
                 <WhatsAppIcon width={18} height={18} /><span>WhatsApp · +91-9111855115</span>
               </a>
-              <a href={`tel:${BUSINESS.phone.replace(/[^\\d+]/g, '')}`} className="flex items-center gap-2 hover:text-gold">
+              <a href={`tel:${BUSINESS.phone.replace(/[^\d+]/g, '')}`} className="flex items-center gap-2 hover:text-gold">
                 <PhoneIcon width={18} height={18} /><span>Call · {BUSINESS.phone}</span>
               </a>
               <a href="mailto:ardhnarishwar.in@gmail.com" className="flex items-center gap-2 hover:text-gold">
