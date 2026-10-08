@@ -7,7 +7,7 @@ fullName: 'Ardhnarishwar Observatory',
 
 /** Trust & local business placeholders — replace with verified production values */
 export const BUSINESS = {
-  phone: '+91-9111855115',
+  phone: '+91-8591161235',
   email: 'ardhnarishwar.in@gmail.com',
   address: {
     streetAddress: '[Street Address — update from Google Business Profile]',
