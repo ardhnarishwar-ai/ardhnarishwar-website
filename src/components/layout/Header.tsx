@@ -33,7 +33,7 @@ export function Header() {
     <header className="observatory-header">
       <div className="observatory-header-inner" style={{ position: 'relative' }}>
         <a
-          href="#hero"
+          href="/"
           className="observatory-brand"
           aria-label="ardhnarishwar.in"
           
