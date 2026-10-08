@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { InstagramIcon, WhatsAppIcon, ChromeIcon, GmailIcon, GoogleFormsIcon, GoogleBusinessIcon, PhoneIcon } from '../ui/SocialIcons'
+import { InstagramIcon, WhatsAppIcon, ChromeIcon, GmailIcon, GoogleFormsIcon, PhoneIcon } from '../ui/SocialIcons'
 import { BRAND, BUSINESS, LINKS } from '../../data/site'
 
 const FOOTER_NAV = [
@@ -43,18 +43,23 @@ export function Footer() {
               <SocialIcon href={LINKS.instagram} label="Instagram" icon={<InstagramIcon width={20} height={20} />} />
               <SocialIcon href={LINKS.consultationForm} label="Consultation Form" icon={<GoogleFormsIcon width={20} height={20} />} />
               <SocialIcon href={LINKS.googleBusiness} label="Google Business" icon={<ChromeIcon width={20} height={20} />} />
-
             </div>
+
             <a href={LINKS.googleBusiness} target="_blank" rel="noopener noreferrer" aria-label="Google Business Profile"
               className="mt-6 flex items-center gap-3 text-sm text-navy/60 transition-colors hover:text-gold">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center">
-                <GoogleBusinessIcon width={36} height={36} />
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center overflow-hidden">
+                <img
+                  src="/images/What-is-Google-My-Business-1107x1536.png"
+                  alt="Google Business Profile"
+                  className="h-10 w-10 object-contain"
+                />
               </span>
               <span>
                 <span className="block text-[10px] uppercase tracking-[0.16em] text-navy/40">Find us on</span>
                 <span className="block mt-0.5 font-medium text-navy/70">Google Business Profile</span>
               </span>
             </a>
+
             <div className="mt-6 space-y-3 text-xs text-navy/45">
               <a href={`tel:${BUSINESS.phone.replace(/[^\\d+]/g, '')}`} className="flex items-center gap-2 hover:text-gold">
                 <PhoneIcon width={18} height={18} /><span>{BUSINESS.phone}</span>
