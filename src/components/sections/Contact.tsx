@@ -55,7 +55,7 @@ export function Contact() {
   });
 
   const [loading, setLoading] = useState(false);
-  const [submittedLead, setSubmittedLead] = useState<{ lead_id: string; message: string } | null>(null);
+  const [submittedLead, setSubmittedLead] = useState<{ lead_id: string; message: string; next_action?: string } | null>(null);
   const [fallbackActive, setFallbackActive] = useState(false);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
@@ -285,40 +285,85 @@ export function Contact() {
                   </div>
                 </form>
               ) : (
-                <div className="text-center py-10 space-y-5">
-                  <span className="text-xs font-mono uppercase tracking-widest text-gold block">
-                    Inquiry Registered
-                  </span>
-                  <h4 className="text-2xl font-serif text-navy">Context Received</h4>
-                  <div className="bg-ivory border border-stone-200 py-2 px-5 rounded-lg inline-block">
-                    <span className="text-xs font-mono text-navy/80">
-                      Reference ID: <strong className="text-navy">{submittedLead.lead_id}</strong>
-                    </span>
+            <div className="p-8 bg-stone-900/90 border border-amber-500/30 rounded-xl text-center space-y-6 shadow-2xl backdrop-blur-sm">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-950/80 border border-emerald-500/40 text-emerald-400 font-mono text-[11px] tracking-wider uppercase">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
+                Inquiry Recorded • Verified Ledger
+              </div>
+
+              <div className="space-y-2">
+                <h3 className="text-xl font-serif text-stone-100 tracking-wide">
+                  Thank You, {formData.name || 'Seeker'}
+                </h3>
+                <p className="font-mono text-xs text-amber-400 tracking-widest uppercase">
+                  Reference ID: {submittedLead?.lead_id}
+                </p>
+                <p className="text-sm text-stone-300 max-w-md mx-auto leading-relaxed pt-2">
+                  {submittedLead?.message}
+                </p>
+              </div>
+
+              {submittedLead?.next_action?.includes('WhatsApp') || submittedLead?.next_action?.includes('Consultation') ? (
+                <div className="pt-4 border-t border-stone-800 space-y-4">
+                  <p className="text-xs text-stone-400">
+                    Your inquiry qualifies for priority consultation scheduling. Connect directly via our private desk:
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+                    <a
+                      href={`https://wa.me/919977158366?text=Namaste,%20I%20have%20submitted%20an%20inquiry%20on%20Ardhnarishwar.%0ALead%20ID:%20${submittedLead?.lead_id || ''}%0AArea%20of%20Concern:%20${encodeURIComponent(formData.primary_concern)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto px-6 py-3 bg-[#B58A42] hover:bg-[#967232] text-stone-950 font-serif font-medium text-sm tracking-wider uppercase rounded shadow-lg transition-all"
+                    >
+                      Confirm Slot on WhatsApp &rarr;
+                    </a>
+                    <a
+                      href={LINKS.consultationForm}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full sm:w-auto px-5 py-3 bg-stone-800 hover:bg-stone-700 text-stone-300 font-mono text-xs tracking-wider rounded border border-stone-700 transition-all"
+                    >
+                      Detailed Medical Intake Form
+                    </a>
                   </div>
-                  <p className="text-sm text-stone-600 max-w-md mx-auto leading-relaxed">
-                    {submittedLead.message}
-                  </p>
-                  <p className="text-xs text-stone-500 italic max-w-sm mx-auto">
-                    Note: Ardhnarishwar Observatory provides constitutional observation and planetary timing, not medical diagnosis or treatment.
-                  </p>
-                  <button
-                    onClick={() => {
-                      setSubmittedLead(null);
-                      setFormData({
-                        name: '',
-                        email: '',
-                        phone: '',
-                        primary_concern: 'Health & Wellness',
-                        message: '',
-                        preferred_contact: 'whatsapp',
-                        consent: false,
-                      });
-                    }}
-                    className="mt-4 text-xs font-mono text-stone-500 hover:text-navy underline block mx-auto"
-                  >
-                    Submit another inquiry
-                  </button>
                 </div>
+              ) : (
+                <div className="pt-4 border-t border-stone-800 space-y-3">
+                  <p className="text-xs text-stone-400">
+                    While our desk reviews your inquiry, explore our foundational observatory insights:
+                  </p>
+                  <a
+                    href="#knowledge"
+                    className="inline-block px-6 py-2.5 bg-stone-800 hover:bg-stone-700 text-amber-400 font-mono text-xs tracking-wider uppercase rounded border border-amber-500/20 transition-all"
+                  >
+                    Explore Knowledge Centre &rarr;
+                  </a>
+                </div>
+              )}
+
+              <p className="text-[10px] font-mono text-stone-500 pt-2">
+                Encrypted with SHA-256 fingerprint • Stored in Sovereign Ledger
+              </p>
+
+              <button
+                type="button"
+                onClick={() => {
+                  setSubmittedLead(null);
+                  setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    primary_concern: 'Health & Wellness',
+                    message: '',
+                    preferred_contact: 'whatsapp',
+                    consent: false,
+                  });
+                }}
+                className="mt-4 text-xs font-mono text-stone-400 hover:text-amber-400 underline block mx-auto transition-colors"
+              >
+                Submit another inquiry
+              </button>
+            </div>
               )}
             </div>
           </Reveal>
