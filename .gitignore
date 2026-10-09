@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+dossiers/*.txt
+__pycache__/
+dossiers/
