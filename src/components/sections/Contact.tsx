@@ -1,10 +1,23 @@
-import { useState, type FormEvent } from 'react'
-import { ExternalLink, Send } from 'lucide-react'
-import { InstagramIcon, WhatsAppIcon, GoogleBusinessIcon } from '../ui/SocialIcons'
-import { LINKS } from '../../data/site'
-import { Reveal } from '../ui/Reveal'
-import { SectionHeading } from '../ui/SectionHeading'
-import { Button } from '../ui/Button'
+import { useState, type FormEvent } from 'react';
+import { ExternalLink, Send } from 'lucide-react';
+import { InstagramIcon, WhatsAppIcon, GoogleBusinessIcon } from '../ui/SocialIcons';
+import { LINKS } from '../../data/site';
+import { Reveal } from '../ui/Reveal';
+import { SectionHeading } from '../ui/SectionHeading';
+import { Button } from '../ui/Button';
+
+const CANONICAL_CONCERNS = [
+  "Health & Wellness",
+  "Money & Financial Concerns",
+  "Work & Career",
+  "Stress, Anxiety & Emotional Well-being",
+  "Relationships & Family",
+  "Life & Future Guidance",
+  "Personal Direction & Decisions",
+  "Something Else / Private Consultation"
+];
+
+const isServerlessEnabled = import.meta.env.VITE_USE_SERVERLESS_LEAD_QUALIFIER !== 'false';
 
 const contactCards = [
   {
@@ -28,139 +41,289 @@ const contactCards = [
     icon: GoogleBusinessIcon,
     cta: 'View Profile',
   },
-]
+];
 
 export function Contact() {
-  const [submitted, setSubmitted] = useState(false)
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    primary_concern: 'Health & Wellness',
+    message: '',
+    preferred_contact: 'whatsapp',
+    consent: false,
+  });
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setSubmitted(true)
-    window.open(LINKS.consultationForm, '_blank', 'noopener,noreferrer')
-  }
+  const [loading, setLoading] = useState(false);
+  const [submittedLead, setSubmittedLead] = useState<{ lead_id: string; message: string } | null>(null);
+  const [fallbackActive, setFallbackActive] = useState(false);
+  const [errorMsg, setErrorMsg] = useState<string | null>(null);
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setErrorMsg(null);
+
+    if (!formData.consent) {
+      setErrorMsg('Affirmative consent is required to proceed with any consultation inquiry.');
+      return;
+    }
+
+    if (!isServerlessEnabled || fallbackActive) {
+      window.open(LINKS.consultationForm, '_blank', 'noopener,noreferrer');
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const res = await fetch('/api/qualify-lead', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      if (!res.ok) {
+        throw new Error(data.error || 'Submission could not be recorded.');
+      }
+
+      setSubmittedLead({ lead_id: data.lead_id, message: data.message });
+    } catch (err: any) {
+      console.warn('[Lead Qualifier Failover Triggered]:', err);
+      setFallbackActive(true);
+      setErrorMsg('Direct connection timed out or could not be persisted. Please continue via our standard secure form.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   return (
-    <section id="contact" className="editorial-section bg-[#f7f7f4]">
-      <div className="mx-auto max-w-7xl px-5 py-24 md:px-8 md:py-32 lg:px-10">
+    <section id="contact" className="section-padding bg-ivory">
+      <div className="section-container">
         <SectionHeading
           label="Private Inquiry"
           title="Begin with a conversation."
-          subtitle="All engagements are handled with discretion. Start with a short inquiry and continue to the confidential intake form when you are ready."
+          subtitle="Whether you seek guidance on a health pattern, a life transition, or an institutional inquiry, every consultation begins with attentive observation."
+          align="center"
+          theme="light"
         />
 
-        <div className="mt-14 grid border-y border-navy/10 md:grid-cols-3 md:divide-x md:divide-navy/10">
-          {contactCards.map((card) => {
-            const Icon = card.icon
+        {/* Original Stacked Layout: Contact Cards on Top */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+          {contactCards.map((card, index) => {
+            const Icon = card.icon;
             return (
-              <a
-                key={card.title}
-                href={card.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex min-h-[190px] flex-col border-b border-navy/10 p-7 last:border-b-0 md:border-b-0 md:p-8"
-              >
-                <Icon className="h-5 w-5 text-gold" strokeWidth={1.4} aria-hidden />
-                <h3 className="mt-6 font-serif text-2xl text-navy">{card.title}</h3>
-                <p className="mt-3 max-w-xs text-sm leading-6 text-navy/58">{card.description}</p>
-                <span className="mt-auto pt-7 inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.16em] text-navy/55 transition-colors group-hover:text-gold">
-                  {card.cta}
-                  <ExternalLink size={13} aria-hidden />
-                </span>
-              </a>
-            )
+              <Reveal key={card.title} delay={index * 100}>
+                <a
+                  href={card.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card-luxury p-6 block group hover:border-gold/40 transition-all duration-300"
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="p-2.5 rounded-lg bg-ivory text-gold group-hover:bg-gold group-hover:text-white transition-colors duration-300">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <div>
+                      <h4 className="font-serif text-navy group-hover:text-gold transition-colors duration-300">
+                        {card.title}
+                      </h4>
+                      <p className="text-xs text-navy/60 mt-1">
+                        {card.description}
+                      </p>
+                      <span className="inline-flex items-center text-xs font-mono text-gold mt-3 group-hover:underline">
+                        {card.cta}
+                        <ExternalLink className="w-3 h-3 ml-1.5 opacity-70 group-hover:opacity-100" />
+                      </span>
+                    </div>
+                  </div>
+                </a>
+              </Reveal>
+            );
           })}
         </div>
 
-        <div className="mt-16 grid grid-cols-1 border-t border-navy/10">
-          <Reveal soft>
-            <div className="border-b border-navy/10 py-10 lg:pr-14">
-              <p className="text-[10px] font-semibold uppercase tracking-[0.2em] text-navy/45">Consultation inquiry</p>
-              <h3 className="mt-4 font-serif text-3xl text-navy md:text-4xl">Tell us what you would like to understand.</h3>
-              <p className="mt-5 max-w-xl text-sm leading-7 text-navy/60">
-                Share a little context below. You will then be directed to the confidential intake form where you can provide relevant background information and your area of inquiry.
-              </p>
+        {/* Full-Width Editorial Form Container (Original main layout) */}
+        <div className="mt-12 max-w-3xl mx-auto">
+          <Reveal>
+            <div className="card-luxury p-8 sm:p-12">
+              {!submittedLead ? (
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <label className="block text-xs font-mono uppercase tracking-widest text-navy/70 mb-2">
+                      Full Name *
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      placeholder="Your full name"
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="input-luxury w-full"
+                    />
+                  </div>
 
-              <form onSubmit={handleSubmit} className="mt-9 space-y-5">
-                <div className="grid gap-5 sm:grid-cols-2">
-                  <FormField label="Full Name" name="name" required placeholder="Your name" />
-                  <FormField label="Email" name="email" type="email" required placeholder="you@email.com" />
-                </div>
-                <FormField label="Phone (optional)" name="phone" type="tel" placeholder="+91 ..." />
-                <div>
-                  <label htmlFor="concern" className="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-navy/55">
-                    What would you like guidance with?
-                  </label>
-                  <select id="concern" name="concern" required className="input-luxury w-full px-4 py-3.5 text-sm text-navy">
-                    <option value="">Choose what you need help with</option>
-                    <option>Health & Wellness</option>
-                    <option>Money & Financial Concerns</option>
-                    <option>Work & Career</option>
-                    <option>Stress, Anxiety & Emotional Well-being</option>
-                    <option>Relationships & Family</option>
-                    <option>Life & Future Guidance</option>
-                    <option>Personal Direction & Decisions</option>
-                    <option>Something Else / Private Consultation</option>
-                  </select>
-                </div>
-                <div>
-                  <label htmlFor="message" className="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-navy/55">
-                    Brief Message
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={4}
-                    placeholder="Share context for your consultation (optional)"
-                    className="input-luxury w-full resize-none px-4 py-3.5 text-sm text-navy"
-                  />
-                </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                      <label className="block text-xs font-mono uppercase tracking-widest text-navy/70 mb-2">
+                        Email Address *
+                      </label>
+                      <input
+                        type="email"
+                        required
+                        placeholder="you@email.com"
+                        value={formData.email}
+                        onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                        className="input-luxury w-full"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-mono uppercase tracking-widest text-navy/70 mb-2">
+                        Phone / WhatsApp (Optional)
+                      </label>
+                      <input
+                        type="tel"
+                        placeholder="+91..."
+                        value={formData.phone}
+                        onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                        className="input-luxury w-full"
+                      />
+                    </div>
+                  </div>
 
-                {submitted ? (
-                  <p className="border-l-2 border-gold px-4 py-2 text-sm text-navy/65">
-                    Thank you. Complete your confidential intake in the opened form.
+                  <div>
+                    <label className="block text-xs font-mono uppercase tracking-widest text-navy/70 mb-2">
+                      Preferred Contact Channel
+                    </label>
+                    <div className="grid grid-cols-3 gap-3">
+                      {(['whatsapp', 'email', 'phone'] as const).map((channel) => (
+                        <button
+                          type="button"
+                          key={channel}
+                          onClick={() => setFormData({ ...formData, preferred_contact: channel })}
+                          className={`py-2 px-3 rounded-lg text-xs font-mono uppercase tracking-wider border transition-colors ${
+                            formData.preferred_contact === channel
+                              ? 'bg-gold/15 border-gold text-navy font-semibold'
+                              : 'bg-ivory/30 border-stone-200 text-stone-500 hover:border-stone-300'
+                          }`}
+                        >
+                          {channel}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-mono uppercase tracking-widest text-navy/70 mb-2">
+                      What would you like guidance with? *
+                    </label>
+                    <select
+                      value={formData.primary_concern}
+                      onChange={(e) => setFormData({ ...formData, primary_concern: e.target.value })}
+                      className="input-luxury w-full"
+                    >
+                      {CANONICAL_CONCERNS.map((concern) => (
+                        <option key={concern} value={concern}>
+                          {concern}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+
+                  <div>
+                    <label className="block text-xs font-mono uppercase tracking-widest text-navy/70 mb-2">
+                      Brief Context / Timing (Optional)
+                    </label>
+                    <textarea
+                      rows={3}
+                      placeholder="Share context for your consultation..."
+                      value={formData.message}
+                      onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                      className="input-luxury w-full resize-none"
+                    />
+                  </div>
+
+                  <div className="flex items-start gap-3 pt-2">
+                    <input
+                      type="checkbox"
+                      id="consentCheck"
+                      required
+                      checked={formData.consent}
+                      onChange={(e) => setFormData({ ...formData, consent: e.target.checked })}
+                      className="mt-1 accent-gold rounded border-stone-300"
+                    />
+                    <label htmlFor="consentCheck" className="text-xs text-stone-600 leading-relaxed">
+                      I agree to be contacted for a complementary wellness perspective. (No medical diagnosis or treatment claims provided). *
+                    </label>
+                  </div>
+
+                  {errorMsg && (
+                    <div className="p-4 bg-amber-50 border border-amber-200 rounded-lg text-xs text-amber-800 space-y-2">
+                      <p>{errorMsg}</p>
+                      {formData.consent && (
+                        <a
+                          href={LINKS.consultationForm}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-block text-gold hover:underline font-mono uppercase tracking-wider text-[11px]"
+                        >
+                          Open Secure External Consultation Form &rarr;
+                        </a>
+                      )}
+                    </div>
+                  )}
+
+                  <div className="pt-2">
+                    <Button
+                      type="submit"
+                      variant="primary"
+                      className="w-full justify-center"
+                    >
+                      {loading ? 'Registering Context...' : 'Continue to Secure Form'}
+                      <Send className="w-4 h-4 ml-2" />
+                    </Button>
+                  </div>
+                </form>
+              ) : (
+                <div className="text-center py-10 space-y-5">
+                  <span className="text-xs font-mono uppercase tracking-widest text-gold block">
+                    Inquiry Registered
+                  </span>
+                  <h4 className="text-2xl font-serif text-navy">Context Received</h4>
+                  <div className="bg-ivory border border-stone-200 py-2 px-5 rounded-lg inline-block">
+                    <span className="text-xs font-mono text-navy/80">
+                      Reference ID: <strong className="text-navy">{submittedLead.lead_id}</strong>
+                    </span>
+                  </div>
+                  <p className="text-sm text-stone-600 max-w-md mx-auto leading-relaxed">
+                    {submittedLead.message}
                   </p>
-                ) : null}
-
-                <Button type="submit" icon={<Send size={17} />}>
-                  Continue to Secure Form
-                </Button>
-              </form>
+                  <p className="text-xs text-stone-500 italic max-w-sm mx-auto">
+                    Note: Ardhnarishwar Observatory provides constitutional observation and planetary timing, not medical diagnosis or treatment.
+                  </p>
+                  <button
+                    onClick={() => {
+                      setSubmittedLead(null);
+                      setFormData({
+                        name: '',
+                        email: '',
+                        phone: '',
+                        primary_concern: 'Health & Wellness',
+                        message: '',
+                        preferred_contact: 'whatsapp',
+                        consent: false,
+                      });
+                    }}
+                    className="mt-4 text-xs font-mono text-stone-500 hover:text-navy underline block mx-auto"
+                  >
+                    Submit another inquiry
+                  </button>
+                </div>
+              )}
             </div>
           </Reveal>
-
-
         </div>
       </div>
     </section>
-  )
-}
-
-function FormField({
-  label,
-  name,
-  type = 'text',
-  required,
-  placeholder,
-}: {
-  label: string
-  name: string
-  type?: string
-  required?: boolean
-  placeholder?: string
-}) {
-  return (
-    <div>
-      <label htmlFor={name} className="mb-2 block text-xs font-medium uppercase tracking-[0.16em] text-navy/55">
-        {label}
-      </label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        required={required}
-        placeholder={placeholder}
-        className="input-luxury w-full px-4 py-3.5 text-sm text-navy"
-      />
-    </div>
-  )
+  );
 }
