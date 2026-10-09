@@ -39,7 +39,45 @@ interface CanonicalSubmission {
 
 const stagingIpMap = new Map<string, { count: number; first: number }>();
 
-function checkStagingRateLimit(ip: string): boolean {
+async function checkDistributedRateLimit(ip: string): Promise<boolean> {
+  const redisUrl = process.env.UPSTASH_REDIS_REST_URL;
+  const redisToken = process.env.UPSTASH_REDIS_REST_TOKEN;
+
+  // 1. Upstash Redis Edge Sliding-Window Path
+  if (redisUrl && redisToken) {
+    try {
+      const sanitizedIp = ip.replace(/[^a-zA-Z0-9_.-]/g, '_');
+      const key = `rate:lead:${sanitizedIp}`;
+      const url = `${redisUrl.replace(/\/+$/, '')}/pipeline`;
+      
+      const commands = [
+        ["INCR", key],
+        ["EXPIRE", key, 600]
+      ];
+
+      const res = await fetch(url, {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${redisToken}`,
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(commands)
+      });
+
+      if (res.ok) {
+        const data = await res.json();
+        const currentCount = Number(data[0]?.result ?? 1);
+        if (currentCount > 5) {
+          return false;
+        }
+        return true;
+      }
+    } catch (e) {
+      console.warn('[Distributed Limiter Warn]: Fallback to local memory limiter', e);
+    }
+  }
+
+  // 2. Resilient In-Memory Fallback
   const now = Date.now();
   const windowMs = 10 * 60 * 1000;
   const entry = stagingIpMap.get(ip) || { count: 0, first: now };
@@ -59,7 +97,7 @@ export default async function handler(req: VercelReq, res: VercelRes) {
   }
 
   const clientIp = (req.headers['x-forwarded-for'] as string)?.split(',')[0]?.trim() || 'unknown';
-  if (req.headers["x-audit-bypass"] !== "sovereign-audit" && !checkStagingRateLimit(clientIp)) {
+  if (req.headers["x-audit-bypass"] !== "sovereign-audit" && !await checkDistributedRateLimit(clientIp)) {
     return res.status(429).json({ error: 'Rate limit exceeded. Please wait 10 minutes.' });
   }
 
