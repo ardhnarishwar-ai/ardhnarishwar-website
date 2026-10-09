@@ -171,18 +171,16 @@ export default async function handler(req: VercelReq, res: VercelRes) {
         throw new Error(`Ledger webhook returned HTTP ${ledgerRes.status}`);
       }
 
-      const ackBody = await ledgerRes.json();
-      if (!ackBody || ackBody.status !== 'ACK' || !ackBody.row_id || String(ackBody.row_id).trim() === '') {
-        throw new Error(`Invalid Ledger ACK body contract: ${JSON.stringify(ackBody)}`);
-      }
-
-      ledgerRowId = String(ackBody.row_id);
-    } catch (persistErr) {
-      console.error('[Persistence Failure — 200 Aborted]:', persistErr);
-    ledgerRowId = `ASYNC-INGEST-${Date.now()}`;
-    } finally {
-      clearTimeout(timeoutId);
+          const ackBody = await ledgerRes.json();
+    if (!ackBody || ackBody.status !== 'ACK' || !ackBody.row_id || String(ackBody.row_id).trim() === '') {
+      return res.status(502).json({
+        error: 'Bad Gateway: Ledger rejected intake or returned invalid ACK contract.',
+        lead_id: leadId
+      });
     }
+
+    ledgerRowId = String(ackBody.row_id);
+    clearTimeout(timeoutId);
 
     return res.status(200).json({
       success: true,
@@ -191,6 +189,20 @@ export default async function handler(req: VercelReq, res: VercelRes) {
       message: systemResponse,
       next_action: nextAction
     });
+  } catch (persistErr: any) {
+    clearTimeout(timeoutId);
+    console.error('[Persistence Failure – Zero False Success Enforced]:', persistErr);
+    if (persistErr.name === 'AbortError') {
+      return res.status(504).json({
+        error: 'Gateway Timeout: Sovereign Ledger took longer than 25s to acknowledge.',
+        lead_id: leadId
+      });
+    }
+    return res.status(502).json({
+      error: 'Bad Gateway: Sovereign Ledger unreachable or connection terminated.',
+      lead_id: leadId
+    });
+  }
 
   } catch (error) {
     console.error('[API Lead Handler Error]:', error);
