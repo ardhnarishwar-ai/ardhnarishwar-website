@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 dossiers/*.txt
+__pycache__/
+dossiers/
