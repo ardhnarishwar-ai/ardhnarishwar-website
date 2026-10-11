@@ -2392,23 +2392,60 @@ body { background: #fff !important; background-image: none !important; }
 
 
 
-/* ===== MOBILE HERO COVER: top-and-bottom-only raised frame ===== */
+/* ===== MOBILE COVER: stronger top-and-bottom 3D bevel only ===== */
 @media (max-width: 900px) {
   .observatory-hero {
     padding: 0 !important;
     overflow: visible !important;
   }
+
   .observatory-hero-cover {
+    position: relative !important;
+    z-index: 2 !important;
     margin: 0 !important;
     width: 100% !important;
+    outline: none !important;
+    border: 0 !important;
+    /* No lateral shadows: only top and bottom edges carry the raised effect. */
     box-shadow:
-      inset 0 2px 0 rgba(255, 249, 225, .66),
-      inset 0 -3px 0 rgba(67, 45, 24, .32),
-      0 -3px 0 rgba(224, 190, 112, .70),
-      0 -6px 0 rgba(132, 91, 36, .18),
-      0 3px 0 rgba(224, 190, 112, .78),
-      0 6px 0 rgba(132, 91, 36, .28),
-      0 11px 0 rgba(88, 61, 28, .12),
-      0 18px 26px -10px rgba(63, 43, 20, .28) !important;
+      inset 0 5px 0 rgba(255, 250, 229, .88),
+      inset 0 -6px 0 rgba(65, 42, 19, .48),
+      0 -4px 0 rgba(223, 185, 102, .92),
+      0 -8px 0 rgba(130, 88, 34, .34),
+      0 4px 0 rgba(231, 197, 121, .96),
+      0 8px 0 rgba(125, 83, 31, .44),
+      0 14px 0 rgba(77, 53, 28, .20),
+      0 22px 30px -8px rgba(53, 36, 20, .34) !important;
+  }
+
+  .observatory-hero-cover::before {
+    content: '' !important;
+    position: absolute !important;
+    left: 0 !important;
+    right: 0 !important;
+    top: -8px !important;
+    height: 8px !important;
+    pointer-events: none !important;
+    z-index: 3 !important;
+    background: linear-gradient(
+      to bottom,
+      rgba(113, 76, 29, .40) 0%,
+      rgba(241, 216, 157, .96) 38%,
+      rgba(255, 248, 222, .96) 68%,
+      rgba(165, 117, 46, .55) 100%
+    ) !important;
+    box-shadow: 0 -3px 7px rgba(67, 45, 24, .18), 0 2px 4px rgba(67, 45, 24, .24) !important;
+  }
+
+  .observatory-hero-cover::after {
+    content: '' !important;
+    position: absolute !important;
+    inset: 0 !important;
+    z-index: 3 !important;
+    pointer-events: none !important;
+    border: 0 !important;
+    box-shadow:
+      inset 0 5px 6px rgba(255, 248, 220, .28),
+      inset 0 -7px 8px rgba(54, 35, 17, .42) !important;
   }
 }
