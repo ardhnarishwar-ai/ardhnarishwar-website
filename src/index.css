@@ -2468,9 +2468,9 @@ body { background: #fff !important; background-image: none !important; }
 }
 
 
-/* ===== MOBILE COVER POSITION: place the full artwork below the fixed header ===== */
+/* ===== MOBILE COVER POSITION: no artificial gap below the fixed header ===== */
 @media (max-width: 767px) {
   .observatory-hero {
-    padding-top: 126px !important;
+    padding-top: 0 !important;
   }
 }
