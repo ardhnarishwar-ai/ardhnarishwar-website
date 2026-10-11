@@ -44,7 +44,7 @@ export function Header() {
           aria-label="ardhnarishwar.in"
         >
           <img
-            src="/images/ardhnarishwar-logo-header-uhd.png"
+            src="/images/ardhnarishwar-logo-header-ivory.png"
             alt="ardhnarishwar.in — Astromedical Solutions"
             width={220}
             height={44}
