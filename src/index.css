@@ -1982,3 +1982,84 @@ body { background: #fff !important; background-image: none !important; }
     transition: none;
   }
 }
+
+
+/* ===== KNOWLEDGE CENTRE: SUBTLE EDITORIAL 3D CARD ===== */
+/* CSS-only depth: no new library, no image crop, and restrained on touch screens. */
+.observatory-knowledge-visual {
+  position: relative;
+  isolation: isolate;
+  transform: perspective(1400px) translate3d(0, 0, 0);
+  transform-style: preserve-3d;
+  border: 1px solid rgba(184, 134, 11, 0.18);
+  box-shadow:
+    0 1px 0 rgba(255, 255, 255, 0.96) inset,
+    0 2px 5px rgba(10, 17, 40, 0.035),
+    0 12px 28px -16px rgba(10, 17, 40, 0.18),
+    0 24px 48px -30px rgba(10, 17, 40, 0.16);
+  transition:
+    transform 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 520ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 520ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.observatory-knowledge-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border: 1px solid rgba(197, 160, 89, 0.10);
+  pointer-events: none;
+  background: linear-gradient(
+    135deg,
+    rgba(197, 160, 89, 0.055) 0%,
+    transparent 24%,
+    transparent 76%,
+    rgba(197, 160, 89, 0.035) 100%
+  );
+}
+
+.observatory-knowledge-visual img,
+.observatory-knowledge-visual figcaption {
+  position: relative;
+}
+
+.observatory-knowledge-visual figcaption {
+  z-index: 2;
+}
+
+@media (hover: hover) and (pointer: fine) and (min-width: 901px) {
+  .observatory-knowledge-visual:hover {
+    transform: perspective(1400px) translate3d(0, -5px, 0) rotateX(0.65deg) rotateY(-0.45deg);
+    border-color: rgba(184, 134, 11, 0.34);
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.98) inset,
+      0 5px 10px -4px rgba(10, 17, 40, 0.06),
+      0 18px 38px -14px rgba(184, 134, 11, 0.12),
+      0 30px 58px -22px rgba(10, 17, 40, 0.20);
+  }
+}
+
+@media (max-width: 900px) {
+  .observatory-knowledge-visual {
+    box-shadow:
+      0 1px 0 rgba(255, 255, 255, 0.96) inset,
+      0 3px 8px rgba(10, 17, 40, 0.045),
+      0 14px 30px -18px rgba(10, 17, 40, 0.17);
+  }
+
+  .observatory-knowledge-visual:active {
+    transform: translate3d(0, -2px, 0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .observatory-knowledge-visual {
+    transition: none;
+  }
+
+  .observatory-knowledge-visual:hover,
+  .observatory-knowledge-visual:active {
+    transform: none;
+  }
+}
