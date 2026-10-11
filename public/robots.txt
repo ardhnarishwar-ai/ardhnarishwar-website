@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Single-page app — primary content at root; sections: #about #services #process #testimonials #raja #contact
-Sitemap: https://ardhnarishwar.com/sitemap.xml
+Sitemap: https://www.ardhnarishwar.in/sitemap.xml
