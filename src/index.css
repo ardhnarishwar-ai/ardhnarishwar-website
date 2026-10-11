@@ -2219,8 +2219,8 @@ body { background: #fff !important; background-image: none !important; }
 }
 
 
-/* ===== CINEMATIC COVER: OUTWARD FOUR-EDGE 3D FRAME ===== */
-/* The hero parent must not clip the outer cast shadow. */
+/* ===== CINEMATIC COVER: WARM RAISED-ARTWORK 3D FRAME ===== */
+/* A warm metallic bevel plus a visible cast shadow outside the artwork. */
 .observatory-hero {
   overflow: visible;
 }
@@ -2229,15 +2229,18 @@ body { background: #fff !important; background-image: none !important; }
   position: relative;
   isolation: isolate;
   box-sizing: border-box;
-  border-top: 2px solid rgba(255, 255, 255, 0.82);
-  border-left: 2px solid rgba(255, 255, 255, 0.68);
-  border-right: 3px solid rgba(10, 17, 40, 0.40);
-  border-bottom: 4px solid rgba(10, 17, 40, 0.46);
+  border: 0;
+  outline: 1px solid rgba(183, 139, 49, 0.72);
+  outline-offset: 0;
   box-shadow:
-    0 0 0 1px rgba(197, 160, 89, 0.58),
-    0 3px 0 rgba(197, 160, 89, 0.30),
-    0 8px 0 rgba(10, 17, 40, 0.16),
-    0 16px 26px -12px rgba(10, 17, 40, 0.28);
+    inset 0 2px 0 rgba(255, 248, 220, 0.92),
+    inset 2px 0 0 rgba(255, 239, 190, 0.62),
+    inset -3px 0 0 rgba(90, 55, 19, 0.52),
+    inset 0 -4px 0 rgba(76, 48, 20, 0.58),
+    0 2px 0 rgba(228, 190, 105, 0.78),
+    0 5px 0 rgba(118, 79, 30, 0.30),
+    0 9px 0 rgba(78, 55, 31, 0.16),
+    0 17px 28px -9px rgba(53, 39, 24, 0.34);
 }
 
 .observatory-hero-cover::after {
@@ -2246,22 +2249,22 @@ body { background: #fff !important; background-image: none !important; }
   inset: 0;
   z-index: 1;
   pointer-events: none;
-  border: 1px solid rgba(255, 255, 255, 0.22);
+  border: 1px solid rgba(255, 244, 207, 0.30);
   box-shadow:
-    inset 0 1px 0 rgba(255,255,255,.26),
-    inset 1px 0 0 rgba(255,255,255,.16);
+    inset 0 1px 0 rgba(255,255,255,.30),
+    inset 1px 0 0 rgba(255,255,255,.18);
 }
 
 @media (max-width: 767px) {
   .observatory-hero-cover {
-    border-top-width: 2px;
-    border-left-width: 2px;
-    border-right-width: 3px;
-    border-bottom-width: 4px;
     box-shadow:
-      0 0 0 1px rgba(197, 160, 89, 0.58),
-      0 3px 0 rgba(197, 160, 89, 0.26),
-      0 7px 0 rgba(10, 17, 40, 0.16),
-      0 12px 20px -10px rgba(10, 17, 40, 0.26);
+      inset 0 2px 0 rgba(255, 248, 220, 0.88),
+      inset 2px 0 0 rgba(255, 239, 190, 0.56),
+      inset -3px 0 0 rgba(90, 55, 19, 0.46),
+      inset 0 -4px 0 rgba(76, 48, 20, 0.52),
+      0 2px 0 rgba(228, 190, 105, 0.76),
+      0 5px 0 rgba(118, 79, 30, 0.28),
+      0 8px 0 rgba(78, 55, 31, 0.14),
+      0 14px 22px -8px rgba(53, 39, 24, 0.30);
   }
 }
