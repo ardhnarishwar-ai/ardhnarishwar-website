@@ -2346,3 +2346,46 @@ body { background: #fff !important; background-image: none !important; }
       0 18px 26px -10px rgba(63,43,20,.30) !important;
   }
 }
+
+
+/* ===== DEFINITIVE COVER FRAME: visible 4-sided bevel + all-around elevation ===== */
+.observatory-hero {
+  overflow: visible !important;
+  isolation: isolate;
+}
+.observatory-hero-cover {
+  position: relative !important;
+  z-index: 1 !important;
+  outline: none !important;
+  border: 0 !important;
+  box-shadow:
+    0 0 0 1px rgba(224, 190, 112, .92),
+    0 0 0 3px rgba(132, 91, 36, .46),
+    0 0 0 5px rgba(247, 232, 193, .78),
+    inset 2px 2px 0 rgba(255, 249, 225, .72),
+    inset -3px -3px 0 rgba(67, 45, 24, .42),
+    0 8px 18px -6px rgba(45, 32, 20, .25),
+    0 20px 34px -14px rgba(45, 32, 20, .26) !important;
+  transition: box-shadow .45s cubic-bezier(.22,1,.36,1), transform .45s cubic-bezier(.22,1,.36,1);
+}
+.observatory-hero-cover::after {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  z-index: 2 !important;
+  pointer-events: none !important;
+  border: 1px solid rgba(255, 247, 220, .32) !important;
+  box-shadow: none !important;
+}
+@media (max-width: 767px) {
+  .observatory-hero-cover {
+    box-shadow:
+      0 0 0 1px rgba(224, 190, 112, .90),
+      0 0 0 3px rgba(132, 91, 36, .40),
+      0 0 0 5px rgba(247, 232, 193, .72),
+      inset 2px 2px 0 rgba(255, 249, 225, .64),
+      inset -3px -3px 0 rgba(67, 45, 24, .38),
+      0 7px 15px -5px rgba(45, 32, 20, .22),
+      0 17px 27px -12px rgba(45, 32, 20, .23) !important;
+  }
+}
