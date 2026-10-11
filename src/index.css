@@ -2063,3 +2063,157 @@ body { background: #fff !important; background-image: none !important; }
     transform: none;
   }
 }
+
+
+/* ===== SITE-WIDE EDITORIAL DEPTH PASS ===== */
+/* A consistent, restrained depth language across the ivory/navy/gold site.
+   Interactive tilt is desktop-only; touch devices get soft elevation, not wobble. */
+:root {
+  --depth-shadow-soft:
+    0 1px 0 rgba(255,255,255,.78) inset,
+    0 4px 12px -8px rgba(10,17,40,.12),
+    0 12px 28px -18px rgba(10,17,40,.18);
+  --depth-shadow-hover:
+    0 1px 0 rgba(255,255,255,.92) inset,
+    0 8px 18px -10px rgba(184,134,11,.16),
+    0 18px 34px -16px rgba(10,17,40,.18);
+  --depth-transition:
+    transform 480ms cubic-bezier(.22,1,.36,1),
+    box-shadow 480ms cubic-bezier(.22,1,.36,1),
+    border-color 480ms cubic-bezier(.22,1,.36,1),
+    background-color 480ms ease;
+}
+
+/* Editorial rows become lightly raised surfaces without changing their layout. */
+.observatory-service-row,
+.observatory-field-index article,
+.observatory-constitution-list article,
+.observatory-timeline-list article,
+.observatory-knowledge-list article,
+.observatory-process-grid article,
+.observatory-testimonial-list blockquote,
+.observatory-statement p {
+  position: relative;
+  transform: translate3d(0,0,0);
+  transition: var(--depth-transition);
+}
+
+/* Gold edge is intentionally faint at rest. */
+.observatory-service-row,
+.observatory-field-index article,
+.observatory-constitution-list article,
+.observatory-timeline-list article,
+.observatory-knowledge-list article {
+  border-color: rgba(197,160,89,.18);
+}
+
+/* Visual plates and founder artwork have a real soft shadow at rest. */
+.observatory-founder-image img,
+.observatory-hero-visual-image,
+.observatory-founder-logo img {
+  transition: var(--depth-transition);
+}
+
+.observatory-founder-image img,
+.observatory-hero-visual-image {
+  box-shadow: var(--depth-shadow-soft);
+}
+
+/* Desktop-only hover: lift and perspective, never exaggerated 3D. */
+@media (hover: hover) and (pointer: fine) and (min-width: 901px) {
+  .observatory-service-row:hover,
+  .observatory-field-index article:hover,
+  .observatory-constitution-list article:hover,
+  .observatory-timeline-list article:hover,
+  .observatory-knowledge-list article:hover,
+  .observatory-process-grid article:hover,
+  .observatory-testimonial-list blockquote:hover,
+  .observatory-statement p:hover {
+    transform: translate3d(0,-3px,0);
+    box-shadow: var(--depth-shadow-hover);
+  }
+
+  .observatory-founder-image img:hover,
+  .observatory-hero-visual-image:hover {
+    transform: perspective(1200px) translate3d(0,-4px,0) rotateX(.45deg);
+    box-shadow: var(--depth-shadow-hover);
+  }
+
+  .observatory-button:hover,
+  .observatory-menu:hover {
+    filter: drop-shadow(0 5px 8px rgba(10,17,40,.12));
+  }
+}
+
+/* Mobile: no tilt; keep shadows light and tap feedback immediate. */
+@media (max-width: 900px) {
+  .observatory-service-row,
+  .observatory-field-index article,
+  .observatory-constitution-list article,
+  .observatory-timeline-list article,
+  .observatory-knowledge-list article,
+  .observatory-process-grid article,
+  .observatory-testimonial-list blockquote,
+  .observatory-statement p {
+    box-shadow: 0 2px 8px -7px rgba(10,17,40,.18);
+  }
+
+  .observatory-founder-image img,
+  .observatory-hero-visual-image {
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.88) inset,
+      0 5px 16px -10px rgba(10,17,40,.20);
+  }
+
+  .observatory-service-row:active,
+  .observatory-field-index article:active,
+  .observatory-constitution-list article:active,
+  .observatory-timeline-list article:active,
+  .observatory-knowledge-list article:active,
+  .observatory-process-grid article:active,
+  .observatory-testimonial-list blockquote:active,
+  .observatory-statement p:active {
+    transform: translate3d(0,-1px,0);
+  }
+}
+
+/* Keep keyboard focus visible and honor reduced-motion preferences. */
+.observatory-service-row:focus-within,
+.observatory-field-index article:focus-within,
+.observatory-constitution-list article:focus-within,
+.observatory-timeline-list article:focus-within,
+.observatory-knowledge-list article:focus-within,
+.observatory-process-grid article:focus-within,
+.observatory-testimonial-list blockquote:focus-within {
+  outline: 1px solid rgba(184,134,11,.38);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .observatory-service-row,
+  .observatory-field-index article,
+  .observatory-constitution-list article,
+  .observatory-timeline-list article,
+  .observatory-knowledge-list article,
+  .observatory-process-grid article,
+  .observatory-testimonial-list blockquote,
+  .observatory-statement p,
+  .observatory-founder-image img,
+  .observatory-hero-visual-image,
+  .observatory-founder-logo img {
+    transition: none;
+  }
+
+  .observatory-service-row:hover,
+  .observatory-field-index article:hover,
+  .observatory-constitution-list article:hover,
+  .observatory-timeline-list article:hover,
+  .observatory-knowledge-list article:hover,
+  .observatory-process-grid article:hover,
+  .observatory-testimonial-list blockquote:hover,
+  .observatory-statement p:hover,
+  .observatory-founder-image img:hover,
+  .observatory-hero-visual-image:hover {
+    transform: none;
+  }
+}
