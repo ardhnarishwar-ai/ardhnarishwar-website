@@ -2466,3 +2466,11 @@ body { background: #fff !important; background-image: none !important; }
       0 8px 20px -12px rgba(10, 17, 40, .24) !important;
   }
 }
+
+
+/* ===== MOBILE COVER POSITION: place the full artwork below the fixed header ===== */
+@media (max-width: 767px) {
+  .observatory-hero {
+    padding-top: 126px !important;
+  }
+}
