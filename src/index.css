@@ -2535,3 +2535,18 @@ body { background: #fff !important; background-image: none !important; }
   border: 0 !important;
   box-shadow: none !important;
 }
+
+
+/* ===== HERO COVER: clean edge, restore subtle depth without a border ===== */
+.observatory-hero-cover {
+  border: 0 !important;
+  outline: 0 !important;
+  box-shadow: 0 14px 28px -20px rgba(10, 17, 40, .28) !important;
+}
+.observatory-hero-cover::before,
+.observatory-hero-cover::after {
+  content: none !important;
+  display: none !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
