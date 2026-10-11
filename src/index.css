@@ -2268,3 +2268,81 @@ body { background: #fff !important; background-image: none !important; }
       0 14px 22px -8px rgba(53, 39, 24, 0.30);
   }
 }
+
+
+/* ===== FINAL 3D PASS: restore depth after the flat editorial overrides ===== */
+/* The previous global editorial reset explicitly removed card shadows and pseudo-layers.
+   Restore depth only on actual interactive cards and featured artwork. */
+.card-luxury {
+  border: 1px solid rgba(184, 134, 11, 0.16) !important;
+  background: linear-gradient(145deg, rgba(255,255,255,.98), rgba(249,245,240,.96)) !important;
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.98) inset,
+    0 3px 8px -4px rgba(10,17,40,.10),
+    0 12px 24px -12px rgba(10,17,40,.16),
+    0 20px 36px -24px rgba(184,134,11,.18) !important;
+  transition: transform .45s cubic-bezier(.22,1,.36,1), box-shadow .45s ease, border-color .35s ease !important;
+}
+.card-luxury::before,
+.card-luxury::after {
+  display: block !important;
+  pointer-events: none;
+}
+@media (hover:hover) and (pointer:fine) {
+  .card-luxury:hover {
+    transform: translate3d(0,-5px,0) !important;
+    border-color: rgba(184,134,11,.38) !important;
+    box-shadow:
+      0 1px 0 rgba(255,255,255,1) inset,
+      0 6px 12px -5px rgba(10,17,40,.12),
+      0 20px 36px -12px rgba(184,134,11,.16),
+      0 30px 48px -20px rgba(10,17,40,.18) !important;
+  }
+}
+
+/* Concern tiles: raised surfaces rather than flat bordered rectangles. */
+.observatory-common-concerns a,
+.observatory-common-concerns article {
+  box-shadow:
+    0 1px 0 rgba(255,255,255,.95) inset,
+    0 3px 8px -5px rgba(10,17,40,.12),
+    0 12px 24px -16px rgba(10,17,40,.18);
+  transition: transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s ease, border-color .3s ease;
+}
+@media (hover:hover) and (pointer:fine) {
+  .observatory-common-concerns a:hover,
+  .observatory-common-concerns article:hover {
+    transform: translate3d(0,-4px,0);
+    box-shadow:
+      0 1px 0 rgba(255,255,255,.98) inset,
+      0 8px 16px -8px rgba(10,17,40,.12),
+      0 22px 36px -18px rgba(184,134,11,.18);
+  }
+}
+
+/* The cover uses a real warm cast shadow; no grey outline or inset-only frame. */
+.observatory-hero {
+  overflow: visible !important;
+}
+.observatory-hero-cover {
+  outline: none !important;
+  border: 0 !important;
+  box-shadow:
+    0 3px 0 rgba(197,160,89,.62),
+    0 7px 0 rgba(137,95,35,.22),
+    0 13px 0 rgba(88,61,28,.10),
+    0 22px 34px -12px rgba(63,43,20,.34) !important;
+}
+.observatory-hero-cover::after {
+  border: 0 !important;
+  box-shadow: none !important;
+}
+@media (max-width:767px) {
+  .observatory-hero-cover {
+    box-shadow:
+      0 3px 0 rgba(197,160,89,.58),
+      0 6px 0 rgba(137,95,35,.20),
+      0 11px 0 rgba(88,61,28,.10),
+      0 18px 26px -10px rgba(63,43,20,.30) !important;
+  }
+}
