@@ -2475,13 +2475,13 @@ body { background: #fff !important; background-image: none !important; }
   }
 }
 
-/* ===== MOBILE HEADER: restore the original subtle translucency ===== */
+/* ===== MOBILE HEADER: near-solid ivory glass, minimal bleed-through ===== */
 @media (max-width: 767px) {
   .observatory-header,
   .observatory-header.is-scrolled {
-    background: rgba(253, 253, 251, 0.94) !important;
-    -webkit-backdrop-filter: blur(14px) !important;
-    backdrop-filter: blur(14px) !important;
+    background: rgba(253, 253, 251, 0.98) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(10px) !important;
   }
 
   .observatory-hero {
