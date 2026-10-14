@@ -1,7 +1,7 @@
 export const BRAND = {
   name: 'Ardhnarishwar',
   tagline: 'Constitutional Observation & Pattern Intelligence',
-fullName: 'Ardhnarishwar Observatory',
+  fullName: 'Ardhnarishwar Astromedical Solutions',
   values: ['Healing', 'Guidance', 'Transformation', 'Insight', 'Balance', 'Well-being'],
 } as const
 
