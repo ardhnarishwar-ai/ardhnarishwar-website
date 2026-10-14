@@ -1,18 +1,16 @@
 import { Helmet } from 'react-helmet-async'
-import { BRAND } from '../data/site'
 import {
   SEO,
   OG,
-  SITE_URL,
+  SITE_ROOT_URL,
   absoluteUrl,
-  buildLocalBusinessSchema,
-  buildWebSiteSchema,
+  buildStructuredDataGraph,
 } from '../config/seo'
 
 const ogImage = absoluteUrl(OG.imagePath)
 
 export function Seo() {
-  const schemas = [buildWebSiteSchema(), buildLocalBusinessSchema()]
+  const structuredData = buildStructuredDataGraph()
 
   return (
     <Helmet>
@@ -23,15 +21,15 @@ export function Seo() {
       <meta name="robots" content={SEO.robots} />
       <meta name="author" content="S. Raja" />
       <meta name="theme-color" content="#f9f5f0" />
-      <link rel="canonical" href={SITE_URL} />
+      <link rel="canonical" href={SITE_ROOT_URL} />
 
       <link rel="icon" href="/images/ardhnarishwar-favicon2-UHD.png" type="image/png" sizes="4000x4000" />
       <link rel="apple-touch-icon" href="/images/ardhnarishwar-favicon2-UHD.png" />
 
-      <meta property="og:site_name" content={BRAND.fullName} />
+      <meta property="og:site_name" content="Ardhnarishwar Astromedical Solutions" />
       <meta property="og:locale" content={SEO.locale} />
       <meta property="og:type" content={OG.type} />
-      <meta property="og:url" content={SITE_URL} />
+      <meta property="og:url" content={SITE_ROOT_URL} />
       <meta property="og:title" content={SEO.title} />
       <meta property="og:description" content={SEO.description} />
       <meta property="og:image" content={ogImage} />
@@ -49,11 +47,7 @@ export function Seo() {
         <meta name="twitter:site" content={SEO.twitterHandle} />
       ) : null}
 
-      {schemas.map((schema, index) => (
-        <script key={index} type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
-      ))}
+      <script type="application/ld+json">{JSON.stringify(structuredData)}</script>
     </Helmet>
   )
 }
