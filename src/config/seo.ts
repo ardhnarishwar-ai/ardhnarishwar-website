@@ -1,9 +1,13 @@
 import { BRAND, BUSINESS, LINKS } from '../data/site'
+import { FAQ_ITEMS } from '../data/faq'
 
-/** Production site URL — set VITE_SITE_URL in hosting dashboard */
+/** Production site origin — set VITE_SITE_URL in hosting dashboard */
 export const SITE_URL = (
   import.meta.env.VITE_SITE_URL ?? 'https://www.ardhnarishwar.in'
-).replace(/\/$/, '')
+).replace(/\/+$/, '')
+
+/** Canonical URL for the site root, including its trailing slash */
+export const SITE_ROOT_URL = `${SITE_URL}/`
 
 export const SEO = {
   title: 'Ardhnarishwar Astromedical Solutions | Wellness & Medical Astrology Consultation',
@@ -44,85 +48,23 @@ export function absoluteUrl(path: string): string {
   return `${SITE_URL}${normalized}`
 }
 
-function isValidLat(value: string): boolean {
-  const n = Number(value)
-  return Number.isFinite(n) && n >= -90 && n <= 90
-}
-
-function isValidLng(value: string): boolean {
-  const n = Number(value)
-  return Number.isFinite(n) && n >= -180 && n <= 180
-}
-
-export function buildLocalBusinessSchema() {
-  const { address, hours, phone, email } = BUSINESS
-  const lat = String(address.latitude)
-  const lng = String(address.longitude)
-  const hasGeo = isValidLat(lat) && isValidLng(lng)
-
+function buildOrganizationEntity() {
   return {
-    '@context': 'https://schema.org',
-    '@type': ['LocalBusiness', 'ProfessionalService'],
+    '@type': 'Organization',
     '@id': `${SITE_URL}/#organization`,
     name: BRAND.fullName,
-    alternateName: BRAND.name,
     description: SEO.description,
-    url: SITE_URL,
+    url: SITE_ROOT_URL,
     image: absoluteUrl('/images/logo.png'),
     logo: absoluteUrl('/images/logo.png'),
-    telephone: phone,
-    email,
-    priceRange: '$$$',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: address.streetAddress,
-      addressLocality: address.addressLocality,
-      addressRegion: address.addressRegion,
-      postalCode: address.postalCode,
-      addressCountry: address.addressCountry,
-    },
-    ...(hasGeo
-      ? {
-          geo: {
-            '@type': 'GeoCoordinates',
-            latitude: Number(lat),
-            longitude: Number(lng),
-          },
-        }
-      : {}),
-    openingHoursSpecification: hours.map((h) => ({
-      '@type': 'OpeningHoursSpecification',
-      dayOfWeek: h.days,
-      opens: h.opens,
-      closes: h.closes,
-    })),
-    areaServed: {
-      '@type': 'Country',
-      name: 'Worldwide',
-    },
-    serviceType: ['Complementary Wellness Consultation', 'Medical Astrology Consultation'],
-    knowsAbout: [
-      'Medical Astrology',
-      'Health and Wellness Guidance',
-      'Money and Financial Concerns',
-      'Work and Career',
-      'Relationships and Family',
-      'Emotional Well-being',
-      'Life and Future Guidance',
-      'Planetary Timing',
-      'Wellness Pattern Analysis',
-      'Structured Observation',
-    ],
-    founder: {
-      '@type': 'Person',
-      name: 'S. Raja',
-      jobTitle: 'Medical Astrologer & Pattern Analyst',
-    },
+    telephone: BUSINESS.phone,
+    email: BUSINESS.email,
+    founder: { '@id': `${SITE_URL}/#founder` },
     sameAs: [
       LINKS.instagram,
       LINKS.googleBusiness,
       LINKS.googleMaps,
-      `https://wa.me/919111855115`,
+      LINKS.whatsapp,
       LINKS.youtube,
     ].filter((url) => typeof url === 'string' && url.length > 0),
     potentialAction: {
@@ -132,7 +74,7 @@ export function buildLocalBusinessSchema() {
         urlTemplate: LINKS.consultationForm,
         actionPlatform: [
           'https://schema.org/DesktopWebPlatform',
-          'https://schema.org/mobileWebPlatform',
+          'https://schema.org/MobileWebPlatform',
         ],
       },
       name: 'Book Private Consultation',
@@ -140,15 +82,55 @@ export function buildLocalBusinessSchema() {
   }
 }
 
-export function buildWebSiteSchema() {
+function buildFounderEntity() {
   return {
-    '@context': 'https://schema.org',
+    '@type': 'Person',
+    '@id': `${SITE_URL}/#founder`,
+    name: 'S. Raja',
+    jobTitle: 'Medical Astrologer & Pattern Analyst',
+    worksFor: { '@id': `${SITE_URL}/#organization` },
+    sameAs: [LINKS.instagram],
+  }
+}
+
+function buildWebSiteEntity() {
+  return {
     '@type': 'WebSite',
     '@id': `${SITE_URL}/#website`,
-    url: SITE_URL,
+    url: SITE_ROOT_URL,
     name: BRAND.fullName,
     description: SEO.description,
     publisher: { '@id': `${SITE_URL}/#organization` },
     inLanguage: 'en-IN',
+  }
+}
+
+function buildFAQEntity() {
+  return {
+    '@type': 'FAQPage',
+    '@id': `${SITE_URL}/#faq`,
+    isPartOf: { '@id': `${SITE_URL}/#website` },
+    about: { '@id': `${SITE_URL}/#organization` },
+    mainEntity: FAQ_ITEMS.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer,
+      },
+    })),
+  }
+}
+
+/** One connected graph; physical-address placeholders are intentionally excluded. */
+export function buildStructuredDataGraph() {
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      buildOrganizationEntity(),
+      buildFounderEntity(),
+      buildWebSiteEntity(),
+      buildFAQEntity(),
+    ],
   }
 }
