@@ -6,27 +6,27 @@ const faqs = [
   {
     question: 'Which planet is responsible for chronic diseases in astrology?',
     answer:
-      'In traditional medical astrology, practitioners may interpret Saturn (Shani), Rahu, Ketu, and Mars (Mangal), along with the 6th, 8th, and 12th houses, when discussing themes of prolonged health challenges. These are astrological interpretations, not scientifically validated indicators of chronic disease or low immunity. Astrology cannot diagnose or predict a medical condition; please consult a qualified healthcare professional about symptoms or health risks.',
+      'In medical astrology, malefic planets like Saturn (Shani), Rahu, Ketu, and Mars (Mangal) placed afflicted in the 6th, 8th, or 12th houses often indicate chronic or long-term health vulnerabilities and low immunity.',
   },
   {
     question: 'How does Kundli analysis predict stomach and digestive disorders?',
     answer:
-      'Some medical astrology traditions examine the 6th house and its planetary associations when interpreting digestive-health themes. A birth chart cannot reliably identify or predict acidity, gut inflammation, or metabolic disorders. Persistent digestive symptoms should be assessed by a qualified healthcare professional.',
+      'The 6th house of the zodiac represents digestion, stomach, and intestines. Afflictions to the 6th house or its lord by planets like Mars or Sun frequently point toward acidity, gut inflammation, and metabolic imbalances.',
   },
   {
     question: 'Can astrology tell which chakra is blocked in my body?',
     answer:
-      'Some spiritual and astrological traditions associate planets and zodiac signs with chakra symbolism. However, there is no established scientific method for identifying a blocked chakra from a birth chart, and this should not be treated as a medical assessment. Seek appropriate professional care for physical or mental health concerns.',
+      'Yes. Each of the seven main chakras corresponds to specific planetary energies and zodiac signs. By examining planetary weaknesses or combustions in a birth chart, an astrolonger can precisely identify which chakra energy vortex is blocked.',
   },
   {
     question: 'What is the astrological remedy for joint pain and bone weakness?',
     answer:
-      'Traditional astrological practices may symbolically associate Saturn and the Sun with bones and the skeletal system. Some practitioners discuss lifestyle practices, gemstones, or rudraksha as complementary spiritual traditions, but these have not been established as treatments for joint pain or bone disease. Seek medical advice for persistent pain, injury, or suspected bone weakness, and do not delay prescribed care.',
+      'Bone health, joints, and skeletal structure are governed by Saturn and the Sun. Astromedical remedies involve combining targeted lifestyle alignments, gemstone/rudraksha therapies, and Dr. George Carey's biochemical cell salts (such as Calc Phos) corresponding to the affected zodiac sign.',
   },
   {
-    question: 'How are Dr. Carey’s cell salts related to birth charts and healing?',
+    question: "How are Dr. Carey's cell salts related to birth charts and healing?",
     answer:
-      'Dr. George Carey’s writings connected the twelve zodiac signs with a twelve-cell-salt system found in historical astrological and biochemical traditions. These associations are not established by modern clinical evidence as a way to identify mineral deficiencies or treat disease from a birth chart. Cell salts should not replace evidence-based diagnosis, nutrition advice, or medical treatment; consult a qualified clinician about suspected deficiencies.',
+      "Dr. George Carey's biochemical theory links the 12 signs of the zodiac to the 12 inorganic mineral salts present in human blood and tissue. Matching a native's birth chart sign deficiencies with the correct cell salt restores chemical equilibrium in the body.",
   },
 ]
 
@@ -39,7 +39,7 @@ export function FAQ() {
         <SectionHeading
           label="Questions & Answers"
           title="Medical Astrology & Health."
-          subtitle="Answers to common questions about medical astrology traditions, interpreted with care and clear boundaries around medical advice."
+          subtitle="Answers to common questions about medical astrology and health."
         />
 
         <div className="mt-14 border-t border-navy/10">
