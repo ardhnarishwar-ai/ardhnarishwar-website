@@ -6,9 +6,9 @@ export const SITE_URL = (
 ).replace(/\/$/, '')
 
 export const SEO = {
-  title: 'Medical Astrology for Planetary Patterns & Individual Health | Ardhnarishwar',
+  title: 'Medical Astrology & Individual Health | Ardhnarishwar',
   description:
-    'Explore how traditional medical astrology interprets planetary patterns in relation to individual constitution, personal rhythms, and health-focused observation.',
+    'Explore individual health patterns through medical astrology and traditional planetary interpretation at Ardhnarishwar.',
   keywords: [
     'medical astrology',
     'astromedical solutions',
