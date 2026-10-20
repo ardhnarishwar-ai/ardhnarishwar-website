@@ -6,12 +6,15 @@ export const SITE_URL = (
 ).replace(/\/$/, '')
 
 export const SEO = {
-  title: 'Ardhnarishwar Astromedical Solutions | Wellness & Medical Astrology Consultation',
+  title: 'Medical Astrology for Planetary Patterns & Individual Health | Ardhnarishwar',
   description:
-    'Private complementary wellness guidance for health, money, career, relationships, emotional well-being, life decisions, and medical astrology.',
+    'Explore how traditional medical astrology interprets planetary patterns in relation to individual constitution, personal rhythms, and health-focused observation.'
   keywords: [
     'medical astrology',
     'astromedical solutions',
+    'individual health patterns',
+    'planetary patterns',
+    'medical astrology consultation',
     'health and wellness guidance',
     'money and financial concerns',
     'career and work guidance',
