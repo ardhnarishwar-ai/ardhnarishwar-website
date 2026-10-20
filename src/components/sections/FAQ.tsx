@@ -38,6 +38,31 @@ const faqs = [
     answer:
       'It is intended for thoughtful individuals interested in self-understanding, constitutional research, pattern intelligence, and long-term observation.',
   },
+  {
+    question: 'Which planets are associated with chronic diseases in medical astrology?',
+    answer:
+      'In traditional medical astrology, practitioners may interpret Saturn, Mars, Rahu, and Ketu, along with the 6th, 8th, and 12th houses, when discussing themes of illness or prolonged challenges. These are astrological interpretations, not scientifically validated indicators of disease, immunity, or prognosis. Astrology cannot diagnose or predict an individual medical condition; consult a qualified healthcare professional about symptoms or health risks.',
+  },
+  {
+    question: 'Can Kundli analysis predict stomach or digestive disorders?',
+    answer:
+      'Some medical astrology traditions examine the 6th house and its planetary associations when interpreting digestive-health themes. A birth chart cannot reliably identify, diagnose, or predict acidity, inflammation, or other digestive disorders. Persistent digestive symptoms should be assessed by a qualified healthcare professional.',
+  },
+  {
+    question: 'Can astrology identify which chakra is blocked?',
+    answer:
+      'Some spiritual and astrological traditions associate planets or zodiac signs with chakra symbolism. There is no established scientific method for diagnosing a blocked chakra from a birth chart, and such an interpretation should not be treated as a medical assessment. If you have physical or mental health concerns, seek appropriate professional care.',
+  },
+  {
+    question: 'What astrological remedies are recommended for joint pain or weak bones?',
+    answer:
+      'Traditional astrological practices may symbolically associate the Sun and Saturn with bones or the skeletal system, and some practitioners discuss lifestyle practices or spiritual rituals as complementary traditions. Gemstones, rudraksha, or astrological remedies have not been established as treatments for joint pain or bone disease. Please seek medical assessment for persistent pain, injury, or suspected bone weakness, and do not delay prescribed care.',
+  },
+  {
+    question: 'How are Dr. George Carey’s cell salts related to birth charts and healing?',
+    answer:
+      'Dr. George Carey’s writings connected zodiac signs with a twelve-cell-salt system, an idea found in historical astrological and biochemical traditions. These associations are not established by modern clinical evidence as a way to identify mineral deficiencies or treat disease from a birth chart. Cell salts should not replace evidence-based diagnosis, nutrition advice, or medical treatment; consult a qualified clinician about suspected deficiencies.',
+  },
 ]
 
 export function FAQ() {
@@ -49,7 +74,7 @@ export function FAQ() {
         <SectionHeading
           label="Questions"
           title="A clearer view of the method."
-          subtitle="A few practical answers about constitutional observation, consultation, confidentiality, and the boundaries of the work."
+          subtitle="Answers about constitutional observation, consultation, medical astrology traditions, confidentiality, and the boundaries of this work."
         />
 
         <div className="mt-14 border-t border-navy/10">
