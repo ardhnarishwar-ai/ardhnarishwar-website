@@ -14,18 +14,15 @@ export function Hero() {
 
           <Reveal immediate delay={100}>
             <h1>
-              Every symptom
-              <span>has a pattern.</span>
-              <span>Every pattern</span>
-              <span>leaves a signature.</span>
+              Understanding Planetary Patterns and Individual Health Through Medical Astrology
             </h1>
           </Reveal>
 
           <Reveal immediate delay={180}>
             <p className="observatory-hero-lead">
-              A private, research-oriented wellness observatory offering complementary
-              guidance around health, money, career, relationships, emotional well-being,
-              and important life decisions.
+              A private, research-oriented observatory exploring traditional planetary
+              patterns, individual constitution, personal rhythms, and health-focused
+              observation through medical astrology.
             </p>
             <p className="mt-5 max-w-2xl text-[10px] font-semibold uppercase tracking-[0.16em] text-navy/55">
               Health & Wellness · Money · Career · Relationships · Emotional Well-being · Life Decisions
