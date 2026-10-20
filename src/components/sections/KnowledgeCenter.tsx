@@ -1,7 +1,7 @@
 export function KnowledgeCenter() {
   const topics = [
     ['01', 'Five Elements & Human Constitution', 'Traditional principles used as a language for observing structure, vitality, movement, transformation, and awareness.'],
-    ['02', 'Planetary Correspondences', 'Traditional relationships between planetary symbolism, constitutional tendencies, timing cycles, and wellness observation.'],
+    ['02', 'Planetary Correspondences', 'Traditional interpretations of planetary symbolism in relation to individual constitution, timing cycles, and health-focused observation.'],
     ['03', 'Zodiac & Human Body', 'Traditional perspectives connecting zodiac archetypes with anatomical regions and constitutional themes.'],
     ['04', 'Solar–Lunar Framework', 'Symbolic solar and lunar cycles considered alongside personal rhythms, vitality patterns, and life observation.'],
   ]
@@ -15,8 +15,8 @@ export function KnowledgeCenter() {
             <h2>Study the framework.<br /><em>Question the assumptions.</em></h2>
           </div>
           <p>
-            Educational material is presented for observation, reflection, and deeper
-            understanding—not as a substitute for medical diagnosis or treatment.
+            Explore traditional ideas about planetary patterns, human constitution, and
+            individual health. The material supports observation and reflection, not medical diagnosis or treatment.
           </p>
         </div>
 
