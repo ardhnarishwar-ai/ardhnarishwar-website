@@ -21,7 +21,7 @@ const faqs = [
   {
     question: 'What is the astrological remedy for joint pain and bone weakness?',
     answer:
-      'Bone health, joints, and skeletal structure are governed by Saturn and the Sun. Astromedical remedies involve combining targeted lifestyle alignments, gemstone/rudraksha therapies, and Dr. George Carey's biochemical cell salts (such as Calc Phos) corresponding to the affected zodiac sign.',
+      "Bone health, joints, and skeletal structure are governed by Saturn and the Sun. Astromedical remedies involve combining targeted lifestyle alignments, gemstone/rudraksha therapies, and Dr. George Carey's biochemical cell salts (such as Calc Phos) corresponding to the affected zodiac sign.",
   },
   {
     question: "How are Dr. Carey's cell salts related to birth charts and healing?",
