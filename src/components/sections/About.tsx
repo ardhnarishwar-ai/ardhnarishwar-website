@@ -19,13 +19,14 @@ export function About() {
           <div>
             <h2>Many symptoms are visible.<br /><em>Patterns are not.</em></h2>
             <p>
-              Ardhnarishwar looks at human experience as a connected field. A symptom,
-              decision, relationship, or difficult period is rarely understood completely
-              in isolation.
+              Ardhnarishwar explores individual health and human constitution through a
+              connected framework of traditional planetary patterns, personal rhythms,
+              and lived experience. Each person is considered in their own context.
             </p>
             <p>
-              The work begins by asking what repeats, what changes, what surrounds the
-              individual, and when the pattern appears.
+              The process begins by observing what repeats, what changes, what surrounds
+              the individual, and how traditional planetary timing is interpreted alongside
+              those observations.
             </p>
           </div>
         </div>
