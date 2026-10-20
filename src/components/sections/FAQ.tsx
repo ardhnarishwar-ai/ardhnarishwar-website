@@ -6,7 +6,7 @@ const faqs = [
   {
     question: 'Which planet is responsible for chronic diseases in astrology?',
     answer:
-      'In medical astrology, malefic planets like Saturn (Shani), Rahu, Ketu, and Mars (Mangal) placed afflicted in the 6th, 8th, or 12th houses often indicate chronic or long-term health vulnerabilities and low immunity.',
+      'In medical astrology, malefic planets like Saturn (Shani), Rahu, Ketu, and Mars (Mangal) afflicted in the 6th, 8th, or 12th houses often indicate chronic or long-term health vulnerabilities and low immunity.',
   },
   {
     question: 'How does Kundli analysis predict stomach and digestive disorders?',
